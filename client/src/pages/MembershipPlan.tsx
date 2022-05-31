@@ -53,6 +53,17 @@ const MembershipPlan = () => {
         setPrices(response.data);
     };
 
+    const createSession = async (priceId: string) => {
+        const { data: response } = await axios.post(
+            "http://localhost:8080/subs/session", 
+            {
+                priceId,
+            }
+        );
+
+        window.location.href = response.url;
+    };
+
     return <Container>
         <CardsContainer>
             {prices.map((price: any) => {
@@ -69,7 +80,7 @@ const MembershipPlan = () => {
                             <Card.Title style={{fontSize: "2rem"}}>
                                 {price.nickname}
                             </Card.Title>
-                            <Button variant="primary" className="mt-1" style={{backgroundColor: "#273746 "}}>
+                            <Button variant="primary" className="mt-1" style={{backgroundColor: "#273746 "}} onClick={() => createSession(price.id)}>
                                 Purchase Now
                             </Button>
                         </Card.Body>
