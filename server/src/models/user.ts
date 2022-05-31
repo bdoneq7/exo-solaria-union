@@ -13,6 +13,10 @@ const userSchema = new Schema({
         required: true,
         min: 8
     },
+    customerStripeId: {
+        type: String,
+        required: true,
+    },
 });
 
 export default mongoose.model("User", userSchema);
