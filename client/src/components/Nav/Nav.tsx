@@ -18,14 +18,14 @@ const Nav = () => {
         localStorage.removeItem("token");
         navigate("/");
     }
-    return <Navbar>
+    return <Navbar style={{backgroundColor: "#17202A"}}>
         <NavItem>
-            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>Home</Link>
         </NavItem>
         {state.data && (
             <LeftNavContainer>
                 <NavItem>
-                    <NavLink onClick={handleLogout}>Logout</NavLink>
+                    <NavLink style={{color: "#ffffff"}} onClick={handleLogout}>Logout</NavLink>
                 </NavItem>
             </LeftNavContainer>
         )}
