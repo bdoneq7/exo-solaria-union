@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import axios from "axios";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 interface Article {
     id: string,
@@ -35,6 +36,24 @@ margin-top: 1rem;
 font-size: 1.5rem;
 `;
 
+const NoArticlesContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 5rem 0;
+flex-direction: column;
+
+& a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+`;
+
+const ErrorHeader = styled.h2`
+font-size: 3rem;
+`;
+
 const Content = styled.p`
 `;
 
@@ -64,7 +83,12 @@ const Dashboard = () => {
             ))}
         </CardsContainer> 
         ) : ( 
-        <div>You don't have a plan</div>
+        <NoArticlesContainer>
+            <ErrorHeader>
+                You don't have access yet to a Membership
+            </ErrorHeader>
+            <Link to="/membership-plan">Purchase Membership</Link>
+        </NoArticlesContainer>
         )}
     </Container>
     );

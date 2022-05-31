@@ -55,7 +55,7 @@ async (req, res) => {
     const newUser = await User.create({
         email,
         password: hashedPassword,
-        customerStripeId: customer.id,
+        stripeCustomerId: customer.id,
     });
 
     const token = await JWT.sign(
