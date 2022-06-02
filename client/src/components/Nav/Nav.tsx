@@ -3,9 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../context";
 import styled from "styled-components";
+import './Nav.css';
+import Logo from "../../images/logo-small.png";
 
-const LeftNavContainer = styled.div`
+const DashboardContainer = styled.div`
 margin-left: auto;
+`
+
+const LogoutContainer = styled.div`
+margin-right: auto;
 `
 
 const Nav = () => {
@@ -18,17 +24,41 @@ const Nav = () => {
         localStorage.removeItem("token");
         navigate("/");
     }
-    return <Navbar style={{backgroundColor: "#17202A"}}>
+    return <Navbar className="m-auto navigationbar">
+        
         <NavItem>
-            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>Home</Link>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>
+            <img src={Logo} className="logo" alt="Exo Solaria Union" title="Exo Solaria Union" />
+            </Link>
+        </NavItem>
+        <NavItem>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR PURPOSE</Link>
+        </NavItem>
+        <NavItem>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR VISION</Link>
+        </NavItem>
+        <NavItem>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR MISSION</Link>
+        </NavItem>
+        <NavItem>
+            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>FREE PREVIEW</Link>
         </NavItem>
         {state.data && (
-            <LeftNavContainer>
+            <DashboardContainer>
                 <NavItem>
-                    <NavLink style={{color: "#ffffff"}} onClick={handleLogout}>Logout</NavLink>
+                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>MY DASHBOARD</NavLink>
                 </NavItem>
-            </LeftNavContainer>
+            </DashboardContainer>  
         )}
+
+        {state.data && (
+            <LogoutContainer> 
+                <NavItem>
+                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>LOGOUT</NavLink>
+                </NavItem>
+            </LogoutContainer>
+        )}
+    
     </Navbar>
 };
 
