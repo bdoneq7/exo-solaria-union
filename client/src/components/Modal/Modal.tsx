@@ -4,10 +4,13 @@ import { useState, useContext } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import './Modal.css';
 
 interface ModalProps {
     text: string
-    variant: "primary" | "secondary" | "danger";
+    variant: "primary" | "secondary" | "danger" | "warning";
     isSignupFlow: boolean
 }
 
@@ -68,10 +71,10 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
         <Button onClick={handleShow} variant={variant} style={{ marginRight: "10px", marginTop: "10px"}}>{text}</Button>
 
         <Modal show={show} onHide={handleClose}>
-            <Modal.Header>
-                <Modal.Title>{text}</Modal.Title>
+            <Modal.Header className="modal-header">
+                <Modal.Title>{text}</Modal.Title><FontAwesomeIcon icon={solid('lock')} size="1x" />
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className="blue">
                 <InputGroup className="mb-3">
                     <InputGroup.Text>Email</InputGroup.Text>
                     <FormControl type="email" 
@@ -86,7 +89,7 @@ const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
                 </InputGroup>
                 {errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className="blue">
                 <Button variant="secondary" onClick={handleClose}>Close</Button>
                 <Button variant="primary" onClick={handleClick}>{text}</Button>
             </Modal.Footer>

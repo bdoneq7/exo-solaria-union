@@ -52,6 +52,22 @@ const Nav = () => {
         )}
 
         {state.data && (
+            <DashboardContainer> 
+                <NavItem>
+                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>ACCOUNT</NavLink>
+                </NavItem>
+            </DashboardContainer>
+        )}
+
+        {state.data && (
+            <DashboardContainer> 
+                <NavItem>
+                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>SUPPORT</NavLink>
+                </NavItem>
+            </DashboardContainer>
+        )}
+
+        {state.data && (
             <LogoutContainer> 
                 <NavItem>
                     <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>LOGOUT</NavLink>

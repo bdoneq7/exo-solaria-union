@@ -72,6 +72,7 @@ const Dashboard = () => {
 
     return (
     <Container>
+        Browse Star Systems | Browse Planets | Search Star System | Search Planet | Earthlike Candidates
         {articles.length ? (
         <CardsContainer>
             {articles.map(article => (
