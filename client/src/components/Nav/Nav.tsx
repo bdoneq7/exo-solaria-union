@@ -24,6 +24,11 @@ const Nav = () => {
         localStorage.removeItem("token");
         navigate("/");
     }
+
+    const handleDashboard = () => {
+        navigate("/dashboard");
+    }
+
     return <Navbar className="m-auto navigationbar">
         
         <NavItem>
@@ -32,39 +37,23 @@ const Nav = () => {
             </Link>
         </NavItem>
         <NavItem>
-            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR PURPOSE</Link>
+            <Link to="/ourpurpose" className="nav-link" style={{color: "#ffffff"}}>OUR PURPOSE</Link>
         </NavItem>
         <NavItem>
-            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR VISION</Link>
+            <Link to="/ourvision" className="nav-link" style={{color: "#ffffff"}}>OUR VISION</Link>
         </NavItem>
         <NavItem>
-            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>OUR MISSION</Link>
+            <Link to="/ourmission" className="nav-link" style={{color: "#ffffff"}}>OUR MISSION</Link>
         </NavItem>
         <NavItem>
-            <Link to="/" className="nav-link" style={{color: "#ffffff"}}>FREE PREVIEW</Link>
+            <Link to="/freepreview" className="nav-link" style={{color: "#ffffff"}}>FREE PREVIEW</Link>
         </NavItem>
         {state.data && (
             <DashboardContainer>
                 <NavItem>
-                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>MY DASHBOARD</NavLink>
+                    <NavLink style={{color: "#FCF3CF"}} onClick={handleDashboard}>MY DASHBOARD</NavLink>
                 </NavItem>
             </DashboardContainer>  
-        )}
-
-        {state.data && (
-            <DashboardContainer> 
-                <NavItem>
-                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>ACCOUNT</NavLink>
-                </NavItem>
-            </DashboardContainer>
-        )}
-
-        {state.data && (
-            <DashboardContainer> 
-                <NavItem>
-                    <NavLink style={{color: "#FCF3CF"}} onClick={handleLogout}>SUPPORT</NavLink>
-                </NavItem>
-            </DashboardContainer>
         )}
 
         {state.data && (

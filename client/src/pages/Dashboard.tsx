@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import axios from "axios";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 interface Article {
     id: string,
@@ -72,14 +74,14 @@ const Dashboard = () => {
 
     return (
     <Container>
-        Browse Star Systems | Browse Planets | Search Star System | Search Planet | Earthlike Candidates
+        Browse Star Systems | Browse Planets | Search Star System | Search Planet | Earthlike Candidates | Account | Support
         {articles.length ? (
         <CardsContainer>
             {articles.map(article => (
                 <Card key={article.id}>
                     <Image src={article.imageUrl}></Image>
                     <Header>{article.title}</Header>
-                    <Content>{article.content}</Content>
+                    <Content>{article.content}</Content><FontAwesomeIcon icon={solid('lock')} size="1x" />
                 </Card>
             ))}
         </CardsContainer> 
