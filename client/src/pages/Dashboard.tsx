@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import UserProfileImage from "../images/userprofileimage.png";
+// import { QUERY_USER } from "../utils/queries";
 
 interface Article {
     id: string,
@@ -72,9 +74,13 @@ const Dashboard = () => {
         setArticles(response);
     };
 
+    
+
     return (
     <Container>
+        
         Browse Star Systems | Browse Planets | Search Star System | Search Planet | Earthlike Candidates | Account | Support
+        <img src={UserProfileImage} style={{width: "20%", height: "20%"}} alt="Exo Solaria Union" title="Exo Solaria Union" />
         {articles.length ? (
         <CardsContainer>
             {articles.map(article => (

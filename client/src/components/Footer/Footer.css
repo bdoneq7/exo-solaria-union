@@ -1,0 +1,38 @@
+:root {
+    --white: #ffffff;
+    --light-yellow: #FCF3CF;
+    --yellow: #fce138;
+    --blue: #024e76;
+    --darkblue: #17202A;
+  }
+
+
+/* Colors */
+
+.white {
+    background-color: var(--blue);
+}
+
+.lightyellow {
+    background-color: var(--light-yellow);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.darkblue {
+      background-color: var(--darkblue);
+}
+
+.footer-section {
+    background-color: var(--darkblue);
+    color: #ffffff;
+    height: 10rem;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+}
+
