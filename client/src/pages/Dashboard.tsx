@@ -5,8 +5,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import UserProfileImage from "../images/userprofileimage.png";
-// import { QUERY_USER } from "../utils/queries";
+import BrowseSystemIcon from "../images/browsesystemicon.png";
+import BrowsePlanetIcon from "../images/browseplaneticon.png"
+import SearchIcon from "../images/search.png";
+import EarthlikeIcon from "../images/earthlike.png";
+import AccountIcon from "../images/account.png";
+import SupportIcon from "../images/support.png";
+
 
 interface Article {
     id: string,
@@ -61,6 +66,23 @@ font-size: 3rem;
 const Content = styled.p`
 `;
 
+const IconContainer = styled.div`
+width: 100%;
+height: 110px;
+background-color: #17202A;
+color: #ffffff;
+display: flex;
+margin-top: 10px;
+`;
+
+const IconImage = styled.div`
+
+height: 110px;
+background-color: #17202A;
+color: #ffffff;
+flex: 1;
+`;
+
 const Dashboard = () => {
 
     const [articles, setArticles] = useState<Article[]>([])
@@ -78,9 +100,45 @@ const Dashboard = () => {
 
     return (
     <Container>
-        
-        Browse Star Systems | Browse Planets | Search Star System | Search Planet | Earthlike Candidates | Account | Support
-        <img src={UserProfileImage} style={{width: "20%", height: "20%"}} alt="Exo Solaria Union" title="Exo Solaria Union" />
+
+        <IconContainer>
+            <IconImage>
+                <Link to="/BrowseStarSystems" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={BrowsePlanetIcon} alt="Browse Planets" title="Browse Planets" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={SearchIcon} alt="Browse Planets" title="Browse Planets" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={SearchIcon} alt="Browse Planets" title="Browse Planets" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={AccountIcon} alt="Account" title="Account" />
+                </Link>
+            </IconImage>
+            <IconImage>
+                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
+                <img src={SupportIcon} alt="Account" title="Account" />
+                </Link>
+            </IconImage>
+        </IconContainer>
+
         {articles.length ? (
         <CardsContainer>
             {articles.map(article => (

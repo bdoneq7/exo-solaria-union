@@ -1,12 +1,17 @@
 import { Navbar, NavItem} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './Footer.css';
+import styled from "styled-components";
+
+const FooterContainer = styled.div`
+text-align: center;
+`
 
 
 const Footer = () => {
 
 
-    return <Navbar className="m-auto footer-section">
+    return <FooterContainer><Navbar className="m-auto footer-section">
         
         <NavItem>
             <Link to="/" className="nav-link" style={{color: "#ffffff"}}>HOME</Link>
@@ -24,8 +29,9 @@ const Footer = () => {
             <Link to="https://www.youtube.com/channel/UClsd0ZTakEY9GqtxuCdB_3g" className="nav-link" style={{color: "#ffffff"}}>YOUTUBE CHANNEL</Link>
         </NavItem>
         
-    
     </Navbar>
+    </FooterContainer>
+    
 };
 
 export default Footer;

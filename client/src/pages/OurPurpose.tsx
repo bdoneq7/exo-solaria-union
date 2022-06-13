@@ -25,8 +25,9 @@ const OurPurpose = () => {
         
         <PurposeTitle>Our Purpose</PurposeTitle>
         
-        <PurposeContent>Our Purpose is Why we Exist and What Guides Us<br /><br />
-        Our Purpose is to help transform Humanitys knowledge of the reality of the universe to progress towards perfect goodness, enlightenment, unity, and joy for all universal life. We can make a difference for good in the lives of all humanity by embracing our purpose, and help elevate humanity to a higher state of existence and fulfillment by reaching for the stars.
+        <PurposeContent>
+        <p>Our Purpose is Why we Exist and What Guides Us</p>
+        <p>Our Purpose is to help transform Humanitys knowledge of the reality of the universe to progress towards perfect goodness, enlightenment, unity, and joy for all universal life. We can make a difference for good in the lives of all humanity by embracing our purpose, and help elevate humanity to a higher state of existence and fulfillment by reaching for the stars.</p>
         </PurposeContent>
     </Container>
     );

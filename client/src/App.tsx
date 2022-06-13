@@ -11,6 +11,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import MembershipPlan from "./pages/MembershipPlan";
+import BrowseStarSystems from "./pages/BrowseStarSystems";
 
 function App() {
   return (
@@ -18,18 +19,28 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />}/>
-        <Route path="/dashboard" element={<ProtectedRoute />}>
-        <Route path="/dashboard" element={<Dashboard />}/>
-        </Route>
+
         <Route path="/ourpurpose" element={<OurPurpose />}/>
         <Route path="/ourvision" element={<OurVision />}/>
         <Route path="/ourmission" element={<OurMission />}/>
         <Route path="/freepreview" element={<FreePreview />}/>
         <Route path="/termsofuse" element={<TermsOfUse />}/>
         <Route path="/privacypolicy" element={<PrivacyPolicy />}/>
+
         <Route path="/membership-plan" element={<ProtectedRoute />}>
         <Route path="/membership-plan" element={<MembershipPlan />}/>
         </Route>
+
+        <Route path="/dashboard" element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<Dashboard />}/>
+        </Route>
+
+        <Route path="/browsestarsystems" element={<ProtectedRoute />}>
+        <Route path="/browsestarsystems" element={<BrowseStarSystems />}/>
+        </Route>
+
+        
+
       </Routes>
       <Footer />
     </BrowserRouter>
