@@ -1,13 +1,18 @@
-import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import ZetaReticuli from "../images/zetareticuli.jpg";
 
+const BrowseBackground = styled.div`
+background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
+width: 100%;
+`;
+
 const StarTitle = styled.div`
 font-weight: bold;
-font-color: #000000;
+color: #ffffff;
 font-size: 24px;
-margin-top: 15px;
 margin-bottom: 20px;
+padding-top: 15px;
+padding-left: 15px;
 `;
 
 const StarContent = styled.div`
@@ -18,16 +23,34 @@ const BrowseStarSystems = () => {
 
 
     return (
-        <Container>
         
         
+        <BrowseBackground>
         <StarTitle>Browse Star Systems</StarTitle>   
 
         <StarContent>
-        <img src={ZetaReticuli} alt="Browse Star Systems" title="Browse Star Systems" />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         </StarContent>
+        </BrowseBackground>
         
-    </Container>
+    
     );
 };
 

@@ -28,7 +28,8 @@ display: flex;
 const Card = styled.div`
 height: 30rem;
 width: 32%;
-box-shadow: 0.1rem 0.1rem 1rem rgba(0,0,0,0.2);
+box-shadow: 0.1rem 0.1rem 1rem #ffffff;
+background-color: #ffffff;
 padding: 2rem;
 border-radius: 2rem;
 margin-right: 5rem;
@@ -69,18 +70,23 @@ const Content = styled.p`
 const IconContainer = styled.div`
 width: 100%;
 height: 110px;
-background-color: #17202A;
+background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
 color: #ffffff;
 display: flex;
-margin-top: 10px;
+padding-top: 15px;
+justify-content: center;
 `;
 
 const IconImage = styled.div`
-
 height: 110px;
-background-color: #17202A;
 color: #ffffff;
 flex: 1;
+width: 100%;
+`;
+
+const DashboardBackground = styled.div`
+background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
+width: 100%;
 `;
 
 const Dashboard = () => {
@@ -99,42 +105,43 @@ const Dashboard = () => {
     
 
     return (
+    <DashboardBackground>    
     <Container>
 
         <IconContainer>
             <IconImage>
-                <Link to="/BrowseStarSystems" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" />
+                <Link to="/BrowseStarSystems" className="nav-link" >
+                <img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={BrowsePlanetIcon} alt="Browse Planets" title="Browse Planets" />
+                <Link to="/BrowsePlanets" className="nav-link" >
+                <img src={BrowsePlanetIcon} alt="Browse Planets" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={SearchIcon} alt="Browse Planets" title="Browse Planets" />
+                <Link to="/SearchStarSystem" className="nav-link" >
+                <img src={SearchIcon} alt="Search Star System" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={SearchIcon} alt="Browse Planets" title="Browse Planets" />
+                <Link to="/SearchPlanet" className="nav-link" >
+                <img src={SearchIcon} alt="Search Planet" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" />
+                <Link to="/EarthlikeCandidates" className="nav-link" >
+                <img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={AccountIcon} alt="Account" title="Account" />
+                <Link to="/Account" className="nav-link" >
+                <img src={AccountIcon} alt="Account" title="Account" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
             <IconImage>
-                <Link to="/BrowsePlanets" className="nav-link" style={{color: "#ffffff"}}>
-                <img src={SupportIcon} alt="Account" title="Account" />
+                <Link to="/Support" className="nav-link" >
+                <img src={SupportIcon} alt="Support" title="Support" style={{color: "#ffffff", width: "50%", height: "50%"}}/>
                 </Link>
             </IconImage>
         </IconContainer>
@@ -144,8 +151,8 @@ const Dashboard = () => {
             {articles.map(article => (
                 <Card key={article.id}>
                     <Image src={article.imageUrl}></Image>
-                    <Header>{article.title}</Header>
-                    <Content>{article.content}</Content><FontAwesomeIcon icon={solid('lock')} size="1x" />
+                    <Header>{article.title}</Header><FontAwesomeIcon icon={solid('lock')} size="1x" />
+                    <Content>{article.content}</Content>
                 </Card>
             ))}
         </CardsContainer> 
@@ -158,6 +165,7 @@ const Dashboard = () => {
         </NoArticlesContainer>
         )}
     </Container>
+    </DashboardBackground>
     );
 };
 
