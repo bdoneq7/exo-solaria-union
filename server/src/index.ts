@@ -2,6 +2,7 @@ import express from "express";
 import authRoutes from "./routes/auth";
 import subsRoutes from "./routes/subs";
 import articlesRoutes from "./routes/articles";
+import StarSystemRoutes from "./routes/starsystems";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -20,6 +21,7 @@ mongoose.connect(
     app.use("/auth", authRoutes);
     app.use("/subs", subsRoutes);
     app.use("/articles", articlesRoutes);
+    app.use("/starsystem", StarSystemRoutes);
 
     app.listen(8080, () => {
         console.log(`Now Listening to port 8080`)
