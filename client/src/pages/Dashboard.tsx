@@ -7,8 +7,10 @@ import BrowseSystemIcon from "../images/browsesystemicon.png";
 import BrowsePlanetIcon from "../images/browseplaneticon.png"
 import SearchIcon from "../images/search.png";
 import EarthlikeIcon from "../images/earthlike.png";
+import AliensIcon from "../images/aliens.png";
 import DashboardHeader from "../images/dashboard_header.jpg";
 import "./Dashboard.css";
+import { Card, Button } from "react-bootstrap";
 
 
 
@@ -36,7 +38,7 @@ flex-direction: column;
 
 const ErrorHeader = styled.h2`
 font-size: 3rem;
-font-color: #ffffff;
+color: #ffffff;
 `;
 
 const DashboardBackground = styled.div`
@@ -52,6 +54,44 @@ padding-top: 15px;
 padding-bottom: 15px;
 `;
 
+const CardsContainer = styled.div`
+display: flex;
+height: 75vh;
+width: 200%;
+align-items: center;
+justify-content: center;
+`;
+
+const CardHeader = styled.div`
+
+background-color: blue;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+border: 0.5rem solid #ffffff;
+width: 12.5rem;
+height: 12.5rem;
+box-shadow: 0.1rem 0.1rem 1rem rgba(19, 20, 19, 0.342);
+`;
+
+const PriceCircle = styled.div`
+border: 0.5rem solid #ffffff;
+width: 12.5rem;
+height: 12.5rem;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0.1rem 0.1rem 1rem rgba(19, 20, 19, 0.342);
+`;
+
+const PriceText = styled.p`
+font-size: 3rem;
+color: #ffffff;
+box-shadow: 0.1rem 0.1rem 1rem rgba(19, 20, 19, 0.342);
+`;
+
 const Dashboard = () => {
 
     const [articles, setArticles] = useState<Article[]>([])
@@ -64,6 +104,32 @@ const Dashboard = () => {
         const { data: response } = await axios.get("http://localhost:8080/articles");
         setArticles(response);
     };
+
+
+    const [prices, setPrices] = useState<any[]>([])
+
+    useEffect(() => {
+        fetchPrices();
+    }, []);
+
+    const fetchPrices = async () => {
+
+        const {data: response} = await axios.get("http://localhost:8080/subs/prices");
+        console.log(response);
+        setPrices(response.data);
+    };
+
+    const createSession = async (priceId: string) => {
+        const { data: response } = await axios.post(
+            "http://localhost:8080/subs/session", 
+            {
+                priceId,
+            }
+        );
+
+        window.location.href = response.url;
+    };
+
 
     
 
@@ -104,13 +170,13 @@ const Dashboard = () => {
 
                   <div className="overviewcard">
                     <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Star/Planet Classifications</div>
+                    <div className="overviewcard__info">Classifications</div>
                   </div>
 
                   
                   <div className="overviewcard">
                     <div className="overviewcard__icon"><img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <Link to="/BrowseStarSystems" className="nav-link" >
+                    <Link to="/BrowseStarSystems0to10" className="nav-link" >
                     <div className="overviewcard__info">Browse Star Systems</div>
                     </Link>
                   </div>
@@ -137,7 +203,7 @@ const Dashboard = () => {
                   </div>
 
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__icon"><img src={AliensIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Alien Species</div>
                   </div>
 
@@ -162,16 +228,40 @@ const Dashboard = () => {
 
             </div>
 
-
+            <BlankContainer></BlankContainer>
 
 
         </DashboardBackground> 
         ) : ( 
         <NoArticlesContainer>
             <ErrorHeader>
-                You don't have access yet to a Membership
+                STEP 2: Subscribe to Exo Solaria Union Membership
             </ErrorHeader>
-            <Link to="/membership-plan">Purchase Membership</Link>
+            
+            <CardsContainer>
+            {prices.map((price: any) => {
+                return (
+                    <Card style={{width: "25%", height: "75%", marginRight: "2rem"}}>
+                        <CardHeader style={{backgroundColor: "#273746 "}}>
+                            <PriceCircle>
+                                <PriceText>
+                                ${price.unit_amount / 100}
+                                </PriceText>
+                            </PriceCircle>
+                        </CardHeader>
+                        <Card.Body>
+                            <Card.Title style={{fontSize: "2rem"}}>
+                                {price.nickname}
+                            </Card.Title>
+                            <Button variant="primary" className="mt-1" style={{backgroundColor: "#273746 "}} onClick={() => createSession(price.id)}>
+                                Purchase Now
+                            </Button>
+                        </Card.Body>
+                    </Card>
+                )
+            })}
+        </CardsContainer>
+
         </NoArticlesContainer>
         )}
     </Container>

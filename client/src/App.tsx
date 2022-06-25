@@ -11,7 +11,7 @@ import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import MembershipPlan from "./pages/MembershipPlan";
-import BrowseStarSystems from "./pages/BrowseStarSystems";
+import BrowseStarSystems from "./pages/BrowseStarSystems0to10";
 
 function App() {
   return (
@@ -35,8 +35,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />}/>
         </Route>
 
-        <Route path="/browsestarsystems" element={<ProtectedRoute />}>
-        <Route path="/browsestarsystems" element={<BrowseStarSystems />}/>
+        <Route path="/browsestarsystems0to10" element={<ProtectedRoute />}>
+        <Route path="/browsestarsystems0to10" element={<BrowseStarSystems />}/>
         </Route>
 
         
