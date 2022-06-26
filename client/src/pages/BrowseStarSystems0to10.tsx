@@ -27,15 +27,6 @@ interface Article {
 }
 
 const BreadCrumbs = styled.div`
-color: #000000;
-font-size: 12px;
-width: 100%;
-height: 50px;
-margin-bottom: 10px;
-padding-top: 15px;
-padding-left: 15px;
-background-color: #F9E79F;
-font-weight: bold;
 `;
 
 const BrowseBackground = styled.div`
@@ -44,19 +35,30 @@ width: 100%;
 `;
 
 const StarTitle = styled.div`
-font-weight: bold;
+`;
+
+const StarDistance = styled.div`
 color: #ffffff;
-font-size: 24px;
+font-size: 20px;
 margin-bottom: 30px;
-padding-top: 15px;
 padding-left: 15px;
+font-family: verdana;
+`;
+
+const SystemNotes = styled.div`
+color: #ffffff;
+font-size: 12px;
+margin-bottom: 40px;
+font-family: verdana;
+width: 100%;
+height: 25px;
+text-align: center;
 `;
 
 const StarSystem = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-gap: 15px;
-border-bottom: 2px dashed #ffffff;
 padding-bottom: 25px;
 `;
 
@@ -64,7 +66,6 @@ const StarSystemThree = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-gap: 15px;
-border-bottom: 2px dashed #ffffff;
 padding-bottom: 25px;
 `;
 
@@ -113,6 +114,14 @@ height: 20rem;
 border-radius: 2rem;
 `;
 
+const TravelTime = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 10px;
+padding-bottom: 5px;
+border-bottom: 2px dashed #ffffff;
+`;
+
 const BrowseStarSystems = () => {
 
     const [articles, setArticles] = useState<Article[]>([])
@@ -131,16 +140,161 @@ const BrowseStarSystems = () => {
         
         
         <BrowseBackground>
-        <BreadCrumbs>
-        <Link to="/dashboard" >Dashboard</Link> {'>'} Browse Star Systems: 0 to 10 Light Years
+
+        <BreadCrumbs className="breadcrumbs">
+        <Link to="/dashboard" >Dashboard</Link> {'>'} Browse Star Systems: 0 to 10 Light Years (150 Total Stars and 94 Total Planets, representing 114 Star Systems)
         </BreadCrumbs>
-        <StarTitle>Sol Star System</StarTitle>   
+
+
+        <div className="main-overview">
+
+                  <div className="overviewcardcurrent">
+                  
+                    <div className="overviewcard__info">0-10<br/> Light Years</div>
+                    
+                  </div>
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems11to20" >11-20<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems21to30" >21-30<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  
+                  <div className="overviewcard">
+                    
+                    
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems31to40" >31-40<br/> Light Years</Link></div>
+                   
+                  </div>
+                  
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems41to50" >41-50<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems51to60" >51-60<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems61to70" >61-70<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  <div className="overviewcard">
+                  
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems71to80" >71-80<br/> Light Years</Link></div>
+                   
+                  </div>
+
+                  <div className="overviewcard">
+                 
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems81to90" >81-90<br/> Light Years</Link></div>
+                    
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems91to100" >91-100<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems101to125" >101-125<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems126to150" >126-150<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems151to175" >151-175<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems176to200" >176-200<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems201to400" >201-400<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems401to600" >401-600<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems601to800" >601-800<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems801to1000" >801-1,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems1000to2000" >1,000-2,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems2001to4000" >2,001-4,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems4001to6000" >4,001-6,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems6001to8000" >6,0001-8,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems8001to10000" >8,001-10,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems10001to25000" >10,001-25,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems25001to50000" >25,001-50,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems50001to75000" >50,001-75,000<br/> Light Years</Link></div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems75001to100000" >75,001-100,000<br/> Light Years</Link></div>
+                  </div>
+
+              </div>
+
+
+
+        <StarTitle className="startitleyellow">Sol Star System</StarTitle>
+        <StarDistance>
+        The Sun is 8.3 Light Minutes or 92,398,072 Miles from Earth on Average<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy
+        </StarDistance>
+           
 
         <StarSystem>
         
         <StarArea>
             Sol
-        <img src={GStarImage} alt="Sol" title="Sol" style={{color: "#ffffff", width: "300px", height: "300px"}}/>
+        <img src={GStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "300px", height: "300px"}}/>
         G2V Main Sequence Yellow Dwarf
         </StarArea>
 
@@ -169,7 +323,7 @@ const BrowseStarSystems = () => {
         </PlanetArea>
         
 
-        <PlanetArea>
+        <PlanetArea className="habzone">
             Mars<br/>
             1.523 AU
         <img src={MarsImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
@@ -223,20 +377,71 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Oort Cloud<br/>
-            2,000 to 3,000 AU
+            2,000 to 100,000 AU
         <img src={OortImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "200px"}} />
         </PlanetArea>
         <br/>
         <br/>
         
         </StarSystem>
+        <SystemNotes>
+        The Sol Star System consists of 1 Star, 8 Major Planets, 5 Dwarf Planets, 1 Asteroid Belt, 1 Kuiper Belt, and 1 Oort Cloud. 2 Major Planets orbit in the Potential Liquid Water Zone. Earth is the only Habitable Planet.<br/>
+        <br/>
+        <span className="traveltitleyellow">Travel Times to the Sun from Earth</span>
+        </SystemNotes>
+
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 1 Earth Year</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 56 Earth Days</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 28 Earth Days</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 14 Earth Days</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+
+        
 
 
 
 
-
-        <StarTitle>Proxima Centauri Star System</StarTitle>   
-
+        <StarTitle className="startitlered">Proxima Centauri Star System</StarTitle>   
+        <StarDistance>
+        4.2421 Light Years Away From Earth (Equals 1.3006 Parsecs or 24.937 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
         <StarSystemThree>
         
         
@@ -303,12 +508,60 @@ const BrowseStarSystems = () => {
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
+        
         <br/>
         <br/>
+
+        
         
         </StarSystemThree>
+        <SystemNotes>
+        The Proxima Centauri Star System consists of 1 Star and 3 Major Planets. 1 Major Planet orbits in the Potential Liquid Water Zone.<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to Proxima Centauri from Earth</span>
+        </SystemNotes>
         
-        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 55,046 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 85.37 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 42.68 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 21.34 Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
 
         
         

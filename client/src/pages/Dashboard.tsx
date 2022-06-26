@@ -140,6 +140,7 @@ const Dashboard = () => {
 
 
     
+    
 
     return (
     <DashboardBackground>    
@@ -158,7 +159,11 @@ const Dashboard = () => {
 
 
               <aside className="sidenav">
-              <img src={Profile} alt="Profile" title="Profile" style={{color: "#ffffff", width: "100%", height: "20%"}}/>
+
+              
+              <img src={Profile} alt="Exo Solaria Union Community" title="Exo Solaria Union Community" style={{color: "#ffffff", width: "100%", height: "20%"}}/>
+              
+
                 <ul className="sidenav__list">
                   <li className="sidenav__list-item">Profile</li>
                   <li className="sidenav__list-item">Account</li>

@@ -1,6 +1,159 @@
+.breadcrumbs {
+color: #000000;
+font-size: 12px;
+width: 100%;
+height: 50px;
+margin-bottom: 10px;
+padding-top: 15px;
+padding-left: 15px;
+background-color: #F9E79F;
+font-weight: bold;
+}
+
+.breadcrumbs a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+.breadcrumbs a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.breadcrumbs a:active {
+    color: blue;
+    text-decoration: none;
+}
+
 .habzone {
     background-color: green;
     border: 1px solid green;
     border-radius: 5px;
 
 }
+
+.main-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Where the magic happens */
+    grid-auto-rows: 35px;
+    grid-gap: 20px;
+    margin: 15px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #ffffff;
+  }
+
+.overviewcard {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #024e76;
+    height: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 5px solid #17202A;
+    border-radius: 25px;
+    color: #ffffff;
+    width: 105%;
+    
+  }
+
+  a:link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #fce138;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .overviewcardcurrent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #17202A;
+    height: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 5px solid #024e76;
+    border-radius: 25px;
+    color: #fce138;
+    width: 105%;
+    
+  }
+
+  .startitleyellow {
+    font-weight: bold;
+    color: #F9E79F;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
+  .startitlered {
+    font-weight: bold;
+    color: #FE0303;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
+  .travel-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Where the magic happens */
+    grid-auto-rows: 35px;
+    grid-gap: 20px;
+    margin: 15px;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+
+  .overviewcardtravel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #17202A;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 5px solid #024e76;
+    border-radius: 25px;
+    color: #fce138;
+    width: 100%;
+    
+  }
+
+  .traveltitleyellow {
+      color: #fce138;
+      font-weight: bold;
+      font-size: 14px;
+  }
+
+  .traveltitlered {
+    color: #FE0303;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+  
