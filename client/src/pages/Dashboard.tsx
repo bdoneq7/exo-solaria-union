@@ -3,12 +3,20 @@ import { Container } from "react-bootstrap";
 import axios from "axios";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Profile from "../images/profile_small.jpg";
+import CommunityIcon from "../images/community.png";
+import MissionsIcon from "../images/missions.png";
+import ClassifyIcon from "../images/classify.png";
 import BrowseSystemIcon from "../images/browsesystemicon.png";
-import BrowsePlanetIcon from "../images/browseplaneticon.png"
 import SearchIcon from "../images/search.png";
 import EarthlikeIcon from "../images/earthlike.png";
 import AliensIcon from "../images/aliens.png";
-import DashboardHeader from "../images/dashboard_header.jpg";
+import UfoIcon from "../images/ufo.png";
+import DataIcon from "../images/data.png";
+import DashboardGalaxy from "../images/dashboard_galaxy.jpg";
+import DashboardCareers from "../images/dashboard_careers.jpg";
+import DashboardTechnology from "../images/dashboard_technology.jpg";
+import DashboardCompanies from "../images/dashboard_companies.jpg";
 import "./Dashboard.css";
 import { Card, Button } from "react-bootstrap";
 
@@ -150,6 +158,7 @@ const Dashboard = () => {
 
 
               <aside className="sidenav">
+              <img src={Profile} alt="Profile" title="Profile" style={{color: "#ffffff", width: "100%", height: "20%"}}/>
                 <ul className="sidenav__list">
                   <li className="sidenav__list-item">Profile</li>
                   <li className="sidenav__list-item">Account</li>
@@ -167,10 +176,19 @@ const Dashboard = () => {
 
                 <div className="main-overview">
 
+                  <div className="overviewcard">
+                    <div className="overviewcard__icon"><img src={CommunityIcon} alt="Exo Solaria Union Community" title="Exo Solaria Union Community" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__info">Exo Solaria Union Community</div>
+                  </div>
 
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Classifications</div>
+                    <div className="overviewcard__icon"><img src={MissionsIcon} alt="Exo Solaria Union Space Missions" title="Exo Solaria Union Space Missions" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__info">Exo Solaria Union<br/> Space Missions</div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__icon"><img src={ClassifyIcon} alt="Star and Planet Classification" title="Star and Planet Classification" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__info">Star and Planet Classifications</div>
                   </div>
 
                   
@@ -183,48 +201,59 @@ const Dashboard = () => {
                   
 
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={BrowsePlanetIcon} alt="Browse Planets" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Browse Planets</div>
-                  </div>
-
-                  <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Search Star System" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Search Star System</div>
                   </div>
 
+                  
+
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Browse Planets" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Search Planets</div>
+                    <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Planet Candidates" title="Earthlike Planet Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__info">Earthlike Planet Candidates</div>
                   </div>
 
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Earthlike Candidates</div>
-                  </div>
-
-                  <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={AliensIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__icon"><img src={AliensIcon} alt="Alien Species" title="Alien Species" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Alien Species</div>
                   </div>
 
                   <div className="overviewcard">
-                    <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__icon"><img src={UfoIcon} alt="UFO / UAP Encounters" title="UFO / UAP Encounters" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
+                    <div className="overviewcard__info">UFO / UAP Encounters</div>
+                  </div>
+
+                  <div className="overviewcard">
+                    <div className="overviewcard__icon"><img src={DataIcon} alt="Data Sources" title="Data Sources" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Data Sources</div>
                   </div>
+
+                  
 
               </div>
 
               <div className="main-cards">
                 <div className="card">Galaxy Map
-                <img src={DashboardHeader} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
+                <img src={DashboardGalaxy} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
                 </div>
-                <div className="card">Card</div>
+                <div className="card">Space Companies
+                <img src={DashboardCompanies} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
+                
+                </div>
+
+                <div className="card">Space Technology
+                <img src={DashboardTechnology} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
+                
+                </div>
+                <div className="card">Space Careers
+                <img src={DashboardCareers} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
+                
+                </div>
               </div>
 
               </main>
 
 
-              <footer className="footer">Footer</footer>
+              <footer className="footer">&copy; Copyright 2022. Exo Solaria Union</footer>
 
             </div>
 

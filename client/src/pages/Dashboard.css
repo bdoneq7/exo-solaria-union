@@ -7,7 +7,7 @@
     "sidenav header"
     "sidenav main"
     "sidenav footer";
-  height: 110vh;
+  height: 150vh;
   border: 7px solid #ffffff;
   border-radius: 10px;
 }
@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
+  font-weight: bold;
 }
 
 .sidenav {
@@ -31,7 +32,7 @@
 
 .sidenav__list {
   padding: 0;
-  margin-top: 85px;
+  margin-top: 15px;
   list-style-type: none;
 }
 
@@ -104,6 +105,10 @@
 }
 
 .card:nth-child(3) {
+  height: 265px;
+}
+
+.card:nth-child(4) {
   height: 265px;
 }
 
