@@ -4,6 +4,8 @@ import styled from "styled-components";
 import "./BrowseStarSystems.css";
 import { Link } from "react-router-dom";
 import GStarImage from "../images/stars/g_class_star.png";
+import KStarImage from "../images/stars/k_class_star.png";
+import KStarImageTest from "../images/stars/k_class_star_test.png";
 import MStarImage from "../images/stars/m_class_star.png";
 import MercuryImage from "../images/planets/mercurian_hot_small.png";
 import VenusImage from "../images/planets/terran_extremelyhot_small.png";
@@ -281,7 +283,7 @@ const BrowseStarSystems = () => {
 
               </div>
 
-
+         {/*Sol Star System Start*/}     
 
         <StarTitle className="startitleyellow">Sol Star System</StarTitle>
         <StarDistance>
@@ -300,6 +302,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
         Mercury<br/>
+        Sol I<br/>
         0.387 AU
         <img src={MercuryImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "40px", height: "40px"}} />
         Hot Mercurian
@@ -308,6 +311,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Venus<br/>
+            Sol II<br/>
             0.723 AU
         <img src={VenusImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         Extremely Hot Terran<br/>
@@ -316,6 +320,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea className="habzone">
             Earth<br/>
+            Sol III<br/>
             1.000 AU
         <img src={EarthImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         Warm<br/> Terran<br/>
@@ -325,6 +330,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea className="habzone">
             Mars<br/>
+            Sol IV<br/>
             1.523 AU
         <img src={MarsImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
         Cold SubTerran<br/>
@@ -339,6 +345,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Jupiter<br/>
+            Sol V<br/>
             5.203 AU
         <img src={JupiterImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "200px", height: "200px"}} />
         Freezing Super Jovian<br/>
@@ -347,6 +354,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Saturn<br/>
+            Sol VI<br/>
             9.538 AU
         <img src={SaturnImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "160px", height: "160px"}} />
         Freezing Jovian<br/>
@@ -355,6 +363,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Uranus<br/>
+            Sol VII<br/>
             19.819 AU
         <img src={NeptunianFreezing} alt="Browse Star Systems" title="Browse Star Systems"style={{color: "#ffffff", width: "120px", height: "120px"}} />
         Freezing Neptunian<br/>
@@ -363,6 +372,7 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
             Neptune<br/>
+            Sol VIII<br/>
             30.058 AU
         <img src={NeptunianFreezing} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "120px", height: "120px"}} />
         Freezing Neptunian<br/>
@@ -431,12 +441,12 @@ const BrowseStarSystems = () => {
 
         </div>
         </TravelTime>
-
+        {/*Sol Star System End*/}  
         
 
 
 
-
+        {/*Proxima Centauri System Start*/}  
         <StarTitle className="startitlered">Proxima Centauri Star System</StarTitle>   
         <StarDistance>
         4.2421 Light Years Away From Earth (Equals 1.3006 Parsecs or 24.937 Trillion Miles)<br/>
@@ -447,24 +457,24 @@ const BrowseStarSystems = () => {
         
         <StarArea>
             Proxima Centauri
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "300px", height: "300px"}}/>
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "250px", height: "250px"}}/>
         M5.5 Main Sequence Red SubDwarf
         </StarArea>
 
         <PlanetArea>
-            b
+            Proxima b<br/> Proxima I
         <img src={SubTerranHot} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
         Hot SubTerran
         </PlanetArea>
 
         <PlanetArea className="habzone">
-            c
+            Proxima c<br/> Proxima II
         <img src={SuperTerranCold} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         Cold <br/>Super Terran
         </PlanetArea>
 
         <PlanetArea>
-            d
+            Proxima d <br/>Proxima III
         <img src={NeptunianFreezing} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "120px", height: "120px"}} />
         Freezing Neptunian
         </PlanetArea>
@@ -562,9 +572,140 @@ const BrowseStarSystems = () => {
 
         </div>
         </TravelTime>
+        {/*Proxima Centauri System End*/}  
+        
+        
+
+
+
+        {/*Rigil Kentaurus System Start*/}  
+        <StarTitle className="startitleyellow">Rigil Kentaurus Star System</StarTitle>   
+        <StarDistance>
+        4.3650 Light Years Away From Earth (Equals 1.3383 Parsecs or 25.660 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+            Rigil Kentaurus A
+        <img src={GStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "300px", height: "300px"}}/>
+        G2 Main Sequence Yellow Dwarf
+        </StarArea>
+
+        <StarArea>
+            Rigil Kentaurus B
+        <img src={KStarImageTest} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "275px", height: "275px"}} />
+        K1V Main Sequence Orange Dwarf
+        </StarArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
 
         
         
+        </StarSystemThree>
+        <SystemNotes>
+        The Proxima Centauri Star System consists of 1 Star and 3 Major Planets. 1 Major Planet orbits in the Potential Liquid Water Zone.<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to Proxima Centauri from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 55,046 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 85.37 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 42.68 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 21.34 Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Proxima Centauri System End*/}  
+
+
+
         
         
         <CardsContainer>

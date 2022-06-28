@@ -61,7 +61,7 @@
   color: slategray;
 }
 
-.main-overview {
+.main-overviewdashboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Where the magic happens */
   grid-auto-rows: 94px;
@@ -69,7 +69,7 @@
   margin: 20px;
 }
 
-.overviewcard {
+.overviewcarddashboard {
   display: flex;
   align-items: center;
   justify-content: space-between;

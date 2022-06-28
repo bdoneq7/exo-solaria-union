@@ -22,6 +22,8 @@ import { Card, Button } from "react-bootstrap";
 
 
 
+
+
 interface Article {
     id: string,
     title: string,
@@ -100,7 +102,10 @@ color: #ffffff;
 box-shadow: 0.1rem 0.1rem 1rem rgba(19, 20, 19, 0.342);
 `;
 
+
 const Dashboard = () => {
+
+  
 
     const [articles, setArticles] = useState<Article[]>([])
 
@@ -153,7 +158,9 @@ const Dashboard = () => {
             <div className="grid-container">
 
               <header className="header">
-                <div className="header__search">Welcome, Brian!</div>
+                
+                <div className="header__search">Welcome, Insert Email</div>
+                
                 <div className="header__avatar">What will you Discover Today?</div>
               </header>
 
@@ -179,25 +186,25 @@ const Dashboard = () => {
 
               
 
-                <div className="main-overview">
+                <div className="main-overviewdashboard">
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={CommunityIcon} alt="Exo Solaria Union Community" title="Exo Solaria Union Community" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Exo Solaria Union Community</div>
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={MissionsIcon} alt="Exo Solaria Union Space Missions" title="Exo Solaria Union Space Missions" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Exo Solaria Union<br/> Space Missions</div>
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={ClassifyIcon} alt="Star and Planet Classification" title="Star and Planet Classification" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Star and Planet Classifications</div>
                   </div>
 
                   
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <Link to="/BrowseStarSystems0to10" className="nav-link" >
                     <div className="overviewcard__info">Browse Star Systems</div>
@@ -205,29 +212,29 @@ const Dashboard = () => {
                   </div>
                   
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Search Star System" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Search Star System</div>
                   </div>
 
                   
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Planet Candidates" title="Earthlike Planet Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Earthlike Planet Candidates</div>
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={AliensIcon} alt="Alien Species" title="Alien Species" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Alien Species</div>
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={UfoIcon} alt="UFO / UAP Encounters" title="UFO / UAP Encounters" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">UFO / UAP Encounters</div>
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={DataIcon} alt="Data Sources" title="Data Sources" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     <div className="overviewcard__info">Data Sources</div>
                   </div>
@@ -303,4 +310,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default Dashboard
