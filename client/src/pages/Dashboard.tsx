@@ -190,53 +190,53 @@ const Dashboard = () => {
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={CommunityIcon} alt="Exo Solaria Union Community" title="Exo Solaria Union Community" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Exo Solaria Union Community</div>
+                    <div className="overviewcard__info"><Link to="/Community" >Exo Solaria Union Community</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={MissionsIcon} alt="Exo Solaria Union Space Missions" title="Exo Solaria Union Space Missions" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Exo Solaria Union<br/> Space Missions</div>
+                    <div className="overviewcard__info"><Link to="/SpaceMissions" >Exo Solaria Union Space Missions</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={ClassifyIcon} alt="Star and Planet Classification" title="Star and Planet Classification" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Star and Planet Classifications</div>
+                    <div className="overviewcard__info"><Link to="/StarPlanetClassify" >Star and Planet Classifications</Link></div>
                   </div>
 
                   
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <Link to="/BrowseStarSystems0to10" className="nav-link" >
-                    <div className="overviewcard__info">Browse Star Systems</div>
-                    </Link>
+                    
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems0to10" >Browse Star Systems</Link></div>
+                    
                   </div>
                   
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Search Star System" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Search Star System</div>
+                    <div className="overviewcard__info"><Link to="/SearchStarSystem" >Search Star System</Link></div>
                   </div>
 
                   
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={EarthlikeIcon} alt="Earthlike Planet Candidates" title="Earthlike Planet Candidates" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Earthlike Planet Candidates</div>
+                    <div className="overviewcard__info"><Link to="/EarthlikePlanets" >Earthlike Planet Candidates</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={AliensIcon} alt="Alien Species" title="Alien Species" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Alien Species</div>
+                    <div className="overviewcard__info"><Link to="/AlienSpecies" >Alien Species</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={UfoIcon} alt="UFO / UAP Encounters" title="UFO / UAP Encounters" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">UFO / UAP Encounters</div>
+                    <div className="overviewcard__info"><Link to="/UfoEncounters" >UFO / UAP Encounters</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={DataIcon} alt="Data Sources" title="Data Sources" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info">Data Sources</div>
+                    <div className="overviewcard__info"><Link to="/DataSources" >Data Sources</Link></div>
                   </div>
 
                   

@@ -118,6 +118,36 @@ font-weight: bold;
     font-family: verdana;
   }
 
+  .startitlebrown {
+    font-weight: bold;
+    color: #AF601A;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
+  .startitlewhite {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
+  .startitleorange {
+    font-weight: bold;
+    color: #F39C12;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
   .travel-overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Where the magic happens */
@@ -154,6 +184,24 @@ font-weight: bold;
     color: #FE0303;
     font-weight: bold;
     font-size: 14px;
+}
+
+.traveltitlebrown {
+  color: #AF601A;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.traveltitlewhite {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.traveltitleorange {
+  color: #F39C12;
+  font-weight: bold;
+  font-size: 14px;
 }
 
   

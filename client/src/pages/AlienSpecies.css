@@ -1,0 +1,31 @@
+.breadcrumbs {
+    color: #000000;
+    font-size: 12px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: #F9E79F;
+    font-weight: bold;
+    }
+    
+    .breadcrumbs a:link {
+        color: blue;
+        text-decoration: none;
+    }
+    
+    .breadcrumbs a:visited {
+        color: blue;
+        text-decoration: none;
+    }
+    
+    .breadcrumbs a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    .breadcrumbs a:active {
+        color: blue;
+        text-decoration: none;
+    }
