@@ -12,6 +12,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import MembershipPlan from "./pages/MembershipPlan";
 import BrowseStarSystems from "./pages/BrowseStarSystems0to10";
+import BrowseStarSystemsTwo from "./pages/BrowseStarSystems11to20";
 import AlienSpecies from "./pages/AlienSpecies";
 import EarthlikePlanets from "./pages/EarthlikePlanets";
 import SpaceMissions from "./pages/SpaceMissions";
@@ -46,6 +47,10 @@ function App() {
 
         <Route path="/browsestarsystems0to10" element={<ProtectedRoute />}>
         <Route path="/browsestarsystems0to10" element={<BrowseStarSystems />}/>
+        </Route>
+
+        <Route path="/browsestarsystems11to20" element={<ProtectedRoute />}>
+        <Route path="/browsestarsystems11to20" element={<BrowseStarSystemsTwo />}/>
         </Route>
 
         <Route path="/alienspecies" element={<ProtectedRoute />}>

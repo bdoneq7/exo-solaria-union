@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
 import styled from "styled-components";
 import "./BrowseStarSystems.css";
 import { Link } from "react-router-dom";
 import AStarImage from "../images/stars/a_class_star.png";
+import FStarImage from "../images/stars/f_class_star.png";
 import GStarImage from "../images/stars/g_class_star.png";
 import KStarImage from "../images/stars/k_class_star.png";
-import KStarImageTest from "../images/stars/k_class_star_test.png";
 import MStarImage from "../images/stars/m_class_star.png";
 import LStarImage from "../images/stars/l_class_star.png";
 import TStarImage from "../images/stars/t_class_star.png";
@@ -16,30 +14,15 @@ import SolarFlareUnknown from "../images/icons/solarflare_unknown.png";
 import SolarFlareModerate from "../images/icons/solarflare_moderate.png";
 import SolarFlareStrong from "../images/icons/solarflare_strong.png";
 import SolarFlareExtreme from "../images/icons/solarflare_extreme.png";
-import MercuryImage from "../images/planets/mercury_small.png";
-import VenusImage from "../images/planets/venus_small.png";
-import EarthImage from "../images/planets/earth_small.png";
-import MarsImage from "../images/planets/mars_small.png";
 import AsteroidImage from "../images/asteroids/asteroid_belt_small.png";
-import JupiterImage from "../images/planets/jupiter_small.png";
-import SuperJovian from "../images/planets/superjovian_small.png";
-import UranusImage from "../images/planets/uranus_small.png";
-import SaturnImage from "../images/planets/saturn_small.png";
-import NeptuneImage from "../images/planets/neptune_small.png";
-import Neptunian from "../images/planets/neptunian_small.png";
-import SubNeptunian from "../images/planets/subneptunian_small.png";
-import KuiperImage from "../images/kuiper/kuiper_belt_small.png";
-import OortImage from "../images/oort/oort_cloud_small.png";
 import Blank from "../images/blank.png"
 import SubTerran from "../images/planets/subterran_small.png";
+import Terran from "../images/planets/terran_small.png";
 import SuperTerran from "../images/planets/superterran_small.png";
-
-interface Article {
-    id: string,
-    title: string,
-    imageUrl: string,
-    content: string,
-}
+import Neptunian from "../images/planets/neptunian_small.png";
+import SubNeptunian from "../images/planets/subneptunian_small.png";
+import Jovian from "../images/planets/jovian_small.png";
+import SuperJovian from "../images/planets/superjovian_small.png";
 
 const BreadCrumbs = styled.div`
 `;
@@ -70,12 +53,6 @@ height: 25px;
 text-align: center;
 `;
 
-const StarSystem = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-gap: 15px;
-padding-bottom: 25px;
-`;
 
 const StarSystemThree = styled.div`
 display: grid;
@@ -98,36 +75,7 @@ font-size: 11px;
 text-align: center;
 `;
 
-const CardsContainer = styled.div`
-padding: 4rem 0;
-display: flex;
-color: #000000;
-`;
 
-const Card = styled.div`
-height: 30rem;
-width: 32%;
-box-shadow: 0.1rem 0.1rem 1rem #ffffff;
-background-color: #ffffff;
-padding: 2rem;
-border-radius: 2rem;
-margin-right: 5rem;
-
-`;
-
-const Header = styled.h2`
-margin-top: 1rem;
-font-size: 1.5rem;
-`;
-
-const Content = styled.p`
-`;
-
-const Image = styled.img`
-width: 100%;
-height: 20rem;
-border-radius: 2rem;
-`;
 
 const TravelTime = styled.div`
 display: grid;
@@ -137,18 +85,9 @@ padding-bottom: 5px;
 border-bottom: 2px dashed #ffffff;
 `;
 
-const BrowseStarSystems = () => {
+const BrowseStarSystemsTwo = () => {
 
-    const [articles, setArticles] = useState<Article[]>([])
-
-    useEffect(() => {
-        fetchArticles()
-    }, [])
-
-    const fetchArticles = async () => {
-        const { data: response } = await axios.get("http://localhost:8080/articles");
-        setArticles(response);
-    };
+    
 
 
     return (
@@ -157,21 +96,21 @@ const BrowseStarSystems = () => {
         <BrowseBackground>
 
         <BreadCrumbs className="breadcrumbs">
-        <Link to="/dashboard" >Dashboard</Link> {'>'} Browse Star Systems: 0 to 10 Light Years (20 Total Stars and 15 Total Planets, representing 15 Star Systems, and 3 multi-planetary systems)
+        <Link to="/dashboard" >Dashboard</Link> {'>'} Browse Star Systems: 11 to 20 Light Years (? Total Stars and ? Total Planets, representing ? Star Systems, and ? multi-planetary systems)
         </BreadCrumbs>
 
 
         <div className="main-overview">
 
-                  <div className="overviewcardcurrent">
+                  <div className="overviewcard">
                   
-                    <div className="overviewcard__info">0-10<br/> Light Years</div>
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems0to10" >0-10<br/> Light Years</Link></div>
                     
                   </div>
 
-                  <div className="overviewcard">
+                  <div className="overviewcardcurrent">
                   
-                    <div className="overviewcard__info"><Link to="/BrowseStarSystems11to20" >11-20<br/> Light Years</Link></div>
+                    <div className="overviewcard__info">11-20<br/> Light Years</div>
                     
                   </div>
 
@@ -296,629 +235,45 @@ const BrowseStarSystems = () => {
 
               </div>
 
-         {/*Sol Star System Start*/}     
-
-        <StarTitle className="startitleyellow">Sol Star System</StarTitle>
-        <StarDistance>
-        The Sun is 8.3 Light Minutes or 92,398,072 Miles from Earth on Average<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy
-        </StarDistance>
+         
            
 
-        <StarSystem>
-        
-        <StarArea>
-            Sol
-        <img src={GStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "240px", height: "240px"}}/>
-        G2V Main Sequence Yellow Dwarf<br/><br/>
-        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Moderate Solar Flares
-        </StarArea>
-
-        <PlanetArea>
-        Mercury<br/>
-        Sol I<br/>
-        0.387 AU
-        <img src={MercuryImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "25px", height: "25px"}} />
-        
-        <br/>
-        <span className="hot">Hot</span> <span className="mercurian">Mercurian</span><br/>
-        <span className="gray">0.055 (EM)</span><br/>
-        <span className="gray">3,032 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Venus<br/>
-            Sol II<br/>
-            0.723 AU
-        <img src={VenusImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
-        <span className="extremelyhot">Extremely Hot</span><br/><span className="terran">Terran</span><br/>
-        <span className="gray">0.815 (EM)</span><br/>
-        <span className="red">7,520 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea className="habzone">
-            Earth<br/>
-            Sol III<br/>
-            1.000 AU
-        <img src={EarthImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
-        <span className="warm">Warm</span><br/><span className="terran">Terran</span><br/>
-        <span className="green">1.000 (EM)</span><br/>
-        <span className="green">7,918 Miles</span>
-        </PlanetArea>
-        
-
-        <PlanetArea className="habzone">
-            Mars<br/>
-            Sol IV<br/>
-            1.523 AU
-        <img src={MarsImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "40px", height: "40px"}} />
-        <span className="cold">Cold</span><br/><span className="subterran">SubTerran</span><br/>
-        <span className="gray">0.107 (EM)</span><br/>
-        <span className="gray">4,220 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Asteroid Belt<br/>
-            2.2 to 5.2 AU
-        <img src={AsteroidImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "155px"}}  />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-            Jupiter<br/>
-            Sol V<br/>
-            5.203 AU
-        <img src={JupiterImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "160px", height: "160px"}} />
-        <span className="freezing">Freezing</span><br/><span className="superjovian">Super Jovian</span><br/>
-        <span className="gray">317.83 (EM)</span><br/>
-        <span className="gray">177,692 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Saturn<br/>
-            Sol VI<br/>
-            9.538 AU
-        <img src={SaturnImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "280px", height: "140px"}} />
-        <span className="freezing">Freezing</span><br/><span className="jovian">Jovian</span><br/>
-        <span className="gray">95.161 (EM)</span><br/>
-        <span className="gray">74,898 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Uranus<br/>
-            Sol VII<br/>
-            19.819 AU
-        <img src={UranusImage} alt="Browse Star Systems" title="Browse Star Systems"style={{color: "#ffffff", width: "90px", height: "90px"}} />
-        <span className="freezing">Freezing</span><br/><span className="neptunian">Neptunian</span><br/>
-        <span className="gray">15.536 (EM)</span><br/>
-        <span className="gray">31,518 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Neptune<br/>
-            Sol VIII<br/>
-            30.058 AU
-        <img src={NeptuneImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "90px", height: "90px"}} />
-        <span className="freezing">Freezing</span><br/><span className="neptunian"> Neptunian</span><br/>
-        <span className="gray">17.148 (EM)</span><br/>
-        <span className="gray">30,598 Miles</span>
-        </PlanetArea>
-
-        <PlanetArea>
-            Kuiper Belt<br/>
-            40 to 700 AU
-        <img src={KuiperImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "155px"}} />
-        </PlanetArea>
-
-        <PlanetArea>
-            Oort Cloud<br/>
-            2,000 to 100,000 AU<br/>
-            <br/>
-        <img src={OortImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "200px"}} />
-        </PlanetArea>
-        <br/>
-        <br/>
-        
-        </StarSystem>
-        <SystemNotes>
-        The Sol Star System consists of 1 Star, 8 Major Planets, 5 Dwarf Planets, 1 Asteroid Belt, 1 Kuiper Belt, and 1 Oort Cloud. Earth and Mars orbit in the Potential Liquid Water Zone. Earth is the only Habitable Planet.<br/>
-        <br/>
-        <span className="traveltitleyellow">Travel Times to the Sun from Earth</span>
-        </SystemNotes>
-
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 1 Earth Year</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 56 Earth Days</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 28 Earth Days</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 14 Earth Days</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Sol Star System End*/}  
-        
-
-
-
-        {/*Proxima Centauri System Start*/}  
-        <StarTitle className="startitlered">Proxima Centauri Star System</StarTitle>   
+        {/*WISE 0350-5658 System Start*/}  
+        <StarTitle className="startitlebrown">WISE 0350-5658 Failed Star System</StarTitle>   
         <StarDistance>
-        4.2421 Light Years Away From Earth (Equals 1.3006 Parsecs or 24.937 Trillion Miles)<br/>
+        11.2080 Light Years Away From Earth (Equals 3.4363 Parsecs or 65.887 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-            Proxima Centauri
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M5.5 Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Extreme Solar Flares
-        </StarArea>
-
-        <PlanetArea>
-            Proxima b<br/> Proxima I<br/>
-            0.028 AU
-        <img src={SubTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "40px", height: "40px"}} />
-        <br/>Hot<br/> SubTerran<br/>
-        0.200 (EM)<br/>
-        ? Miles
-        </PlanetArea>
-
-        <PlanetArea className="habzone">
-            Proxima c<br/> Proxima II<br/>
-            0.0485 AU
-        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
-        Cold <br/>Super Terran<br/>
-        1.3 (EM)<br/>
-        8,710 Miles
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        Proxima d <br/>Proxima III<br/>
-        1.489 AU
-        <img src={Neptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "90px", height: "90px"}} />
-        Freezing Neptunian<br/>
-        12 (EM)<br/>
-        ? Miles
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Proxima Centauri Star System consists of 1 Star and 3 Major Planets. Proxima c orbits in the Potential Liquid Water Zone, indicated by a green background.<br/> 
-        <br/>
-        <span className="traveltitlered">Travel Times to Proxima Centauri from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 55,046 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 85.37 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 42.68 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 21.34 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Proxima Centauri System End*/}  
-        
-        
-
-
-
-        {/*Rigil Kentaurus System Start*/}  
-        <StarTitle className="startitleyellow">Rigil Kentaurus Star System (Formerly Alpha Centauri)</StarTitle>   
-        <StarDistance>
-        4.3650 Light Years Away From Earth (Equals 1.3383 Parsecs or 25.660 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-            Rigil Kentaurus A
-        <img src={GStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "240px", height: "240px"}}/>
-        G2 Main Sequence Yellow Dwarf<br/><br/>
-        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Moderate Solar Flares
-        
-        </StarArea>
-
-        <StarArea>
-            Rigil Kentaurus B
-        <img src={KStarImageTest} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "225px", height: "225px"}} />
-        K1V Main Sequence Orange Dwarf
-        </StarArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Rigil Kentaurus Star System consists of 2 Stars and 0 Planets.<br/> 
-        <br/>
-        <span className="traveltitleyellow">Travel Times to Rigil Kentaurus from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 56,641 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 87.34 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 43.92 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 21.96 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Rigil Kenetaurus System End*/}  
-
-
-
-        {/*Barnard's Star System Start*/}  
-        <StarTitle className="startitlered">Barnard's Star System</StarTitle>   
-        <StarDistance>
-        5.9630 Light Years Away From Earth (Equals 1.8282 Parsecs or 35.054 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-            Barnard's Star
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M4V Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Moderate Solar Flares
-        </StarArea>
-
-        <PlanetArea>
-            Barnard b<br/> Barnard I<br/>
-            0.40 AU
-        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        Freezing<br/> Sub Neptunian<br/>
-        3.2 (EM)<br/>
-        ? Miles
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Barnard's Star System consists of 1 Star and 1 Major Planet.<br/> 
-        <br/>
-        <span className="traveltitlered">Travel Times to Barnard's Star from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 77,377 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 120 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 60 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 30 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Barnard's Star System End*/}  
-
-
-        {/*WISE 1049-5319 System Start*/}  
-        <StarTitle className="startitlebrown">WISE 1049-5319 Failed Star System</StarTitle>   
-        <StarDistance>
-        6.5200 Light Years Away From Earth (Equals 1.999041 Parsecs or 38.328 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-        WISE 1049-5319 A
-        <img src={LStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "195px", height: "195px"}}/>
-        L7.5 Brown Failed SubDwarf<br/><br/>
+        WISE 0350-5658
+        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        Brown SubDwarf<br/><br/>
         <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
         Unknown Solar Flares
         </StarArea>
 
-        <StarArea>
-        WISE 1049-5319 B
-        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "180px", height: "180px"}} />
-        T0.5 Brown Failed SubDwarf
-        </StarArea>
-
         <PlanetArea>
-          
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
 
         <PlanetArea>
+            
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
 
         <PlanetArea>
         No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+          
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
@@ -965,9 +320,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The WISE 1049-5319 System consists of 2 Failed Stars and 0 Planets.<br/> 
+        The WISE 0350-5658 Failed Star System consists of 1 Failed Star and 0 Planets.<br/> 
         <br/>
-        <span className="traveltitlebrown">Travel Times to WISE 1049-5319 from Earth</span>
+        <span className="traveltitlebrown">Travel Times to WISE 0350-5658 from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -975,7 +330,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 84,605 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = 145,438 Earth Years</div>
             
             </div>
 
@@ -985,7 +340,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 131.21 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = 225.55 Earth Years</div>
             
             </div>
 
@@ -995,7 +350,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 65.60 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = 112.77 Earth Years</div>
             
             </div>
 
@@ -1005,562 +360,50 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 32.80 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = 56.39 Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*WISE 1049-5319 System End*/}  
+        {/*WISE 0350-5658 System End*/}  
+        
+        
 
 
 
-      {/*WISE WISE 0855-0714 System Start*/}  
-      <StarTitle className="startitlebrown">WISE 0855-0714 Failed Star System</StarTitle>   
+        {/*EZ Aquarii System Start*/}  
+        <StarTitle className="startitlered">EZ Aquarii Star System</StarTitle>   
         <StarDistance>
-        7.5300 Light Years Away From Earth (Equals 2.308708 Parsecs or 44.266 Trillion Miles)<br/>
+        11.2660 Light Years Away From Earth (Equals 3.4541 Parsecs or 66.228 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        WISE 0855-0714
-        <img src={SubStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "160px", height: "160px"}}/>
-        Sub-BD Brown Failed SubDwarf<br/><br/>
+        EZ Aquarii A
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M5V Main Sequence Red Sub Dwarf<br/><br/>
         <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
         Unknown Solar Flares
-        </StarArea>
-
-        <StarArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </StarArea>
 
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The WISE 0855-0714 System consists of 1 Failed Star and 0 Planets.<br/> 
-        <br/>
-        <span className="traveltitlebrown">Travel Times to WISE 0855-0714 from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 97,711 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 151.53 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 75.77 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 37.88 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*WISE 0855-0714 System End*/}  
-
-
-        {/*Wolf Star System Start*/}  
-        <StarTitle className="startitlered">Wolf 359 Star System</StarTitle>   
-        <StarDistance>
-        7.7825 Light Years Away From Earth (Equals 2.3861 Parsecs or 45.740 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
         <StarArea>
-            Wolf 359
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M6.5Ve Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Extreme Solar Flares
-        </StarArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Wolf 359 Star System consists of 1 Star and 0 Planets.<br/> 
-        <br/>
-        <span className="traveltitlered">Travel Times to Wolf 359 from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 100,987 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 156.61 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 78.31 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 39.15 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Wolf 359 Star System End*/}
-
-        {/*Lalande 21185 System Start*/}  
-        <StarTitle className="startitlered">Lalande 21185 Star System</StarTitle>   
-        <StarDistance>
-        8.2905 Light Years Away From Earth (Equals 2.5418 Parsecs or 48.736 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-        Lalande 21185
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M2.1Ve Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Moderate Solar Flares
-        </StarArea>
-
-        <PlanetArea>
-            Lalande b<br/> Lalande I<br/>
-            0.0695 AU
-        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "95px", height: "95px"}} />
-        Hot<br/> Sub Neptunian<br/>
-        3.8 (EM)<br/>
-        ? Miles
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Lalande 21185 System consists of 1 Star and 1 Major Planet.<br/> 
-        <br/>
-        <span className="traveltitlered">Travel Times to Lalande 21185 from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 107,579 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 166.84 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 83.42 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 41.71 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Lalande 21185 System End*/} 
-
-
-        {/*Sirius System Start*/}  
-        <StarTitle className="startitlewhite">Sirius Star System</StarTitle>   
-        <StarDistance>
-        8.5828 Light Years Away From Earth (Equals 2.6314 Parsecs or 50.455 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-        Sirius A
-        <img src={AStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "270px", height: "270px"}}/>
-        A1V SubGiant<br/><br/>
-        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Extreme Solar Flares
-        </StarArea>
-
-        <StarArea>
-        Sirius B
-        <img src={WhiteDwarfStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
-        DA2 White Dwarf
-        </StarArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The Sirius Star System consists of 2 Stars and 0 Planets.<br/> 
-        <br/>
-        <span className="traveltitlewhite">Travel Times to Sirius from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 111,372 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 172.72 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 86.36 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 43.18 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*Sirius System End*/} 
-
-
-
-        {/*Luyten 726-8 System Start*/}  
-        <StarTitle className="startitlered">Luyten 726-8 Star System</StarTitle>   
-        <StarDistance>
-        8.7280 Light Years Away From Earth (Equals 2.6760 Parsecs or 51.308 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-        Luyten 726-8 A
-        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M5.5V Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Unknown Solar Flares
-        </StarArea>
-
-        <StarArea>
-        Luyten 726-8 B
+        EZ Aquarii B
         <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}} />
-        M6V Main Sequence Red SubDwarf
+        M Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        EZ Aquarii c
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}} />
+        M Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
         </StarArea>
 
         <PlanetArea>
@@ -1622,9 +465,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Luyten 726-8 Star System consists of 2 Stars and 0 Planets.<br/> 
+        The EZ Aquarii Star System consists of 3 Stars and 0 Planets.<br/> 
         <br/>
-        <span className="traveltitlered">Travel Times to Luyten 726-8 from Earth</span>
+        <span className="traveltitlered">Travel Times to EZ Aquarii from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -1632,7 +475,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 113,256 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = 146,190 Earth Years</div>
             
             </div>
 
@@ -1642,7 +485,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 175.64 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = 226.71 Earth Years</div>
             
             </div>
 
@@ -1652,7 +495,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 87.82 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = 113.36 Earth Years</div>
             
             </div>
 
@@ -1662,27 +505,306 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 43.91 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = 56.58 Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Luyten 726-8 System End*/} 
+        {/*EZ Aquarii System End*/}  
 
 
 
-        {/*Ross 154 System Start*/}  
-        <StarTitle className="startitlered">Ross 154 Star System</StarTitle>   
+        {/*Procyon System Start*/}  
+        <StarTitle className="startitlelightyellow">Procyon Star System</StarTitle>   
         <StarDistance>
-        9.6813 Light Years Away From Earth (Equals 2.9683 Parsecs or 56.912 Trillion Miles)<br/>
+        11.4020 Light Years Away From Earth (Equals 3.4958 Parsecs or 67.028 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        Ross 154
+        Procyon A
+        <img src={FStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "255px", height: "255px"}}/>
+        F5V SubGiant<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        Procyon B
+        <img src={WhiteDwarfStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}}/>
+        DQZ White Dwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+          No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The Procyon Star System consists of 2 Stars and 0 Planets.<br/> 
+        <br/>
+        <span className="traveltitlelightyellow">Travel Times to Procyon from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 147,955 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 229.45 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 114.73 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 57.37 Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Procyon System End*/}  
+
+
+        {/*61 Cygni System Start*/}  
+        <StarTitle className="startitleorange">61 Cygni Star System</StarTitle>   
+        <StarDistance>
+        11.4030 Light Years Away From Earth (Equals 3.4961 Parsecs or 67.033 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        61 Cygni A
+        <img src={KStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "225px", height: "225px"}}/>
+        K5V Main Sequence Orange Dwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        61 Cygni B
+        <img src={KStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "225px", height: "225px"}} />
+        K7V Main Sequence Orange Dwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The 61 Cygni Star System consists of 2 Stars and 0 Planets.<br/> 
+        <br/>
+        <span className="traveltitleorange">Travel Times to 61 Cygni from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 147,968 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 229.47 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 114.74 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 57.37 Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*61 Cygni System End*/}  
+
+
+
+      {/*Struve 2398 System Start*/}  
+      <StarTitle className="startitlered">Struve 2398 Star System</StarTitle>   
+        <StarDistance>
+        11.5250 Light Years Away From Earth (Equals 3.5335 Parsecs or 67.751 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        Struve 2398 A
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M3V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        Struve 2398 B
         <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
         M3.5V Main Sequence Red SubDwarf<br/><br/>
         <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
@@ -1690,24 +812,18 @@ const BrowseStarSystems = () => {
         </StarArea>
 
         <PlanetArea>
+          
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
 
         <PlanetArea>
-          
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
 
         <PlanetArea>
         No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
@@ -1754,9 +870,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Ross 154 Star System consists of 1 Star and 0 Planets.<br/> 
+        The Struve 2398 Star System consists of 2 Stars and 0 Planets.<br/> 
         <br/>
-        <span className="traveltitlered">Travel Times to Ross 154 from Earth</span>
+        <span className="traveltitlered">Travel Times to Struve 2398 from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -1764,7 +880,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 125,627 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = 149,551 Earth Years</div>
             
             </div>
 
@@ -1774,7 +890,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 194.82 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = 231.93 Earth Years</div>
             
             </div>
 
@@ -1784,7 +900,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 97.41 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = 115.96 Earth Years</div>
             
             </div>
 
@@ -1794,34 +910,57 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 48.71 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = 57.98 Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Ross 154 Star System End*/}
+        {/*Struve 2398 System End*/}  
 
 
-
-        {/*Ross 248 System Start*/}  
-        <StarTitle className="startitlered">Ross 248 Star System</StarTitle>   
+        {/*Gliese 15 System Start*/}  
+        <StarTitle className="startitlered">Gliese 15 Star System</StarTitle>   
         <StarDistance>
-        10.3220 Light Years Away From Earth (Equals 3.1647 Parsecs or 60.679 Trillion Miles)<br/>
+        11.6240 Light Years Away From Earth (Equals 3.5639 Parsecs or 68.333 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        Ross 248
+        Gliese 15 A
         <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M6V Main Sequence Red SubDwarf<br/><br/>
-        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Unknown Solar Flares
+        M1.4V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Extreme Solar Flares
+        </StarArea>
+
+        <StarArea>
+        Gliese 15 B
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M4.1V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Extreme Solar Flares
         </StarArea>
 
         <PlanetArea>
+        Gliese 15 b<br/> Gliese 15 I<br/>
+            0.0717 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        <br/>Very Hot<br/> SubNeptunian<br/>
+        5.35 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+       
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
@@ -1833,20 +972,12 @@ const BrowseStarSystems = () => {
         </PlanetArea>
 
         <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
+        Gliese 15 c<br/> Gliese 15 II<br/>
+            5.18 AU
+        <img src={Jovian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "140px", height: "140px"}} />
+        <br/>Freezing<br/>Jovian<br/>
+        51.80 (EM)<br/>
+        ? Miles
         </PlanetArea>
 
         <PlanetArea>
@@ -1886,9 +1017,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Ross 248 Star System consists of 1 Star and 0 Planets.<br/> 
+        The Gliese 15 Star System consists of 2 Stars and 2 Major Planets.<br/> 
         <br/>
-        <span className="traveltitlered">Travel Times to Ross 248 from Earth</span>
+        <span className="traveltitlered">Travel Times to Gliese 15 from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -1896,7 +1027,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 133,941 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = 150,836 Earth Years</div>
             
             </div>
 
@@ -1906,7 +1037,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 207.72 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = 233.92 Earth Years</div>
             
             </div>
 
@@ -1916,7 +1047,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 103.86 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = 116.96 Earth Years</div>
             
             </div>
 
@@ -1926,161 +1057,45 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 51.93 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = 58.48 Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Ross 248 Star System End*/}
+        {/*Gliese 15 Star System End*/}
 
-
-        {/*WISE 1506+7207 System Start*/}  
-        <StarTitle className="startitlebrown">WISE 1506+7207 Failed Star System</StarTitle>   
+        {/*Epsilon Indi System Start*/}  
+        <StarTitle className="startitleorange">Epsilon Indi Star System</StarTitle>   
         <StarDistance>
-        10.5210 Light Years Away From Earth (Equals 3.2257 Parsecs or 61.849 Trillion Miles)<br/>
+        11.8240 Light Years Away From Earth (Equals 3.6252 Parsecs or 69.508 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        WISE 1506+7207
-        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "180px", height: "180px"}}/>
-        T6V Brown Failed SubDwarf<br/><br/>
-        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Unknown Solar Flares
-        </StarArea>
-
-        <StarArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </StarArea>
-
-        <PlanetArea>
-          
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        No Planets Discovered
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <PlanetArea>
-        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
-        
-        </PlanetArea>
-        
-        <br/>
-        <br/>
-
-        
-        
-        </StarSystemThree>
-        <SystemNotes>
-        The WISE 1506+7207 System consists of 1 Failed Star and 0 Planets.<br/> 
-        <br/>
-        <span className="traveltitlebrown">Travel Times to WISE 1506+7207 from Earth</span>
-        </SystemNotes>
-        
-        <TravelTime>
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Chemical Rocket = 136,523 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fission Rocket = 211.72 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Fusion Rocket = 105.86 Earth Years</div>
-            
-            </div>
-
-        </div>
-
-        <div className="travel-overview">
-
-            <div className="overviewcardtravel">
-
-            <div className="overviewcard__info">Laser Light Sail = 52.93 Earth Years</div>
-            
-            </div>
-
-        </div>
-        </TravelTime>
-        {/*WISE 1506+7207 System End*/}  
-        
-
-
-        {/*Epsilon Eridani System Start*/}  
-        <StarTitle className="startitleorange">Epsilon Eridani Star System</StarTitle>   
-        <StarDistance>
-        10.5220 Light Years Away From Earth (Equals 3.2260 Parsecs or 61.854 Trillion Miles)<br/>
-        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
-        </StarDistance>
-        <StarSystemThree>
-        
-        
-        <StarArea>
-        Epsilon Eridani
+        Epsilon Indi A
         <img src={KStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "225px", height: "225px"}}/>
-        K2V Main Sequence Orange SubDwarf<br/><br/>
-        <img src={SolarFlareStrong} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
-        Strong Solar Flares
+        K5V Main Sequence Orange Dwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        Epsilon Indi B
+        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "180px", height: "180px"}}/>
+        T1 Brown Failed SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        Epsilon Indi C
+        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "180px", height: "180px"}}/>
+        T6 Brown Failed SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
         </StarArea>
 
         <PlanetArea>
@@ -2100,17 +1115,16 @@ const BrowseStarSystems = () => {
 
         <PlanetArea>
           
-        Asteroid Belt
-            <img src={AsteroidImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "155px"}}  />
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
 
         <PlanetArea>
-        Aegir<br/> Epsilon I<br/>
-        3.39 AU
+        Epsilon b<br/> Epsilon I<br/>
+            12.8 AU
         <img src={SuperJovian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "160px", height: "160px"}} />
         Freezing<br/> Super Jovian<br/>
-        1.55 (JM)<br/>
+        2.7 (JM)<br/>
         ? Miles
         </PlanetArea>
 
@@ -2135,23 +1149,13 @@ const BrowseStarSystems = () => {
         </PlanetArea>
         
         <PlanetArea>
-        Asteroid Belt
-            <img src={AsteroidImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "155px"}}  />
-        
-        </PlanetArea>
-
-        <PlanetArea>
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
         </PlanetArea>
         
         <PlanetArea>
-        Ran<br/> Epsilon II<br/>
-        40 AU
-        <img src={Neptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "90px", height: "80px"}} />
-        Freezing<br/>Neptunian<br/>
-        31.75 (EM)<br/>
-        ? Miles
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
         </PlanetArea>
         
         <br/>
@@ -2161,9 +1165,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Epsilon Eridani Star System consists of 1 Star, 2 Major Planets, and 2 Asteroid Belts.<br/> 
+        The Epsilon Indi System consists of 3 Stars and 1 Major Planet.<br/> 
         <br/>
-        <span className="traveltitleorange">Travel Times to Epsilon Eridani from Earth</span>
+        <span className="traveltitleorange">Travel Times to Epsilon Indi from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -2171,7 +1175,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 136,536 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = 153,431 Earth Years</div>
             
             </div>
 
@@ -2181,7 +1185,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 211.74 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = 237.94 Earth Years</div>
             
             </div>
 
@@ -2191,7 +1195,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 105.87 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = 118.97 Earth Years</div>
             
             </div>
 
@@ -2201,31 +1205,448 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 52.94 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = 59.49 Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Epsilon Eridani System End*/}  
+        {/*Epsilon Indi System End*/} 
 
 
-
-        {/*Lacaille 9352 System Start*/}  
-        <StarTitle className="startitlered">Lacaille 9352 Star System</StarTitle>   
+        {/*DX Cancri System Start*/}  
+        <StarTitle className="startitlered">DX Cancri Star System</StarTitle>   
         <StarDistance>
-        10.7420 Light Years Away From Earth (Equals 3.2935 Parsecs or 63.148 Trillion Miles)<br/>
+        11.8260 Light Years Away From Earth (Equals 3.6258 Parsecs or 69.520 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        Lacaille 9352
+        DX Cancri
         <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M0.5V Main Sequence Red SubDwarf<br/><br/>
+        M6.5V Main Sequence Red SubDwarf<br/><br/>
         <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
         Unknown Solar Flares
+        </StarArea>
+
+        
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The DX Cancri Star System consists of 1 Star and 0 Planets.<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to DX Cancri from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = 153,457 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = 237.98 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = 118.99 Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = 59.50 Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*DX Cancri System End*/} 
+
+
+
+        {/*Tau Ceti System Start*/}  
+        <StarTitle className="startitleyellow">Tau Ceti Star System</StarTitle>   
+        <StarDistance>
+        11.8870 Light Years Away From Earth (Equals 2.6445 Parsecs or 69.879 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        Tau Ceti
+        <img src={GStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "240px", height: "240px"}}/>
+        G8.5V Main Sequence Yellow Dwarf<br/><br/>
+        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Moderate Solar Flares
+        </StarArea>
+
+        
+
+        <PlanetArea>
+          
+        Tau Ceti b<br/> Tau Ceti I<br/>
+        0.133 AU
+        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
+        Very Hot<br/> Super Terran<br/>
+        1.75 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        Tau Ceti c<br/> Tau Ceti II<br/>
+        0.243 AU
+        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
+        Very Hot<br/> Super Terran<br/>
+        1.83 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        
+        Tau Ceti d<br/> Tau Ceti III<br/>
+        0.538 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Hot<br/> SubNeptunian<br/>
+        3.93 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea className="habzone">
+        Tau Ceti e<br/> Tau Ceti IV<br/>
+        1.334 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Cold<br/> SubNeptunian<br/>
+        3.93 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        Asteroid Belt<br/>
+            6.2 AU
+        <img src={AsteroidImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50px", height: "155px"}}  />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The Tau Ceti Star System consists of 1 Star, 4 Major Planets, and 1 Asteroid Belt. Tau Ceti IV orbits in the potential liquid water zone. Does it have large Habitable Moons?<br/> 
+        <br/>
+        <span className="traveltitleyellow">Travel Times to Tau Ceti from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Tau Ceti System End*/} 
+
+
+
+        {/*GJ 1061 System Start*/}  
+        <StarTitle className="startitlered">GJ 1061 Star System</StarTitle>   
+        <StarDistance>
+        11.9910 Light Years Away From Earth (Equals 3.6764 Parsecs or 70.490 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        GJ 1061
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M5.5V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Moderate Solar Flares
+        </StarArea>
+
+        <PlanetArea>
+        GJ 1061 b<br/> GJ 1061 I<br/>
+        0.021 AU
+        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
+        Hot<br/> Super Terran<br/>
+        1.38 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea className="habzone">
+          
+        GJ 1061 c<br/> GJ 1061 II<br/>
+        0.035 AU
+        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
+        Warm<br/> Super Terran<br/>
+        1.75 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea className="habzone">
+        
+        GJ 1061 d<br/> GJ 1061 III<br/>
+        0.054 AU
+        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
+        Warm<br/> Super Terran<br/>
+        1.68 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The GJ 1061 Star System consists of 1 Star and 3 Planets. GJ 1061 II and GJ 1061 III both orbit in the potential liquid water zone. Do these planets support life?<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to GJ 1061 from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*GJ 1061 Star System End*/}
+
+
+
+        {/*YZ Ceti System Start*/}  
+        <StarTitle className="startitlered">YZ Ceti Star System</StarTitle>   
+        <StarDistance>
+        12.1320 Light Years Away From Earth (Equals 3.7196 Parsecs or 71.319 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        YZ Ceti
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M4.5V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareExtreme} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Extreme Solar Flares
         </StarArea>
 
         <PlanetArea>
@@ -2293,9 +1714,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Lacaille 9352 Star System consists of 1 Star and 0 Planets.<br/> 
+        The YZ Ceti Star System consists of 1 Star and 0 Planets.<br/> 
         <br/>
-        <span className="traveltitlered">Travel Times to Lacaille 9352 from Earth</span>
+        <span className="traveltitlered">Travel Times to YZ Ceti from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -2303,7 +1724,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 139,931 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2313,7 +1734,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 216.17 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2323,7 +1744,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 108.18 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2333,44 +1754,472 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 54.05 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Lacaille 9352 Star System End*/}
+        {/*YZ Ceti Star System End*/}
 
 
-        {/*Ross 128 System Start*/}  
-        <StarTitle className="startitlered">Ross 128 Star System</StarTitle>   
+        {/*Luyten's Star System Start*/}  
+        <StarTitle className="startitlered">Luyten's Star System</StarTitle>   
         <StarDistance>
-        10.9190 Light Years Away From Earth (Equals 3.3477 Parsecs or 64.188 Trillion Miles)<br/>
+        12.3660 Light Years Away From Earth (Equals 3.7822 Parsecs or 72.518 Trillion Miles)<br/>
         Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
         </StarDistance>
         <StarSystemThree>
         
         
         <StarArea>
-        Ross 128
+        Luyten's Star
         <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
-        M4V Main Sequence Red SubDwarf<br/><br/>
+        M3.5V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Moderate Solar Flares
+        </StarArea>
+
+        
+
+        <PlanetArea>
+          
+        Luyten b<br/> Luyten I<br/>
+        0.0364 AU
+        <img src={Terran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
+        Hot<br/> Terran<br/>
+        1.18 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea className="habzone">
+        Luyten c<br/> Luyten II<br/>
+        0.0911 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Warm<br/> SubNeptunian<br/>
+        2.89 (EM)<br/>
+        11,877 Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        Luyten d<br/> Luyten III<br/>
+        0.712 AU
+        <img src={Neptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "90px", height: "90px"}} />
+        Freezing<br/> Neptunian<br/>
+        10.8 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        Luyten e<br/> Luyten IV<br/>
+        0.849 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Freezing<br/> SubNeptunian<br/>
+        9.3 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The Luyten's Star System consists of 1 Star and 4 Planets. Luyten's Star II orbits in the potential liquid water zone. Does it have large Habitable Moons?<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to Luyten's Star from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Luyten's Star System End*/}  
+        
+
+
+        {/*Teegarden's Star System Start*/}  
+        <StarTitle className="startitlered">Teegarden's Star System</StarTitle>   
+        <StarDistance>
+        12.5140 Light Years Away From Earth (Equals 3.8368 Parsecs or 73.565 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        Teegarden's Star
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M6.5V Main Sequence Red SubDwarf<br/><br/>
         <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
         Moderate Solar Flares
         </StarArea>
 
         <PlanetArea className="habzone">
-            Ross 128 b<br/> Ross 128 I<br/>
-            0.0493 AU
-        <img src={SuperTerran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "70px", height: "70px"}} />
-        Warm<br/> Super Terran<br/>
-        1.35 (EM)<br/>
-        8,710 Miles
+        Teegarden b<br/> Teegarden I<br/>
+        0.0252 AU
+        <img src={Terran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
+        Warm<br/>Terran<br/>
+        1.05 (EM)<br/>
+        ? Miles
+        </PlanetArea>
+
+        <PlanetArea className="habzone">
+        Teegarden c<br/> Teegarden II<br/>
+        0.0443 AU
+        <img src={Terran} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "60px", height: "60px"}} />
+        Cold<br/>Terran<br/>
+        1.11 (EM)<br/>
+        ? Miles
         </PlanetArea>
 
         <PlanetArea>
         <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
         
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The Teegarden's Star System consists of 1 Star, and 2 Major Planets. Teegarden's Star I and Teegarden's Star II both orbit in the potential liquid water zone. Are they home to life?<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to Teegarden's Star from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Teegarden's Star System End*/}  
+
+
+
+        {/*SCR 1845-6357 System Start*/}  
+        <StarTitle className="startitlered">SCR 1845-6357 Star System</StarTitle>   
+        <StarDistance>
+        12.5710 Light Years Away From Earth (Equals 3.8542 Parsecs or 73.900 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        SCR 1845-6357 A
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M8.5V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <StarArea>
+        SCR 1845-6357 B
+        <img src={TStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "180px", height: "180px"}}/>
+        T Brown SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+          
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The SCR 1845-6357 Star System consists of 1 Star, 1 Failed Star, and 0 Planets.<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to SCR 1845-6357 from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*SCR 1845-6357 Star System End*/}
+
+
+        {/*Kapteyn's Star System Start*/}  
+        <StarTitle className="startitlered">Kapteyn's Star System</StarTitle>   
+        <StarDistance>
+        12.770 Light Years Away From Earth (Equals 3.9174 Parsecs or 75.111 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        Kapteyn's Star
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M1V Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareModerate} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Moderate Solar Flares
+        </StarArea>
+
+        <PlanetArea className="habzone">
+            Kapteyn b<br/> Kapteyn I<br/>
+            0.168 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Cold<br/> SubNeptunian<br/>
+        4.8 (EM)<br/>
+        11,877 Miles
+        </PlanetArea>
+
+        <PlanetArea>
+        Kapteyn c<br/> Kapteyn II<br/>
+            0.311 AU
+        <img src={SubNeptunian} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        Freezing<br/> SubNeptunian<br/>
+        7.0 (EM)<br/>
+        ? Miles
         </PlanetArea>
 
         <PlanetArea>
@@ -2426,9 +2275,9 @@ const BrowseStarSystems = () => {
         
         </StarSystemThree>
         <SystemNotes>
-        The Ross 128 Star System consists of 1 Star and 1 Major Planet. Ross 128 b orbits in the potential liquid water zone, indicated by a green background.<br/> 
+        The Kapteyn's Star System consists of 1 Star and 2 Major Planets. Kapteyn's Star I orbits in the potential liquid water zone. Does it have large Habitable Moons?<br/> 
         <br/>
-        <span className="traveltitlered">Travel Times to Ross 128 Star from Earth</span>
+        <span className="traveltitlered">Travel Times to Kapteyn's Star from Earth</span>
         </SystemNotes>
         
         <TravelTime>
@@ -2436,7 +2285,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Chemical Rocket = 77,377 Earth Years</div>
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2446,7 +2295,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fission Rocket = 120 Earth Years</div>
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2456,7 +2305,7 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Fusion Rocket = 60 Earth Years</div>
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
             
             </div>
 
@@ -2466,25 +2315,143 @@ const BrowseStarSystems = () => {
 
             <div className="overviewcardtravel">
 
-            <div className="overviewcard__info">Laser Light Sail = 30 Earth Years</div>
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
             
             </div>
 
         </div>
         </TravelTime>
-        {/*Ross 128 System End*/} 
+        {/*Kapteyn's Star System End*/} 
         
         
-        <CardsContainer>
-            {articles.map(article => (
-                <Card key={article.id}>
-                    <Image src={article.imageUrl}></Image>
-                    <Header>{article.title}</Header>
-                    <Content>{article.content}</Content>
-                </Card>
-            ))}
-        </CardsContainer> 
         
+        {/*Lacaille 8760 System Start*/}  
+        <StarTitle className="startitlered">Lacaille 8760 Star System</StarTitle>   
+        <StarDistance>
+        12.8700 Light Years Away From Earth (Equals 3.9459 Parsecs or 75.657 Trillion Miles)<br/>
+        Located in the Local Fluff of the Local Bubble of the Orion Arm of the Milky Way Galaxy<br/>
+        </StarDistance>
+        <StarSystemThree>
+        
+        
+        <StarArea>
+        Lacaille 8760
+        <img src={MStarImage} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "210px", height: "210px"}}/>
+        M0Ve Main Sequence Red SubDwarf<br/><br/>
+        <img src={SolarFlareUnknown} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "35px", height: "35px"}} />
+        Unknown Solar Flares
+        </StarArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+          No Planets Discovered
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <PlanetArea>
+        <img src={Blank} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "80px", height: "80px"}} />
+        
+        </PlanetArea>
+        
+        <br/>
+        <br/>
+
+        
+        
+        </StarSystemThree>
+        <SystemNotes>
+        The Lacaille 8760 Star System consists of 1 Star and 0 Planets.<br/> 
+        <br/>
+        <span className="traveltitlered">Travel Times to Lacaille 8760 from Earth</span>
+        </SystemNotes>
+        
+        <TravelTime>
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Chemical Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fission Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Fusion Rocket = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+
+        <div className="travel-overview">
+
+            <div className="overviewcardtravel">
+
+            <div className="overviewcard__info">Laser Light Sail = ? Earth Years</div>
+            
+            </div>
+
+        </div>
+        </TravelTime>
+        {/*Lacaille 8760 System End*/} 
          
         
         </BrowseBackground>
@@ -2493,4 +2460,4 @@ const BrowseStarSystems = () => {
     );
 };
 
-export default BrowseStarSystems;
+export default BrowseStarSystemsTwo;

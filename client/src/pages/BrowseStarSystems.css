@@ -100,6 +100,16 @@ font-weight: bold;
 
   .startitleyellow {
     font-weight: bold;
+    color: #fce138;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: verdana;
+  }
+
+  .startitlelightyellow {
+    font-weight: bold;
     color: #F9E79F;
     font-size: 40px;
     margin-bottom: 20px;
@@ -180,6 +190,12 @@ font-weight: bold;
       font-size: 14px;
   }
 
+  .traveltitlelightyellow {
+    color: #F9E79F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
   .traveltitlered {
     color: #FE0303;
     font-weight: bold;
@@ -204,4 +220,59 @@ font-weight: bold;
   font-size: 14px;
 }
 
+.red {
+  color: #FE0303;
+}
+
+.green {
+  color: #05FC01;
+}
+
+.gray {
+  color: #BDC3C7;
+}
+
+.extremelyhot {
+  color: #E5FC01;
+}
+
+.hot {
+  color: #FE0303;
+}
+
+.warm {
+  color: #05FC01;
+}
+
+.cold {
+  color: #7897FF;
+}
+
+.freezing {
+  color: #02FBFE;
+}
+
+
+.mercurian {
+  color: #AF7AC5;
+}
+
+.subterran {
+  color: #7897FF;
+}
+
+.terran {
+  color: #05FC01;
+}
+
+.neptunian {
+  color: #E5FC01;
+}
+
+.jovian {
+  color: #FE7A78;
+}
   
+.superjovian {
+  color: #FE0303;
+}
