@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import "./AlienSpecies.css";
 import { Link } from "react-router-dom";
-
+import DataBanner from "../images/databanner.jpg";
 
 
 
@@ -14,6 +13,28 @@ width: 100%;
 `;
 
 
+const HeaderImage = styled.div`
+width: 100%;
+height: 400px;
+margin-bottom: 20px;
+`;
+
+const SightingContainer = styled.div`
+width: 100%;
+height: 200px;
+`;
+
+const SightingContent = styled.div`
+width: 97%;
+height: 150px;
+color: #ffffff;
+background-color: #1A5276;
+border: 2px solid #ffffff;
+border-radius:25px;
+margin-left: 20px;
+margin-right: 20px;
+padding: 10px;
+`;
 
 
 
@@ -36,9 +57,18 @@ const DataSources = () => {
         <Link to="/dashboard" >Dashboard</Link> {'>'} Data Sources
         </BreadCrumbs>
 
-        Sources
+        <HeaderImage>
+        <img src={DataBanner} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "100%", height: "100%"}}/>
+        </HeaderImage>
+
         
-        
+
+        <SightingContainer>
+        <SightingContent>
+           Data Sources
+        </SightingContent>
+        </SightingContainer>
+
         
          
         
