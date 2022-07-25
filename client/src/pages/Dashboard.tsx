@@ -257,19 +257,19 @@ const Dashboard = () => {
               </div>
 
               <div className="main-cards">
-                <div className="card">Galaxy Map
+                <div className="card"><Link to="/GalaxyMap" >Galaxy Map</Link>
                 <img src={DashboardGalaxy} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
                 </div>
-                <div className="card">Space Companies
+                <div className="card"><Link to="/Companies" >Space Companies</Link>
                 <img src={DashboardCompanies} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
                 
                 </div>
 
-                <div className="card">Space Technology
+                <div className="card"><Link to="/Technology" >Space Technology</Link>
                 <img src={DashboardTechnology} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
                 
                 </div>
-                <div className="card">Space Careers
+                <div className="card"><Link to="/Careers" >Space Careers</Link>
                 <img src={DashboardCareers} alt="Earthlike Candidates" title="Earthlike Candidates" style={{color: "#ffffff", width: "100%", height: "90%"}}/>
                 
                 </div>

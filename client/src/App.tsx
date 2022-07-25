@@ -23,6 +23,10 @@ import StarPlanetClassify from "./pages/StarPlanetClassify";
 import SearchStarSystem from "./pages/SearchStarSystem";
 import Community from "./pages/Community";
 import DataSources from "./pages/DataSources";
+import Careers from "./pages/Careers";
+import Companies from "./pages/Companies";
+import GalaxyMap from "./pages/GalaxyMap";
+import Technology from "./pages/Technology";
 
 
 function App() {
@@ -95,6 +99,22 @@ function App() {
 
         <Route path="/datasources" element={<ProtectedRoute />}>
         <Route path="/datasources" element={<DataSources />}/>
+        </Route>
+
+        <Route path="/careers" element={<ProtectedRoute />}>
+        <Route path="/careers" element={<Careers />}/>
+        </Route>
+
+        <Route path="/companies" element={<ProtectedRoute />}>
+        <Route path="/companies" element={<Companies />}/>
+        </Route>
+
+        <Route path="/galaxymap" element={<ProtectedRoute />}>
+        <Route path="/galaxymap" element={<GalaxyMap />}/>
+        </Route>
+
+        <Route path="/technology" element={<ProtectedRoute />}>
+        <Route path="/technology" element={<Technology />}/>
         </Route>
 
         
