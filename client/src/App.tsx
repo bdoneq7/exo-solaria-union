@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+import LoadingScreen from './components/Loading/Loading';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
@@ -24,7 +26,17 @@ import DataSources from "./pages/DataSources";
 
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  }, [])
+
   return (
+
+    <>
+    {loading === false ? (
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -90,7 +102,10 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
-    
+      ) : (
+        <LoadingScreen />
+      )}
+      </>
   );
 }
 

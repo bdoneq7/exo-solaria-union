@@ -65,10 +65,15 @@ const Community = () => {
 
         <SightingContainer>
         <SightingContent>
-           Space Community
+           Community Forum
         </SightingContent>
         </SightingContainer>
 
+        <SightingContainer>
+        <SightingContent>
+           Courses?
+        </SightingContent>
+        </SightingContainer>
         
          
         

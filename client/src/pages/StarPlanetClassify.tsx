@@ -19,10 +19,12 @@ height: 400px;
 margin-bottom: 20px;
 `;
 
+
 const SightingContainer = styled.div`
 width: 100%;
 height: 200px;
 `;
+
 
 const SightingContent = styled.div`
 width: 97%;
@@ -62,10 +64,17 @@ const StarPlanetClassify = () => {
         </HeaderImage>
 
         
+        
 
         <SightingContainer>
         <SightingContent>
-           Classification
+           Star Classifications
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+           Planet Classifications
         </SightingContent>
         </SightingContainer>
 

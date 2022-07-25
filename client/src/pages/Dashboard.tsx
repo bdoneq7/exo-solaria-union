@@ -19,6 +19,7 @@ import DashboardTechnology from "../images/dashboard_technology.jpg";
 import DashboardCompanies from "../images/dashboard_companies.jpg";
 import "./Dashboard.css";
 import { Card, Button } from "react-bootstrap";
+import LoadingScreen from './../components/Loading/Loading';
 
 
 
@@ -105,6 +106,11 @@ box-shadow: 0.1rem 0.1rem 1rem rgba(19, 20, 19, 0.342);
 
 const Dashboard = () => {
 
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  }, [])
   
 
     const [articles, setArticles] = useState<Article[]>([])
@@ -148,18 +154,25 @@ const Dashboard = () => {
     
 
     return (
+      <>
+      {loading === false ? (
+      
     <DashboardBackground>    
     <Container>
  
         {articles.length ? (
+
+        
         <DashboardBackground>
+
+            
             <BlankContainer></BlankContainer>
 
             <div className="grid-container">
 
               <header className="header">
                 
-                <div className="header__search">Welcome, Insert Email</div>
+                <div className="header__search">Welcome Back, Insert Username!</div>
                 
                 <div className="header__avatar">What will you Discover Today?</div>
               </header>
@@ -307,6 +320,12 @@ const Dashboard = () => {
         )}
     </Container>
     </DashboardBackground>
+
+) : (
+  <LoadingScreen />
+)}
+</>
+
     );
 };
 

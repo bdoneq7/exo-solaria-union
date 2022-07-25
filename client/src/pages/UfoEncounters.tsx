@@ -22,9 +22,19 @@ height: 400px;
 margin-bottom: 20px;
 `;
 
+const ObservableContainer = styled.div`
+width: 100%;
+height: 175px;
+`;
+
 const SightingContainer = styled.div`
 width: 100%;
-height: 200px;
+height: 175px;
+`;
+
+const FilterContainer = styled.div`
+width: 100%;
+height: 75px;
 `;
 
 const SightingContent = styled.div`
@@ -42,6 +52,18 @@ padding: 10px;
 const ObservableContent = styled.div`
 width: 97%;
 height: 150px;
+color: #000000;
+background-color: #ffffff;
+border: 2px solid #000000;
+border-radius:25px;
+margin-left: 20px;
+margin-right: 20px;
+padding: 10px;
+`;
+
+const FilterContent = styled.div`
+width: 97%;
+height: 50px;
 color: #000000;
 background-color: #F4D03F;
 border: 2px solid #000000;
@@ -74,7 +96,7 @@ const UfoEncounters = () => {
         <img src={UfoHeader} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "100%", height: "100%"}}/>
         </HeaderImage>
 
-        <SightingContainer>
+        <ObservableContainer>
         <ObservableContent>
             6 UFO OBSERVABLES:<br/><br/>
             1. Instantaneous Acceleration &nbsp;&nbsp;
@@ -84,13 +106,21 @@ const UfoEncounters = () => {
             5. Low Observability &nbsp;&nbsp;
             6. Biological Effects
             </ObservableContent>
-        </SightingContainer>
+        </ObservableContainer>
+
+        <FilterContainer>
+        <FilterContent>
+            FILTER BY: TYPE | YEAR | LOCATION
+            </FilterContent>
+        </FilterContainer>
 
         <SightingContainer>
+
         <SightingContent>
             June 1947: Mount Rainier, Washington [GLOWING UFO'S]<br/><br/>
             Civilian pilot Kenneth Arnold reported seeing nine glowing objects flying in a “V” formation over Mount Rainier—at an estimated speed of 1,700 m.p.h. He compared their motion to “a saucer if you skip it across water,” which news reports translated as the shape of the crafts themselves. Air Force investigators deemed Arnold a credible witness, but concluded what he had seen was a mirage.
         </SightingContent>
+        
         </SightingContainer>
 
         <SightingContainer>

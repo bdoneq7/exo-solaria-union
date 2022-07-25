@@ -65,11 +65,51 @@ const SpaceMissions = () => {
 
         <SightingContainer>
         <SightingContent>
-           Space Missions
+        MISSION 1: BRING TOGETHER A GLOBAL COMMUNITY OF SPACE VISIONARIES
         </SightingContent>
         </SightingContainer>
 
-        
+        <SightingContainer>
+        <SightingContent>
+        MISSION 2: BUILD REUSABLE INTER-PLANETARY SPACECRAFT
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 3: BUILD AN EARTH ORBITAL COLONY
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 4: BUILD A SURFACE MOON COLONY
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 5: BUILD A SURFACE MARS COLONY
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 6: MINE ASTEROIDS
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 7: BUILD AN ORBITAL VENUS COLONY
+        </SightingContent>
+        </SightingContainer>
+
+        <SightingContainer>
+        <SightingContent>
+        MISSION 8: BUILD A GANYMEDE SURFACE COLONY
+        </SightingContent>
+        </SightingContainer>
          
         
         </BrowseBackground>
