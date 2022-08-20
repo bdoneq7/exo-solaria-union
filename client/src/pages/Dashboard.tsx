@@ -109,9 +109,12 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000)
+    setTimeout(() => setLoading(false), 1000)
   }, [])
   
+  // Const email for useState
+  // UseEffect to fetch email
+  // const fetchEmail async function
 
     const [articles, setArticles] = useState<Article[]>([])
 
@@ -172,7 +175,7 @@ const Dashboard = () => {
 
               <header className="header">
                 
-                <div className="header__search">Welcome Back, Insert Username!</div>
+                <div className="header__search">Welcome Back, !</div>
                 
                 <div className="header__avatar">What will you Discover Today?</div>
               </header>
@@ -185,12 +188,11 @@ const Dashboard = () => {
               
 
                 <ul className="sidenav__list">
-                  <li className="sidenav__list-item">Profile</li>
-                  <li className="sidenav__list-item">Account</li>
-                  <li className="sidenav__list-item">Billing</li>
-                  <li className="sidenav__list-item">Password</li>
-                  <li className="sidenav__list-item">Notifications</li>
-                  <li className="sidenav__list-item">Support</li>
+                  <li className="sidenav__list-item"><Link to="/Account" >Account</Link></li>
+                  <li className="sidenav__list-item"><Link to="/Billing" >Billing</Link></li>
+                  <li className="sidenav__list-item"><Link to="/Password" >Password</Link></li>
+                  <li className="sidenav__list-item"><Link to="/Notifications" >Notifications</Link></li>
+                  <li className="sidenav__list-item"><Link to="/Support" >Support</Link></li>
                 </ul>
               </aside>
 
@@ -220,14 +222,14 @@ const Dashboard = () => {
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={BrowseSystemIcon} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
                     
-                    <div className="overviewcard__info"><Link to="/BrowseStarSystems0to10" >Browse Star Systems</Link></div>
+                    <div className="overviewcard__info"><Link to="/BrowseStarSystems0to10" >Browse Star Systems and Planets</Link></div>
                     
                   </div>
                   
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={SearchIcon} alt="Search Star System" title="Search Star System" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info"><Link to="/SearchStarSystem" >Search Star System</Link></div>
+                    <div className="overviewcard__info"><Link to="/SearchStarSystem" >Search Star Systems and Planets</Link></div>
                   </div>
 
                   
@@ -239,17 +241,17 @@ const Dashboard = () => {
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={AliensIcon} alt="Alien Species" title="Alien Species" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info"><Link to="/AlienSpecies" >Alien Species</Link></div>
+                    <div className="overviewcard__info"><Link to="/AlienSpecies" >Alien Species and Civilizations</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={UfoIcon} alt="UFO / UAP Encounters" title="UFO / UAP Encounters" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info"><Link to="/UfoEncounters" >UFO / UAP Encounters</Link></div>
+                    <div className="overviewcard__info"><Link to="/UfoEncounters" >UFO / UAP Craft Encounters</Link></div>
                   </div>
 
                   <div className="overviewcarddashboard">
                     <div className="overviewcard__icon"><img src={DataIcon} alt="Data Sources" title="Data Sources" style={{color: "#ffffff", width: "50%", height: "50%"}}/></div>
-                    <div className="overviewcard__info"><Link to="/DataSources" >Data Sources</Link></div>
+                    <div className="overviewcard__info"><Link to="/DataSources" >Exo Solaria Union Data Sources</Link></div>
                   </div>
 
                   

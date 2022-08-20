@@ -16,7 +16,7 @@ interface ModalProps {
 
 const ErrorMessage = styled.p`
 color: red
-`
+`;
 
 const ModalComponent = ({ text, variant, isSignupFlow }: ModalProps) => {
 

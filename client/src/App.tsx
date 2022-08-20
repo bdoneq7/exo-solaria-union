@@ -27,6 +27,12 @@ import Careers from "./pages/Careers";
 import Companies from "./pages/Companies";
 import GalaxyMap from "./pages/GalaxyMap";
 import Technology from "./pages/Technology";
+import Account from "./pages/Account";
+import Billing from "./pages/Billing";
+import Notifications from "./pages/Notifications";
+import Password from "./pages/Password";
+import Support from "./pages/Support";
+import RoswellNewMexico from "./pages/RoswellNewMexico";
 
 
 function App() {
@@ -115,6 +121,30 @@ function App() {
 
         <Route path="/technology" element={<ProtectedRoute />}>
         <Route path="/technology" element={<Technology />}/>
+        </Route>
+
+        <Route path="/account" element={<ProtectedRoute />}>
+        <Route path="/account" element={<Account />}/>
+        </Route>
+
+        <Route path="/billing" element={<ProtectedRoute />}>
+        <Route path="/billing" element={<Billing />}/>
+        </Route>
+
+        <Route path="/notifications" element={<ProtectedRoute />}>
+        <Route path="/notifications" element={<Notifications />}/>
+        </Route>
+
+        <Route path="/password" element={<ProtectedRoute />}>
+        <Route path="/password" element={<Password />}/>
+        </Route>
+
+        <Route path="/support" element={<ProtectedRoute />}>
+        <Route path="/support" element={<Support />}/>
+        </Route>
+
+        <Route path="/roswellnewmexico" element={<ProtectedRoute />}>
+        <Route path="/roswellnewmexico" element={<RoswellNewMexico />}/>
         </Route>
 
         
