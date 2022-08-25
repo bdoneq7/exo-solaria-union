@@ -9,8 +9,6 @@ import cors from "cors";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
-
 mongoose.connect(
     process.env.MONGO_URI as string)
 .then(() => {
@@ -25,7 +23,7 @@ mongoose.connect(
     app.use("/articles", articlesRoutes);
     app.use("/starsystem", StarSystemRoutes);
 
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || 3000, () => {
         console.log(`Now Listening to Port`)
     });
 
