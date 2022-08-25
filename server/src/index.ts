@@ -9,6 +9,8 @@ import cors from "cors";
 
 dotenv.config();
 
+const PORT = process.env.PORT;
+
 mongoose.connect(
     process.env.MONGO_URI as string)
 .then(() => {
@@ -23,9 +25,13 @@ mongoose.connect(
     app.use("/articles", articlesRoutes);
     app.use("/starsystem", StarSystemRoutes);
 
-    app.listen(8080, () => {
-        console.log(`Now Listening to port 8080`)
+    app.listen(PORT, () => {
+        console.log(`Now Listening to Port`)
     });
+
+    // app.listen(8080, () => {
+    //     console.log(`Now Listening to port 8080`)
+    // });
 })
 .catch((error) => {
     console.log(error)
