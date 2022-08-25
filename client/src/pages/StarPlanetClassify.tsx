@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import "./StarPlanetClassify.css";
 import ClassifyBanner from "../images/classifybanner.jpg";
+import WolfRayetStarImage from "../images/stars/wolf_rayet_star.png";
+import OStarImage from "../images/stars/o_class_star.png";
+import BStarImage from "../images/stars/b_class_star.png";
+import FStarImage from "../images/stars/f_class_star.png";
 import AStarImage from "../images/stars/a_class_star.png";
 import GStarImage from "../images/stars/g_class_star.png";
 import KStarImage from "../images/stars/k_class_star.png";
@@ -124,7 +129,482 @@ const StarPlanetClassify = () => {
         </SightingContainer>
 
 
+
+        <StarClass>
         
+        <StarArea>
+            Hyper Giant Class Star
+        <img src={BStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "355px", height: "355px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="lightblue">Surface Temperature</span><br/>
+        ? K to 53,000 K<br/>
+        ? F to 94,940 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Core Temperature</span><br/>
+            ? K to ? K<br/>
+            ? F to ? F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Solar Masses</span><br/>
+            75 to 315
+        
+        </ParameterArea>
+        
+
+        <ParameterArea>
+        <span className="lightblue">Solar Diameter</span><br/>
+            501 to 2,100
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Solar Luminosity</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Solar Flares</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Lifetime</span><br/>
+            ? Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Destiny</span><br/>
+            ?<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="lightblue">Notes</span><br/>
+            ?
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
+
+        <StarClass>
+        
+        <StarArea>
+            Super Giant Class Star
+        <img src={GStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "345px", height: "345px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="yellow">Surface Temperature</span><br/>
+        4,000 K to 40,000 K<br/>
+        6,740 F to 71,540 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Core Temperature</span><br/>
+            ? K to ? K<br/>
+            ? F to ? F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Solar Masses</span><br/>
+            10 to 70
+        
+        </ParameterArea>
+        
+
+        <ParameterArea>
+        <span className="yellow">Solar Diameter</span><br/>
+            30 to 500
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Solar Luminosity</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Solar Flares</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Lifetime</span><br/>
+            ? Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Destiny</span><br/>
+            ?<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="yellow">Notes</span><br/>
+            ?
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
+
+
+        <StarClass>
+        
+        <StarArea>
+            Giant Class Star
+        <img src={MStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "335px", height: "335px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="red">Surface Temperature</span><br/>
+        3,000 K to 10,000 K<br/>
+        4,940 F to 17,540 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Core Temperature</span><br/>
+            ? K to ? K<br/>
+            ? F to ? F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Solar Masses</span><br/>
+            1 to 5
+        
+        </ParameterArea>
+        
+
+        <ParameterArea>
+        <span className="red">Solar Diameter</span><br/>
+            10 to 50
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Solar Luminosity</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Solar Flares</span><br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Lifetime</span><br/>
+            ? Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Destiny</span><br/>
+            ?<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+        <span className="red">Notes</span><br/>
+            ?
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
+
+        <StarClass>
+        
+        <StarArea>
+            Wolf Rayet Class Star
+        <img src={WolfRayetStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "325px", height: "325px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="lighterblue">Surface Temperature</span><br/>
+        5,200 K to 5,999 K<br/>
+        8,900 F to 10,338 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Core Temperature<br/>
+            10 Million K to 15 Million K<br/>
+            18 Million F to 27 Million F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Masses<br/>
+            0.80 to 1.03
+        
+        </ParameterArea>
+        
+
+        <ParameterArea className="habzone">
+            Solar Diameter<br/>
+            0.96 to 1.14
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Luminosity<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Flares<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Lifetime<br/>
+            10 Billion Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Destiny<br/>
+            White Dwarf<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Notes
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
+
+        <StarClass>
+        
+        <StarArea>
+            O Class Star
+        <img src={OStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "300px", height: "300px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="purple">Surface Temperature</span><br/>
+        5,200 K to 5,999 K<br/>
+        8,900 F to 10,338 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Core Temperature<br/>
+            10 Million K to 15 Million K<br/>
+            18 Million F to 27 Million F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Masses<br/>
+            0.80 to 1.03
+        
+        </ParameterArea>
+        
+
+        <ParameterArea className="habzone">
+            Solar Diameter<br/>
+            0.96 to 1.14
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Luminosity<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Flares<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Lifetime<br/>
+            10 Billion Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Destiny<br/>
+            White Dwarf<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Notes
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
+        
+        <StarClass>
+        
+        <StarArea>
+            B Class Star
+        <img src={BStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "280px", height: "280px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="lightblue">Surface Temperature</span><br/>
+        5,200 K to 5,999 K<br/>
+        8,900 F to 10,338 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Core Temperature<br/>
+            10 Million K to 15 Million K<br/>
+            18 Million F to 27 Million F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Masses<br/>
+            0.80 to 1.03
+        
+        </ParameterArea>
+        
+
+        <ParameterArea className="habzone">
+            Solar Diameter<br/>
+            0.96 to 1.14
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Luminosity<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Flares<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Lifetime<br/>
+            10 Billion Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Destiny<br/>
+            White Dwarf<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Notes
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
 
 
         
@@ -204,6 +684,87 @@ const StarPlanetClassify = () => {
         <br/>
         
         </StarClass>
+
+
+
+        <StarClass>
+        
+        <StarArea>
+            F Class Star
+        <img src={FStarImage} alt="Sol - Click for Sol Details" title="Sol - Click for Sol Details" style={{color: "#ffffff", width: "255px", height: "255px"}}/>
+        Text<br/><br/>
+        
+        </StarArea>
+
+        <ParameterArea>
+        <span className="lightyellow">Surface Temperature</span><br/>
+        5,200 K to 5,999 K<br/>
+        8,900 F to 10,338 F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Core Temperature<br/>
+            10 Million K to 15 Million K<br/>
+            18 Million F to 27 Million F
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Masses<br/>
+            0.80 to 1.03
+        
+        </ParameterArea>
+        
+
+        <ParameterArea className="habzone">
+            Solar Diameter<br/>
+            0.96 to 1.14
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Luminosity<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Solar Flares<br/>
+            ?
+        
+        </ParameterArea>
+
+        <ParameterArea>
+            Lifetime<br/>
+            10 Billion Years<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Destiny<br/>
+            White Dwarf<br/>
+            
+        </ParameterArea>
+
+        <ParameterArea>
+            Notes
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+
+        <ParameterArea>
+           
+        </ParameterArea>
+        <br/>
+        <br/>
+        
+        </StarClass>
+
+
+
 
         <StarClass>
         

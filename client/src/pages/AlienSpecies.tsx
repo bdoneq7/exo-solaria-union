@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import AlienBanner from "../images/alienspeciesbanner.jpg";
-
+import GrayAlien from "../images/communionalien.jpg";
+import TallWhiteAlien from "../images/tallwhitealien.jpg";
+import HumanRace from "../images/humanrace.jpg";
 
 
 const BreadCrumbs = styled.div`
@@ -59,18 +61,38 @@ const AlienSpecies = () => {
 
         <HeaderImage>
         <img src={AlienBanner} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "100%", height: "100%"}}/>
+        
         </HeaderImage>
 
         
 
         <SightingContainer>
         <SightingContent>
-           Human Species<br/>
-           Planet Earth
+        <img src={HumanRace} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "10%", height: "100%"}}/>
+        
+           Human Species - Planet Earth - Confirmed
+        </SightingContent>
+        </SightingContainer>
+
+
+        <SightingContainer>
+        <SightingContent>
+        <img src={GrayAlien} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "10%", height: "100%"}}/>
+        
+           Gray Species - Unknown Planet - Unconfirmed
+          
         </SightingContent>
         </SightingContainer>
 
         
+        <SightingContainer>
+        <SightingContent>
+        <img src={TallWhiteAlien} alt="Browse Star Systems" title="Browse Star Systems" style={{color: "#ffffff", width: "10%", height: "100%"}}/>
+        
+           Tall White Species - Unknown Planet - Unconfirmed
+          
+        </SightingContent>
+        </SightingContainer>
          
         
         </BrowseBackground>
