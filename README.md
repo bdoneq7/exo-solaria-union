@@ -1,13 +1,10 @@
 # Exo Solaria Union
 
 ## Purpose 
-The purpose of the Exo Solaria Union is to build a Global Space Community to advocate for space exploration, give members access to a comprehensive star and planet catalog, star and planet classifications, earthlike planet candidates, searching for alien civilizations, UAP Encounters database, a galactic map, space techonology articles, space companies, and space careers.
+The purpose of the Exo Solaria Union is to build a Global Space Community to advocate for space exploration and give members free access to a comprehensive star and planet catalog, star and planet classifications, earthlike planet candidates, searching for alien civilizations, UAP Encounters database, a galactic map, space techonology articles, space companies, and space careers.
 
 ## Built With
 * React
-* MongoDB
-* Express
-* Node
 
 ## Table of Contents
 * [Screenshot](#screenshot)
@@ -21,7 +18,7 @@ The purpose of the Exo Solaria Union is to build a Global Space Community to adv
 
 ## Deployment 
 
-The app will be accessible from a domain name.
+The app will be accessible from https://www.exosolariaunion.com "Exo Solaria Union"
 
 ## License 
 Private.
