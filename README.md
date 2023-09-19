@@ -18,7 +18,7 @@ The purpose of the Exo Solaria Union is to build a Global Space Community to adv
 
 ## Deployment 
 
-The app will be accessible from https://www.exosolariaunion.com "Exo Solaria Union"
+The app will be accessible from https://www.exosolariaunion.com
 
 ## License 
 Private.
