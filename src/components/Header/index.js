@@ -7,7 +7,7 @@ function Header(props) {
 	return (
 		<header>
 			<div>
-				<h1>Gods of Aumin</h1>
+				<h1>Exo Solaria Union</h1>
 			</div>
 			<div>
 				<Nav
