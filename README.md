@@ -1,30 +1,41 @@
-# Exo Solaria Union
+# Brian Portfolio
 
 ## Purpose 
-The purpose of the Exo Solaria Union is to build a Global Space Community to advocate for space exploration and give members free access to a comprehensive star and planet catalog, star and planet classifications, earthlike planet candidates, searching for alien civilizations, UAP Encounters database, a galactic map, space techonology articles, space companies, and space careers.
+To build a portfolio that potential employers can use to review my work samples and download my resume.
 
 ## Built With
+* JavaScript
 * React
 
 ## Table of Contents
 * [Screenshot](#screenshot)
+* [Installation](#installation)
 * [Deployment](#deployment)
 * [License](#license)
 * [Contributing](#contributing)
 * [Questions](#questions)
 
 ## Screenshot
-![Alt Exo Solaria Union Homepage Screenshot](https://github.com/bdoneq7/exo-solaria-union/blob/main/assets/images/screenshot.PNG?raw=true "Exo Solaria Union Homepage Screenshot")
+![Alt Brian Done React Portfolio Screenshot](https://github.com/bdoneq7/brian-react-portfolio/blob/main/assets/images/screenshot.PNG?raw=true "Brian Done React Portfolio Screenshot")
+
+## Installation 
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+
 
 ## Deployment 
 
-The app will be accessible from https://www.exosolariaunion.com
+https://bdoneq7.github.io/brian-react-portfolio/
 
 ## License 
-Private.
+Using the MIT License.
 
 ## Contributing 
-This app has been developed solely by Brian Done.
+This React Portfolio was created by Brian Done. 
 
 ## Questions
 Please direct questions to Brian Done at briguy2078@gmail.com. 
