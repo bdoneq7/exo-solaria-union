@@ -8,14 +8,9 @@ import image_2 from "../../assets/images/what2watch.jpg";
 function Project(props) {
   const projectList = [
     {
-      name: "Food4Thought",
-      type: "Node, Express, MongoDB, GraphQL, React, Bootstrap",
-      description: "Search for Recipes",
+      name: "Sol Star System",
       image: image_0,
-      appLink: "https://immense-shelf-25976.herokuapp.com",
-      gitLogo: gitLogo,
-      gitRepo: "https://github.com/Dapr1nc3/Food-App",
-      accessibility: "Recipe App"
+     
     },
     {
       name: "What's Out There?",

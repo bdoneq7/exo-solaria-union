@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import Portfolio from "./components/Portfolio";
+import Stars from "./components/Stars";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 
@@ -15,7 +15,7 @@ function App() {
 			case "about":
 				return <About />;
 			case "portfolio":
-				return <Portfolio />;
+				return <Stars />;
 			case "contact":
 				return <Contact />;
 			case "resume":
