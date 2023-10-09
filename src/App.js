@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Stars from "./components/Stars";
-import Contact from "./components/Contact";
+import Earthlike from "./components/Earthlike";
 import Resume from "./components/Resume";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 			case "portfolio":
 				return <Stars />;
 			case "contact":
-				return <Contact />;
+				return <Earthlike />;
 			case "resume":
 				return <Resume />;
 			default:
