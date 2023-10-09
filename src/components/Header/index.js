@@ -8,7 +8,7 @@ function Header(props) {
 	return (
 		<header>
 			<div class="logodiv">
-			<img src={logo} className="my-2" style={{ width: "100%", height: "100%" }} alt="Exo Solaria Union" title="Exo Solaria Union" />
+			<img src={logo} className="my-2" style={{ width: "25%", height: "25%" }} alt="Exo Solaria Union" title="Exo Solaria Union" />
 			</div>
 			<div class="linksdiv">
 				<Nav
