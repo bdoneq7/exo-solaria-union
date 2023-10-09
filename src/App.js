@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Stars from "./components/Stars";
 import Earthlike from "./components/Earthlike";
-import Resume from "./components/Aliens";
 import Aliens from "./components/Aliens";
 
 function App() {
