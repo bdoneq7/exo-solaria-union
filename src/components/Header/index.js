@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Nav";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo-small.png";
 
 function Header(props) {
 	const { currentTab, setCurrentTab } = props;
@@ -8,7 +8,7 @@ function Header(props) {
 	return (
 		<header>
 			<div class="logodiv">
-			<img src={logo} className="my-2" style={{ width: "20%", height: "20%" }} alt="Exo Solaria Union" title="Exo Solaria Union" />
+			<img src={logo} className="my-2" style={{ width: "100%", height: "100%" }} alt="Exo Solaria Union" title="Exo Solaria Union" />
 			</div>
 			<div class="linksdiv">
 				<Nav
