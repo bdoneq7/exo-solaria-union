@@ -17,6 +17,8 @@ function About(props) {
       </div>
     </section>
   );
+
+  
 }
 
 export default About;

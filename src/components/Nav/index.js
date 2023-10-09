@@ -11,7 +11,7 @@ function Nav(props) {
 					<span onClick={() => setCurrentTab("about")}>About</span>
 				</li>
 				<li className={currentTab === "portfolio" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentTab("stars")}>Star/Planet Database</span>
+					<span onClick={() => setCurrentTab("stars")}>Exoplanet Star Systems</span>
 				</li>
 				<li className={currentTab === "contact" ? "mx-2 navActive" : "mx-2"}>
 					<span onClick={() => setCurrentTab("earthlike")}>Earth-Like Planets</span>
