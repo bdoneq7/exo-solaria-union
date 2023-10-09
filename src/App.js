@@ -5,7 +5,8 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Stars from "./components/Stars";
 import Earthlike from "./components/Earthlike";
-import Resume from "./components/Resume";
+import Resume from "./components/Aliens";
+import Aliens from "./components/Aliens";
 
 function App() {
 	const [currentTab, setCurrentTab] = useState("about");
@@ -14,12 +15,12 @@ function App() {
 		switch (currentTab) {
 			case "about":
 				return <About />;
-			case "portfolio":
+			case "stars":
 				return <Stars />;
-			case "contact":
+			case "earthlike":
 				return <Earthlike />;
-			case "resume":
-				return <Resume />;
+			case "aliens":
+				return <Aliens />;
 			default:
 				return null;
 		}
