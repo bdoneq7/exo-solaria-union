@@ -10,13 +10,13 @@ function Nav(props) {
 					<span onClick={() => setCurrentTab("about")}>About</span>
 				</li>
 				<li className={currentTab === "portfolio" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentTab("portfolio")}>Star/Planet Database</span>
+					<span onClick={() => setCurrentTab("stars")}>Star/Planet Database</span>
 				</li>
 				<li className={currentTab === "contact" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentTab("contact")}>Earth-Like Planets</span>
+					<span onClick={() => setCurrentTab("earthlike")}>Earth-Like Planets</span>
 				</li>
 				<li className={currentTab === "resume" ? "mx-2 navActive" : "mx-2"}>
-					<span onClick={() => setCurrentTab("resume")}>Alien Species</span>
+					<span onClick={() => setCurrentTab("aliens")}>Alien Species</span>
 				</li>
 			</ul>
 		</nav>
