@@ -1,43 +1,29 @@
-import "./index.css";
-import React, { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Stars from "./components/Stars";
-import Earthlike from "./components/Earthlike";
-import Aliens from "./components/Aliens";
+
+import React from 'react';
+import Hero from './components/hero/Hero';
+import Navbar from './components/navbar/Navbar';
+import Data from './components/data/Data';
+import Cloud from './components/cloud/Cloud';
+import Footer from './components/footer/Footer';
+
 
 function App() {
-	const [currentTab, setCurrentTab] = useState("about");
+  return (
+    
+    <>
+    <Navbar />
+    <Hero />
+    <Data />
+    <Cloud />
+    <Footer />
+    
+    </>
 
-	const renderTab = () => {
-		switch (currentTab) {
-			case "about":
-				return <About />;
-			case "stars":
-				return <Stars />;
-			case "earthlike":
-				return <Earthlike />;
-			case "aliens":
-				return <Aliens />;
-			default:
-				return null;
-		}
-	};
 
-	return (
-		<div>
-			<div className="mobile-header">
-				<Header currentTab={currentTab} setCurrentTab={setCurrentTab}></Header>
-			</div>
-			<div>
-				<main>{renderTab()}</main>
-			</div>
-			<div>
-				<Footer></Footer>
-			</div>
-		</div>
-	);
+        
+      
+  
+  );
 }
 
 export default App;
