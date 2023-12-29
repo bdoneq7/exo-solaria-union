@@ -6,7 +6,7 @@ const Recovery = () => {
         <div className='recovery'>
           <div className='container'>
             <div className='content'>
-                <h2><span>Website</span> Portfolio</h2>
+                <h2><span>Star</span> Systems</h2>
                 <p>Text</p>
                 <div>
                     <button>Explore</button>
