@@ -10,6 +10,11 @@ import GalaxyMapPage from './routes/GalaxyMapPage';
 import EarthlikePage from './routes/EarthlikePage';
 import StarSystemsPage from './routes/StarSystemsPage';
 import ObjectsPage from './routes/ObjectsPage';
+import StarsPage from './routes/StarsPage';
+import PlanetsPage from './routes/PlanetsPage';
+import AliensPage from './routes/AliensPage';
+import SpaceTechPage from './routes/SpaceTechPage';
+import TermsPage from './routes/TermsPage';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +25,11 @@ ReactDOM.render(
       <Route path='/earthlike' element={<EarthlikePage />} />
       <Route path='/starsystems' element={<StarSystemsPage />} />
       <Route path='/objects' element={<ObjectsPage />} />
+      <Route path='/stars' element={<StarsPage />} />
+      <Route path='/planets' element={<PlanetsPage />} />
+      <Route path='/aliens' element={<AliensPage />} />
+      <Route path='/spacetech' element={<SpaceTechPage />} />
+      <Route path='/terms' element={<TermsPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

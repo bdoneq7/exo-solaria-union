@@ -1,17 +1,17 @@
 import React from 'react';
 
 import Navbar from '../components/navbar/Navbar';
-import Portfolio from '../components/portfolio/Portfolio';
+import SpaceTech from '../components/spacetech/SpaceTech.js';
 import Footer from '../components/footer/Footer';
 
-const PortfolioPage = () => {
+const SpaceTechPage = () => {
     return  (
         <>
             <Navbar />
-            <Portfolio />
+            <SpaceTech />
             <Footer />
         </>
     )
 }
 
-export default PortfolioPage;
+export default SpaceTechPage;
