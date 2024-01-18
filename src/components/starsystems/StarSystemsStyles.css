@@ -1,0 +1,110 @@
+.howitworks {
+    width: 100%;
+    height: 200vh;
+    background: #C33764;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    position: relative;
+}
+
+.howitworks a {
+    text-decoration: none;
+    color: #5aa6f7;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+  
+.howitworks a:hover {
+      box-shadow: inset 1000px 0 0 0 #7dd2f1;
+      color: #000000;
+    }
+
+.howitworks:before {
+    content: '';
+    position: absolute;
+    background: url('../../assets/howitworks-bg.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.howitworks .content {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    left: 0;
+    padding: 1rem;
+  
+}
+
+.howitworks h2 {
+    color: #f8f8f8;
+    background:rgb(1, 1, 101, 0.75);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.howitworks h3 {
+    color: #f8f8f8;
+    padding: 0.5rem;
+    background:rgba(0,0,0,0.7);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+   
+}
+
+.howitworks p {
+    color: #f8f8f8;
+    margin: 1rem 0;
+    background:rgba(0,0,0,0.7);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.howitworks button {
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px #000000;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+.howitworks .iconmain {
+    padding-top: .9rem;
+    color: #f8f8f8;
+
+    
+}
+
+.howitworks .iconstep {
+    padding-top: 0.4rem;
+    
+
+    
+}
+
+
+
+.howitworks .iconbutton {
+    margin-left: 0.75rem;
+    padding-top: .2rem;
+    
+}
+
+@media screen and (max-width: 940px) {
+    .howitworks .content {
+        width: 100%;
+    }
+
+    .howitworks h2 {
+        font-size: 1.7rem;
+    }
+
+    .howitworks .iconmain {
+        padding-top: .7rem;
+        color: #ffffff;
+        
+    }
+}

@@ -1,10 +1,10 @@
-.hero {
+.galaxystats {
     width: 100%;
     height: 200vh;
     position: relative;
     background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -12,7 +12,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 
 
-.hero .content {
+.galaxystats .content {
     position: absolute;
     left: 0;
     top: 7%;
@@ -21,7 +21,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
 }
 
-.hero h2 {
+.galaxystats h2 {
     color: #f8f8f8;
     background:rgb(1, 1, 101, 0.75);
     padding: 0.5rem;
@@ -29,7 +29,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
 }
 
-.hero p {
+.galaxystats p {
     color: #f8f8f8;
     padding-top: 1rem;
     padding: 0.5rem;
@@ -37,23 +37,23 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     margin-top: 1rem;
 }
 
-.hero .blue {
+.galaxystats .blue {
     color: var(--primary-color);
 }
 
-.hero button {
+.galaxystats button {
     color: #ffffff;
     -webkit-text-stroke: 0.2px #000000;
     text-shadow: 2px 2px 4px #000000;
     border: 1px solid #000000;
 }
 
-.hero .iconmain {
+.galaxystats .iconmain {
     padding-top: .7rem;
     
 }
 
-.hero .iconbutton {
+.galaxystats .iconbutton {
     margin-left: 0.75rem;
     padding-top: .25rem;
     
@@ -140,17 +140,17 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 
 @media screen and (max-width:940px) {
-    .hero .content {
+    .galaxystats .content {
         left: 0;
         width: 100%;
         
     }
 
-    .hero h2 {
+    .galaxystats h2 {
         font-size: 1.7rem;
     }
 
-    .hero .iconmain {
+    .galaxystats .iconmain {
         padding-top: .5rem;
         
     }

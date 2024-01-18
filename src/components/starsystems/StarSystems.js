@@ -1,7 +1,6 @@
 import React from 'react';
-import './HeroStyles.css';
-import { GiGalaxy } from "react-icons/gi";
-import MClass from "../../assets/M Class.gif";
+import './StarSystemsStyles.css';
+import { GiSolarSystem } from "react-icons/gi";
 import GClass from "../../assets/G Class.gif";
 import Mercurian from "../../assets/mercurian.png";
 import TerranHellish from "../../assets/terran hellish.png";
@@ -13,20 +12,13 @@ import Jovian from "../../assets/Jovian.png";
 import IceGiant from "../../assets/ice giant.png";
 import KuiperBelt from "../../assets/Kuiper Belt.png";
 
-
-const Hero = () => {
+const StarSystems = () => {
     return  (
-        <div className='hero'>
-            <div className='container'>
-                <div className='content'>
-                <h2><GiGalaxy className='iconmain' /><span> Exo Solaria Union</span> Home</h2>
-                    
-                   
-
-                    
-                
-                  
-                    <p>
+        <div className='howitworks'>
+          <div className='container'>
+            <div className='content'>
+                <h2><GiSolarSystem size='40' className='icon' alt="Star System List" title="Star System List" /><span> Star System</span> List</h2>
+                <br/>
                         <img src={GClass} style={{ width: "15%", height: "15%" }} alt="Sol" title="Sol" />
                         <img src={Mercurian} style={{ width: "5%", height: "5%" }} alt="Earth" title="Earth" />
                         <img src={TerranHellish} style={{ width: "5%", height: "5%" }} alt="Earth" title="Earth" />
@@ -38,18 +30,20 @@ const Hero = () => {
                         <img src={IceGiant} style={{ width: "5%", height: "5%" }} alt="Earth" title="Earth" />
                         <img src={IceGiant} style={{ width: "5%", height: "5%" }} alt="Earth" title="Earth" />
                         <img src={KuiperBelt} style={{ width: "5%", height: "5%" }} alt="Earth" title="Earth" />
-                    </p>
-                    <p>
-                    <img src={MClass} style={{ width: "10%", height: "10%" }} alt="Sol" title="Sol" />
-                    </p>
-                    <div>
-                        
-                    </div>
+                    
+                
+                <div>
+                
+                    
+                
+                    
                 </div>
             </div>
+
+          </div>
 
         </div>
     )
 }
 
-export default Hero;
+export default StarSystems;

@@ -3,8 +3,10 @@
     height: 100px;
     position: absolute;
     z-index: 10;
-    background-color: #000000;
+    
 }
+
+
 
 .navbar .container {
     display: flex;
@@ -18,7 +20,10 @@
     color: #ffffff;
     margin: 1rem;
     
+    
 }
+
+
 
 .navbar .logo .icon {
     font-size: 3rem;
@@ -32,7 +37,11 @@
 }
 
 .navbar button {
-    color: #000000;
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px #000000;
+    text-shadow: 2px 2px 4px #000000;
+    border: 1px solid #000000;
+    margin-left: .5rem;
 }
 
 .hamburger {
@@ -50,6 +59,7 @@
 .navbar li {
     padding: 1rem;
     font-weight: 600;
+    font-size: 1.1rem;
     color: #ffffff;
 }
 
@@ -63,6 +73,10 @@
     .navbar .hamburger {
         display: block;
         z-index: 15;
+    }
+
+    .navbar h1 {
+        font-size: 2rem;
     }
 
     .navbar .nav-menu {

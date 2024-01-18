@@ -1,0 +1,113 @@
+.clientportfolio {
+    width: 100%;
+    height: 300vh;
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    position: relative;
+}
+
+.clientportfolio:before {
+    content: '';
+    position: absolute;
+    background: url('../../assets/client-portfolio-bg.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.clientportfolio .content {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    left: 0;
+    padding: 1rem;
+  
+}
+
+.clientportfolio .contentcard {
+    position: relative;
+    width: 47%;
+    height: 400px;
+    left: 0;
+    padding: 1rem;
+    border-radius: 10px;
+    float: left;
+    color: #ffffff;
+    background: rgba(0,0,0,0.60);
+    margin: 1rem;
+    
+  
+}
+
+.clientportfolio h2 {
+    color: #f8f8f8;
+    background:rgb(1, 1, 101, 0.75);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.clientportfolio h3 {
+    color: #000000;
+    padding: 0.5rem;
+    background:rgba(250, 246, 5, 0.85);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align:center;
+}
+
+.clientportfolio p {
+    color: #f8f8f8;
+    margin: 1rem 0;
+    background:rgba(0,0,0,0.75);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.clientportfolio button {
+    color: #ffffff;
+    -webkit-text-stroke: 0.2px #000000;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+.clientportfolio .iconmain {
+    padding-top: .9rem;
+    
+}
+
+.clientportfolio .iconbutton {
+    margin-left: 0.75rem;
+    padding-top: .2rem;
+    
+}
+
+@media screen and (max-width: 940px) {
+
+    .clientportfolio {
+        width: 100%;
+        height: 300vh;
+        background: rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    .clientportfolio .content {
+        width: 100%;
+        top: 5%;
+    }
+
+    .clientportfolio .contentcard {
+        position: relative;
+        width: 95%;
+        height: 400px;
+        left: 0;
+        padding: 1rem;
+        border-radius: 10px;
+        color: #ffffff;
+        background: rgba(0,0,0,0.60);
+        margin: 1rem;
+        
+      
+    }
+}
