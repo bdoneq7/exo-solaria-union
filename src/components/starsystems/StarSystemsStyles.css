@@ -10,7 +10,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 .starsystems a {
     text-decoration: none;
-    color: #5aa6f7;
+    color: #f7fb03;
     box-shadow: inset 0 0 0 0 #54b3d6;
     margin: 0 -.25rem;
     padding: 0 .25rem;
@@ -44,6 +44,14 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     margin-top: 5rem;
     width: 100%;
     height: 290px;
+    
+
+}
+
+.starsystemsectionhigher {
+    margin-top: 6rem;
+    width: 100%;
+    height: 310px;
     
 
 }
@@ -84,7 +92,75 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     position: relative;
 }
 
+.starsectiondouble {
+    float: left;
+    width: 15%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centering y-axis */
+    align-items :center; /* Centering x-axis */
+    color: #ffffff;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.starsectiondoublewider {
+    float: left;
+    width: 15%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centering y-axis */
+    align-items :center; /* Centering x-axis */
+    color: #ffffff;
+    position: relative;
+    margin-right: 3rem;
+}
+
+.starsection .overlay-textaclass {
+    position: absolute;
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(1, 1, 101, 0.75);
+    border-radius: 10px;
+    color: #fff; 
+    padding: 3px; 
+    font-size: 13px; 
+    text-align: center;
+    width: 80%;
+}
+
 .starsection .overlay-textgclass {
+    position: absolute;
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(1, 1, 101, 0.75);
+    border-radius: 10px;
+    color: #fff; 
+    padding: 3px; 
+    font-size: 13px; 
+    text-align: center;
+    width: 80%;
+}
+
+.starsectiondoublewider .overlay-textkclass {
+    position: absolute;
+    top: 22%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgb(1, 1, 101, 0.75);
+    border-radius: 10px;
+    color: #fff; 
+    padding: 3px; 
+    font-size: 13px; 
+    text-align: center;
+    width: 80%;
+}
+
+.starsectiondouble .overlay-textgclass {
     position: absolute;
     top: 20%; 
     left: 50%; 
@@ -713,6 +789,16 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.starclassawhite {
+    font-size: 10px;
+    color:#f7f8f3;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+  
+
+}
 
 .starclassgyellow {
     font-size: 10px;

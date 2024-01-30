@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './StarSystemsStyles.css';
 import { GiSolarSystem } from "react-icons/gi";
 import { PiPlanetFill } from "react-icons/pi";
@@ -67,10 +68,10 @@ const StarSystems = () => {
 
                 <div className='navigationsection'>
               <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigationactive"> 0 - 50 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigationactive"> <Link to='/starsystems'>0 - 50 Light Years</Link></span>
                 </div>
               <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 51 - 200 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems51to200'> 51 - 200 Light Years</Link></span>
                 </div>
               <div className='centered-labelnavigation'>
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 201 - 400 Light Years</span>
@@ -119,10 +120,11 @@ const StarSystems = () => {
                 </div>
                 </div>
               
+  {/* Sol Star System Start */}            
               <div className='starsystemsection'>
 
+                {/* Sol Start */}
                 <div className='starsection'>
-                
                 
                 <img src={GClass} alt="Sol" title="Sol" />
                 <div class="overlay-textgclass">Sol</div>
@@ -143,7 +145,9 @@ const StarSystems = () => {
                 <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.0122 %</span>
                 </div>
                 </div>
+                {/* Sol End */}
 
+                {/* Planet Mercury Start */}
                 <div className='planetsection'>
                 
                 <div className='centered-label'>
@@ -183,7 +187,9 @@ const StarSystems = () => {
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
                 </div>
+                {/* Planet Mercury End */}
 
+                {/* Planet Venus Start */}
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <FaVolcano size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclasshellish"> Hellish</span>
@@ -222,8 +228,9 @@ const StarSystems = () => {
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
                 </div>
+                {/* Planet Venus End */}
 
-
+                {/* Planet Earth Start */}
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <MdForest size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclasslush"> Lush</span>
@@ -264,7 +271,9 @@ const StarSystems = () => {
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensyes"> Humans</span>
                 </div>
                 </div>
+                {/* Planet Earth End */}
 
+                {/* Planet Mars Start */}
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <GiSandstorm size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclassbarren"> Barren</span>
@@ -304,7 +313,9 @@ const StarSystems = () => {
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
                 </div>
+                {/* Planet Mars End */}
                         
+                {/* Asteroid Belt Start */}        
                 <div className='planetsection'>
                 <img src={AsteroidBelt} alt="Earth" title="Earth" />
                 <div class="overlay-textbelt">Asteroid Belt</div>
@@ -317,8 +328,10 @@ const StarSystems = () => {
                 <div className='centered-label'>
                 <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 2 Million +</span>
                 </div>
-                </div>        
-                        
+                </div>   
+                {/* Asteroid Belt End */}     
+                
+                {/* Planet Jupiter Start */}
                 <div className='planetsection'>
 
                 <div className='centered-label'>
@@ -357,8 +370,10 @@ const StarSystems = () => {
                 <div className='centered-label'>
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
-                </div>          
+                </div>   
+                {/* Planet Jupiter End */}       
                         
+                {/* Planet Saturn Start */}        
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <BsCloudsFill size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclassgasgiant"> Gas Giant</span>
@@ -398,7 +413,9 @@ const StarSystems = () => {
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
                 </div>          
+                {/* Planet Saturn End */}
 
+                {/* Planet Uranus Start */}
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <GiIceCube size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclassicegiant"> Ice Giant</span>
@@ -437,8 +454,10 @@ const StarSystems = () => {
                 <div className='centered-label'>
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
-                </div>        
+                </div>      
+                {/* Planet Uranus End */}  
 
+                {/* Planet Neptune Start */}
                 <div className='planetsection'>
                 <div className='centered-label'>
                 <GiIceCube size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclassicegiant"> Ice Giant</span>
@@ -477,8 +496,10 @@ const StarSystems = () => {
                 <div className='centered-label'>
                 <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> No Life</span>
                 </div>
-                </div>       
+                </div>    
+                {/* Planet Neptune End */}   
                         
+                {/* Kuiper Belt Start */}        
                 <div className='planetsection'>
                 <img src={KuiperBelt} alt="Earth" title="Earth" />
                 <div class="overlay-textbelt">Kuiper Belt</div>
@@ -490,19 +511,23 @@ const StarSystems = () => {
                 </div>
                 <div className='centered-label'>
                 <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 300,000 +</span>
-                
                 </div>
-
                 </div>
+                {/* Kuiper Belt End */}
               
               </div>
+              {/* Sol Star System End */}
+              
 
+              {/* Sol Travel Start */}
               <div className='traveltimesection'>
               <div className='centered-label'>
                 <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Sun Distance to Earth = 8.3 Light Minutes</span>
                 </div>
                 </div>
+                {/* Sol Travel End */}
 
+              {/* Sol Location Start */}
               <div className='galacticlocationsection'>
               <div className='centered-labeldistance'>
                 <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
@@ -517,7 +542,7 @@ const StarSystems = () => {
                 <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
                 </div>
                 </div>
-
+                {/* Sol Location End */}
           
 
               
@@ -714,7 +739,7 @@ const StarSystems = () => {
 
               <div className='starsystemsection'>
 
-                <div className='starsection'>
+                <div className='starsectiondouble'>
                   <img src={GClass} alt="Rigil Kentaurus A" title="Rigil Kentaurus A" />
                   <div class="overlay-textgclass">Rigil Kentaurus A</div>
                   <div className='centered-label'>
