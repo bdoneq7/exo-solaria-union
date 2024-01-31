@@ -31,21 +31,9 @@ import SubBD from "../../assets/Sub BD Small.png";
 import TClass from "../../assets/T Class  Smaller.png";
 import LClass from "../../assets/L Class Medium.png";
 import MClass from "../../assets/M Class Smaller.gif";
-import KClass from "../../assets/K Class Small.gif";
 import KClassGiant from "../../assets/K Class.gif";
-import GClass from "../../assets/G Class Small.gif";
 import AClass from "../../assets/A Class.gif";
-import Mercurian from "../../assets/mercurian small.png";
-import TerranHellish from "../../assets/terran hellish small.png";
-import Terran from "../../assets/terran earthlike small.png";
-import SuperTerran from "../../assets/super terran small.png";
-import SubTerranBarren from "../../assets/sub terran barren small.png";
-import AsteroidBelt from "../../assets/Asteroid Belt 2.png";
-import SuperJovian from "../../assets/Super Jovian_small.png";
-import Jovian from "../../assets/Jovian_small.png";
 import SubNeptunian from "../../assets/Sub Neptunian Small.png";
-import IceGiant from "../../assets/ice giant_small.png";
-import KuiperBelt from "../../assets/Kuiper Belt.png";
 
 const StarSystems51to200 = () => {
     return  (
