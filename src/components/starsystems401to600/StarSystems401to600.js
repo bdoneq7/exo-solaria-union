@@ -2,24 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../starsystems/StarSystemsStyles.css';
 import { GiSolarSystem } from "react-icons/gi";
-import { SiAlienware } from "react-icons/si";
-import { FaCircle } from "react-icons/fa";
 import { GrSolaris } from "react-icons/gr";
 import { SiFireship } from "react-icons/si";
 import { GiFlameSpin } from "react-icons/gi";
-import { FaTemperatureThreeQuarters } from "react-icons/fa6";
-import { FaWeightHanging } from "react-icons/fa";
-import { LuOrbit } from "react-icons/lu";
-import { IoIosWater } from "react-icons/io";
-import { TbRulerMeasure } from "react-icons/tb";
-import { BsDatabaseFillDown } from "react-icons/bs";
-import { VscWorkspaceUnknown } from "react-icons/vsc";
 import { BsFillBrightnessHighFill } from "react-icons/bs";
 import { GiMolecule } from "react-icons/gi";
-import { CgArrowLongRightC } from "react-icons/cg";
 import { MdRocketLaunch } from "react-icons/md";
 import { GiChemicalBolt } from "react-icons/gi";
-import { PiPlanetFill } from "react-icons/pi";
 import { IoIosNuclear } from "react-icons/io";
 import { IoMdNuclear } from "react-icons/io";
 import { GiSail } from "react-icons/gi";
@@ -30,7 +19,6 @@ import { WiStars } from "react-icons/wi";
 import { TbGalaxy } from "react-icons/tb";
 import BClass from "../../assets/B Class.gif";
 import KClass from "../../assets/K Class.gif";
-import SuperJovian from "../../assets/Super Jovian_small.png";
 
 
 const StarSystems401to600 = () => {
