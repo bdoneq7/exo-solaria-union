@@ -4,16 +4,16 @@ import Logo from "../../assets/logowhite.png";
 import { GiSolarSystem } from "react-icons/gi";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { SiAlienware } from "react-icons/si";
-import { ImRocket } from "react-icons/im";
 import { IoPlanetSharp } from "react-icons/io5";
 import { GrSolaris } from "react-icons/gr";
 import { GiGalaxy } from "react-icons/gi";
 import { GiMoonOrbit } from "react-icons/gi";
-import { GiBlackHoleBolas } from "react-icons/gi";
 import { IoStatsChart } from "react-icons/io5";
 import { GiAlienBug } from "react-icons/gi";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
+import { BsPeopleFill } from "react-icons/bs";
+import { TbUfo } from "react-icons/tb";
+import { FaShareAlt } from "react-icons/fa";
+import { GiUfo } from "react-icons/gi";
 
 
 import {Link} from 'react-router-dom';
@@ -53,11 +53,11 @@ const Navbar = () => {
                     
                     <li><Link to='/planets'><IoPlanetSharp size='35' className='icon' alt="Planet Classes" title="Planet Classes" /></Link></li>
                     
-                    <li><Link to='/aliens'><GiAlienBug size='31' className='icon' alt="Alien Species" title="Alien Species" /></Link></li>
-                    <li><Link to='/spacetech'><ImRocket size='30' className='icon' alt="Space Tech Levels" title="Space Tech Levels" /></Link></li>
-                    <li><Link to='/terms'><GiBlackHoleBolas size='35' className='icon' alt="Space Term Definitions" title="Space Term Definitions" /></Link></li>
-                    <li><Link to='https://www.instagram.com/exosolariaunion/'><FaSquareInstagram size='35' className='icon' alt="Follow Us on Instagram" title="Follow Us on Instagram" /></Link></li>
-                    <li><Link to='https://www.facebook.com/exosolariaunion/'><FaFacebook size='35' className='icon' alt="Like Us on Facebook" title="Like Us on Facebook" /></Link></li>
+                    <li><Link to='/aliens'><GiAlienBug size='32' className='icon' alt="Alien Species" title="Alien Species" /></Link></li>
+                    <li><Link to='/spacetech'><TbUfo size='35' className='icon' alt="Alien Technology" title="Alien Technology" /></Link></li>
+                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien Whistleblowers" title="Alien  Whistleblowers" /></Link></li>
+                    <li><Link to='https://www.instagram.com/exosolariaunion/'><GiUfo size='35' className='icon' alt="Alien/UFO/UAP Encounter Timeline" title="Alien/UFO/UAP Encounter Timeline" /></Link></li>
+                    <li><Link to='https://newparadigminstitute.org/take-action/join-citizens-for-disclosure/'><FaShareAlt size='35' className='icon' alt="Citizens for UAP Disclosure" title="Citizens for UAP Disclosure" /></Link></li>
                     
                     
                 </ul>

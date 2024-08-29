@@ -14,7 +14,7 @@ export const Aliens = () => {
                     Humans
                     </p>
                     <p>
-                    Potential Aliens
+                    Grays, J-Rods (origins, intent, biology)
                     </p>
                     
                     

@@ -9,9 +9,9 @@ export const Terms = () => {
         <div className='terms'>
             <div className='container'>
             <div className='content'>
-                    <h2><GiBlackHoleBolas className='iconmain' /><span> Space Term</span> Definitions</h2>
+                    <h2><GiBlackHoleBolas className='iconmain' /><span> Alien / UFO / UAP</span> Whistleblowers</h2>
                     <p>
-                    Terms
+                    Bob Lazar, Daniel Burisch (Crain), Daniel Sheehan, Lue Elizondo, David Grusch, David Fravor, Ryan Graves
                     </p>
                     
                     

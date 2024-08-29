@@ -4,6 +4,7 @@ import './StarSystemsStyles.css';
 import { GiSolarSystem } from "react-icons/gi";
 import { PiPlanetFill } from "react-icons/pi";
 import { FaCircleRadiation } from "react-icons/fa6";
+import { GiAsteroid } from "react-icons/gi";
 import { SiAlienware } from "react-icons/si";
 import { FaCircle } from "react-icons/fa";
 import { GrSolaris } from "react-icons/gr";
@@ -38,9 +39,9 @@ import { GiDustCloud } from "react-icons/gi";
 import { GiBubbles } from "react-icons/gi";
 import { HiViewGrid } from "react-icons/hi";
 import { WiStars } from "react-icons/wi";
-import SubBD from "../../assets/Sub BD Small.png";
-import TClass from "../../assets/T Class  Smaller.png";
-import LClass from "../../assets/L Class Medium.png";
+import SubBD from "../../assets/SUB BD Class New.png";
+import TClass from "../../assets/T Class Brown Dwarf.png";
+import LClass from "../../assets/L Class Brown Dwarf Size.png";
 import MClass from "../../assets/M Class Smaller.gif";
 import KClass from "../../assets/K Class Small.gif";
 import GClass from "../../assets/G Class Small.gif";
@@ -74,19 +75,19 @@ const StarSystems = () => {
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems51to200'> 51 - 200 Light Years</Link></span>
                 </div>
               <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 201 - 400 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems201to400'>201 - 400 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 401 - 600 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems401to600'>401 - 600 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 601 - 800 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems601to800'> 601 - 800 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 801 - 1,000 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems801to1000'> 801 - 1,000 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 1,001 - 2,000 Light Years</span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems1001to2000'>1,001 - 2,000 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 2,001 - 3,000 Light Years</span>
@@ -242,7 +243,9 @@ const StarSystems = () => {
                 <MdOutlineAir size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetatmospherebreathable"> Breathable</span>
                 </div>
                 
+                <Link to='/planetearthview'>
                 <img src={Terran} alt="Earth" title="Earth" />
+                </Link>
                 <div class="overlay-textterran">Earth</div>
 
                 <div className='centered-labeltop'>
@@ -289,7 +292,7 @@ const StarSystems = () => {
                 <div class="overlay-textsubterran">Mars</div>
 
                 <div className='centered-labeltop'>
-                <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancehabzone"> 1.523 AU</span>
+                <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 1.523 AU</span>
                 </div>
                 <div className='centered-label'>
                 <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 686.980 Days</span>
@@ -326,7 +329,10 @@ const StarSystems = () => {
                 <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 2.2 - 3.2 AU</span>
                 </div>
                 <div className='centered-label'>
-                <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 2 Million +</span>
+                <GiAsteroid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 2 Million +</span>
+                </div>
+                <div className='centered-label'>
+                <FaCircle size='7' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> Ceres at 2.77 AU</span>
                 </div>
                 </div>   
                 {/* Asteroid Belt End */}     
@@ -510,7 +516,10 @@ const StarSystems = () => {
                 <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 30 - 50 AU</span>
                 </div>
                 <div className='centered-label'>
-                <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 300,000 +</span>
+                <GiAsteroid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 300,000 +</span>
+                </div>
+                <div className='centered-label'>
+                <FaCircle size='8' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> Pluto at 39.5 AU</span>
                 </div>
                 </div>
                 {/* Kuiper Belt End */}
@@ -615,7 +624,7 @@ const StarSystems = () => {
                 <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
                 </div>
                 <div className='centered-label'>
-                <FaEarthAmericas size='17' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizesubterran"> Super Terran</span>
+                <FaEarthAmericas size='17' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizesuperterran"> Super Terran</span>
                 </div>
                 <div className='centered-label'>
                 <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
@@ -657,7 +666,7 @@ const StarSystems = () => {
 
                 <div className='planetsection'>
                 <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
+                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Ice Giant ?</span>
                 </div>
                 <div className='centered-label'>
                 <FaCircle size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizeneptunian"> Neptunian</span>
@@ -737,7 +746,7 @@ const StarSystems = () => {
                 </div>
                 </div>
 
-              <div className='starsystemsection'>
+              <div className='starsystemsectionhigher'>
 
                 <div className='starsectiondouble'>
                   <img src={GClass} alt="Rigil Kentaurus A" title="Rigil Kentaurus A" />
@@ -819,6 +828,21 @@ const StarSystems = () => {
 
                 </div>      
 
+                <div className='galacticlocationsection'>
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <TbGalaxy size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Milky Way Orion-Cygnus Arm</span>
+                </div>
+                <div className='centered-labeldistance'>
+                <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
+                </div>
+                </div>
+
 
               <div className='starsystemsection'>
 
@@ -848,13 +872,13 @@ const StarSystems = () => {
                 <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
                 </div>
                 <div className='centered-label'>
-                <FaCircle size='17' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizesubneptunian"> Sub Neptunian</span>
+                <FaCircle size='15' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizesubneptunian"> Sub Neptunian</span>
                 </div>
                 <div className='centered-label'>
                 <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
                 </div>
                 <img src={SubNeptunian} alt="Barnard I" title="Barnard I" />
-                <div class="overlay-textsuperterran">Barnard I</div>
+                <div class="overlay-textsubneptunian">Barnard I</div>
 
                 <div className='centered-labeltop'>
                 <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 0.40 AU</span>
@@ -911,7 +935,22 @@ const StarSystems = () => {
 
                 </div>
 
-              <div className='starsystemsection'>
+                <div className='galacticlocationsection'>
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <TbGalaxy size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Milky Way Orion-Cygnus Arm</span>
+                </div>
+                <div className='centered-labeldistance'>
+                <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
+                </div>
+                </div>
+
+              <div className='starsystemsectionhighest'>
 
                 <div className='starsection'>
                   <img src={LClass} alt="Rigil Kentaurus A" title="Rigil Kentaurus A" />
@@ -991,14 +1030,29 @@ const StarSystems = () => {
                 </div>
 
                 </div>
+
+                <div className='galacticlocationsection'>
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <TbGalaxy size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Milky Way Orion-Cygnus Arm</span>
+                </div>
+                <div className='centered-labeldistance'>
+                <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
+                </div>
+                </div>
                     
 
-              <div className='starsystemsection'>
+              <div className='starsystemsectionhighest'>
 
                 <div className='starsection'>
                   <img src={SubBD} alt="Rigil Kentaurus A" title="Rigil Kentaurus A" />
                   <div class="overlay-textbrowndwarfsubbd">Wise 0855-0714</div>
-                  <div className='centered-label'>
+                  <div className='centered-labelbrowndwarf'>
                 <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbrowndwarf"> Sub-BD Brown Dwarf</span>
                 </div>
                 <div className='centered-label'>
@@ -1011,7 +1065,7 @@ const StarSystems = () => {
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassextreme"> Unknown</span>
                 </div>
 
-                <div className='centered-label'>
+                <div className='centered-labelbottombrowndwarf'>
                 <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
                 </div>
                 </div>
@@ -1053,6 +1107,21 @@ const StarSystems = () => {
                 <GiSail size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="propulsion"> Solar Sail Propulsion = 37.88 Years</span>
                 </div>
 
+                </div>
+
+                <div className='galacticlocationsection'>
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <TbGalaxy size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Milky Way Orion-Cygnus Arm</span>
+                </div>
+                <div className='centered-labeldistance'>
+                <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
+                </div>
                 </div>
                           
 
@@ -1116,6 +1185,21 @@ const StarSystems = () => {
                 <GiSail size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="propulsion"> Solar Sail Propulsion = 39.15 Years</span>
                 </div>
 
+                </div>
+
+                <div className='galacticlocationsection'>
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
+                </div>
+              <div className='centered-labeldistance'>
+                <TbGalaxy size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Milky Way Orion-Cygnus Arm</span>
+                </div>
+                <div className='centered-labeldistance'>
+                <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
+                </div>
                 </div>
 
                     

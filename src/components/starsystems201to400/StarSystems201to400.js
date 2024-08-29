@@ -28,21 +28,23 @@ import { GiBubbles } from "react-icons/gi";
 import { HiViewGrid } from "react-icons/hi";
 import { WiStars } from "react-icons/wi";
 import { TbGalaxy } from "react-icons/tb";
-import TClass from "../../assets/T Class  Smaller.png";
 import MClass from "../../assets/M Class Smaller.gif";
+import MClassGiant from "../../assets/M Class.gif";
+import KClassGiant from "../../assets/K Class.gif";
 import GClass from "../../assets/G Class Small.gif";
 import AClass from "../../assets/A Class.gif";
-import FireGiant from "../../assets/fire giant_small.png";
+import BClass from "../../assets/B Class.gif";
 import SuperJovian from "../../assets/Super Jovian_small.png";
+import InfernoGiant from "../../assets/inferno giant_small.png";
 
-const StarSystems51to200 = () => {
+const StarSystems201to400 = () => {
     return  (
         <div className='starsystems'>
           <div className='container'>
             <div className='content'>
 
             <div className='centered-labeltitle'>
-                <GiSolarSystem size='70' className='iconmain' alt="Star System List" title="Star System List" /><h2><span className="titleblue">Star System List</span>   51 - 200 Light Years</h2>
+                <GiSolarSystem size='70' className='iconmain' alt="Star System List" title="Star System List" /><h2><span className="titleblue">Star System List</span>   201 - 400 Light Years</h2>
             </div>
 
                 <div className='navigationsection'>
@@ -53,10 +55,10 @@ const StarSystems51to200 = () => {
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigationactive"><Link to='/starsystems51to200'> 51 - 200 Light Years</Link></span>
                 </div>
               <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems201to400'> 201 - 400 Light Years</Link></span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems201to400'>201 - 400 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems401to600'>401 - 600 Light Years</Link></span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems401to600'> 401 - 600 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems601to800'> 601 - 800 Light Years</Link></span>
@@ -65,7 +67,7 @@ const StarSystems51to200 = () => {
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems801to1000'> 801 - 1,000 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
-                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> <Link to='/starsystems1001to2000'>1,001 - 2,000 Light Years</Link></span>
+                <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"><Link to='/starsystems1001to2000'>1,001 - 2,000 Light Years</Link></span>
                 </div>
                 <div className='centered-labelnavigation'>
                 <WiStars size='25' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyearsnavigation"> 2,001 - 3,000 Light Years</span>
@@ -102,27 +104,48 @@ const StarSystems51to200 = () => {
                
 
 
-    {/* HR 8323 System Start */}
+    {/* Epsilon Bootes System Start */}
               <div className='starsystemsectionhigher'>
 
-              <div className='starsection'>
-                  <img src={GClass} alt="HR 8323" title="HR 8323" />
-                  <div class="overlay-textgclass">HR 8323</div>
+              <div className='starsectiondoublewider'>
+                  <img src={KClassGiant} alt="Epsilon Bootes A" title="Epsilon Bootes A" />
+                  <div class="overlay-textkclass">Epsilon Bootes A</div>
                   <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> G2V Class Dwarf</span>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclasskorange"> K0II Class Giant</span>
                 </div>
                 <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> Luminosity = ?</span>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclasskorange"> Luminosity = 501</span>
                 </div>
                 <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 10,160 &deg; F</span>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 7,730 &deg; F</span>
                 </div>
                 <div className='centered-label'>
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> Unknown Flares</span>
                 </div>
 
                 <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.15 %</span>
+                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.20 %</span>
+                </div>
+                </div>
+
+                <div className='starsection'>
+                  <img src={AClass} alt="Epsilon Bootes B" title="Epsilon Bootes B" />
+                  <div class="overlay-textaclass">Epsilon Bootes B</div>
+                  <div className='centered-label'>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> A2V Class Sub Giant</span>
+                </div>
+                <div className='centered-label'>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> Luminosity = 44.8</span>
+                </div>
+                <div className='centered-labelbottom'>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 15,756 &deg; F</span>
+                </div>
+                <div className='centered-label'>
+                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> Unknown Flares</span>
+                </div>
+
+                <div className='centered-label'>
+                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
                 </div>
                 </div>
 
@@ -141,7 +164,7 @@ const StarSystems51to200 = () => {
 
               <div className='traveltimesection'>
               <div className='centered-labeldistance'>
-                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 51.000 Light Years</span>
+                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 203.000 Light Years</span>
                 </div>
 
                 <div className='centered-labeltraveltime'>
@@ -163,7 +186,9 @@ const StarSystems51to200 = () => {
                 </div>   
 
                 <div className='galacticlocationsection'>
-              
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
               <div className='centered-labeldistance'>
                 <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
                 </div>
@@ -174,44 +199,23 @@ const StarSystems51to200 = () => {
                 <HiViewGrid size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Galactic Quadrant 4</span>
                 </div>
                 </div>
-      {/* HR 8323 System End */}             
+      {/* Epsilon Bootes System End */}             
 
       
-      {/* Gliese 758 Start */}
+      {/* Zaurak Start */}
               <div className='starsystemsectionhigher'>
 
                 <div className='starsection'>
-                  <img src={GClass} alt="Gliese 758 A" title="Gliese 758 A" />
-                  <div class="overlay-textgclass">Gliese 758 A</div>
+                  <img src={MClassGiant} alt="Zaurak" title="Zaurak" />
+                  <div class="overlay-textmclass">Zaurak</div>
                   <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> G8V Class Dwarf</span>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> M0III Class Giant</span>
                 </div>
                 <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> Luminosity = ?</span>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = 807.29</span>
                 </div>
                 <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 9,089 &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 18 %</span>
-                </div>
-                </div>
-
-                <div className='starsection'>
-                  <img src={TClass} alt="Gliese 758 B" title="Gliese 758 B" />
-                  <div class="overlay-textgclass">Gliese 758 B</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbrowndwarf"> T8 Brown Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbrowndwarf"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbrowndwarf"> 620 &deg; F</span>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> 6,400 &deg; F</span>
                 </div>
                 <div className='centered-label'>
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
@@ -222,18 +226,20 @@ const StarSystems51to200 = () => {
                 </div>
                 </div>
 
-
+                <div className='planetsection'>
                 
+                </div>
 
-                
+                <div className='planetsection'>
+                No Planets Discovered
+                </div>
 
-                
               
               </div>
 
               <div className='traveltimesection'>
               <div className='centered-labeldistance'>
-                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 51.400 Light Years</span>
+                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 203.34 Light Years</span>
                 </div>
 
                 <div className='centered-labeltraveltime'>
@@ -255,7 +261,9 @@ const StarSystems51to200 = () => {
                 </div>
 
                 <div className='galacticlocationsection'>
-              
+              <div className='centered-labeldistance'>
+                <GiDustCloud size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Interstellar Cloud</span>
+                </div>
               <div className='centered-labeldistance'>
                 <GiBubbles size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Local Bubble</span>
                 </div>
@@ -267,28 +275,28 @@ const StarSystems51to200 = () => {
                 </div>
                 </div>
 
-   {/* Gliese 758 System End */}
+   {/* Zaurak System End */}
 
               <div className='starsystemsectionhigher'>
 
                 <div className='starsection'>
-                  <img src={GClass} alt="104 Tauri" title="104 Tauri" />
-                  <div class="overlay-textgclass">104 Tauri</div>
+                  <img src={KClassGiant} alt="Alpha Lynx" title="Alpha Lynx" />
+                  <div class="overlay-textkclass">Alpha Lynx</div>
                   <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> G4V Class Dwarf</span>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclasskorange"> K7III Class Giant</span>
                 </div>
                 <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> Luminosity = 2.41</span>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclasskorange"> Luminosity = 673</span>
                 </div>
                 <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 9,830 &deg; F</span>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclasskorange"> 6,527 &deg; F</span>
                 </div>
                 <div className='centered-label'>
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> Unknown</span>
                 </div>
 
                 <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 22 %</span>
+                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 26 %</span>
                 </div>
                 </div>
 
@@ -310,7 +318,7 @@ const StarSystems51to200 = () => {
 
               <div className='traveltimesection'>
               <div className='centered-labeldistance'>
-                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 51.800 Light Years</span>
+                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 203.500 Light Years</span>
                 </div>
 
                 <div className='centered-labeltraveltime'>
@@ -350,148 +358,39 @@ const StarSystems51to200 = () => {
               <div className='starsystemsectionhigher'>
 
                 <div className='starsection'>
-                  <img src={GClass} alt="Gliese 777 A" title="Gliese 777 A" />
-                  <div class="overlay-textgclass">Gliese 777 A</div>
+                  <img src={BClass} alt="Homam" title="Homam" />
+                  <div class="overlay-textgclass">Homam</div>
                   <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> G6IV Class Dwarf</span>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbblue"> B8V Class Sub Giant</span>
                 </div>
                 <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> Luminosity = 1.127</span>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbblue"> Luminosity = 224</span>
                 </div>
                 <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 9,946 &deg; F</span>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassbblue"> 19,682 &deg; F</span>
                 </div>
                 <div className='centered-label'>
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> Unknown</span>
                 </div>
 
                 <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.20 %</span>
+                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.06 %</span>
                 </div>
                 </div>
 
-                <div className='starsection'>
-                  <img src={MClass} alt="Gliese 777 B" title="Gliese 777 B" />
-                  <div class="overlay-textmclass">Gliese 777 B</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> M4.5 Class Sub Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> Unknown</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-
-                
-
-                {/* Planet Gliese 777 I Start */}
-                <div className='planetsection'>
-                
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <FaCircle size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizeneptunian"> Neptunian</span>
-                </div>
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <img src={FireGiant} alt="Gliese 777 I" title="Gliese 777 I" />
-                <div class="overlay-textneptunian">Gliese 777 I</div>
-
-                <div className='centered-labeltop'>
-                <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 0.1304 AU</span>
-                </div>
-                <div className='centered-label'>
-                <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 17.1110 Days</span>
-                </div>
-                <div className='centered-label'>
-                <FaWeightHanging size='13' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetmassnotsimilar"> 19.05 (EM)</span>
-                </div>
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='14' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <FaTemperatureThreeQuarters size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclimateextremelyhot">Extremely Hot</span>
-                </div>
-                <div className='centered-label'>
-                <IoIosWater size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unlikely</span>
-                </div>
-                </div>
-                {/* Planet Gliese 777 I End */}
-
+    
                 <div className='planetsection'>
                 
                 </div>
 
                 <div className='planetsection'>
-                
+                No Planets Discovered
                 </div>
 
                 
 
                 
 
-
-                {/* Planet Gliese 777 II Start */}
-                <div className='planetsection'>
-                
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <PiPlanetFill size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizesuperjovian"> Super Jovian</span>
-                </div>
-                <div className='centered-label'>
-                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <img src={SuperJovian} alt="Gliese 777 II" title="Gliese 777 II" />
-                <div class="overlay-textsuperjovian">Gliese 777 II</div>
-
-                <div className='centered-labeltop'>
-                <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 4.01 AU</span>
-                </div>
-                <div className='centered-label'>
-                <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 7.98 Years</span>
-                </div>
-                <div className='centered-label'>
-                <FaWeightHanging size='13' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetmassnotsimilar"> 1.56 (JM)</span>
-                </div>
-                <div className='centered-label'>
-                <BsDatabaseFillDown size='14' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <TbRulerMeasure size='16' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <FaTemperatureThreeQuarters size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclimatefreezing">Freezing</span>
-                </div>
-                <div className='centered-label'>
-                <IoIosWater size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
-                </div>
-                <div className='centered-label'>
-                <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unlikely</span>
-                </div>
-                </div>
-                {/* Planet Gliese 777 II End */}
-
-
-                
 
                 
               
@@ -499,7 +398,7 @@ const StarSystems51to200 = () => {
 
               <div className='traveltimesection'>
               <div className='centered-labeldistance'>
-                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 51.800 Light Years</span>
+                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 204.360 Light Years</span>
                 </div>
 
                 <div className='centered-labeltraveltime'>
@@ -539,137 +438,69 @@ const StarSystems51to200 = () => {
               <div className='starsystemsectionhigher'>
 
                 <div className='starsection'>
-                  <img src={AClass} alt="Castor A" title="Castor A" />
-                  <div class="overlay-textaclass">Castor A</div>
+                  <img src={GClass} alt="HD 179079" title="HD 179079" />
+                  <div class="overlay-textgclass">HD 179079</div>
                   <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> A1V Class Giant</span>
+                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> G5IV Class Dwarf</span>
                 </div>
                 <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> Luminosity = ?</span>
+                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> Luminosity = 2.34</span>
                 </div>
                 <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> ? &deg; F</span>
+                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassgyellow"> 9,751 &deg; F</span>
                 </div>
                 <div className='centered-label'>
                 <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
                 </div>
 
                 <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
+                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = 0.19 %</span>
                 </div>
                 </div>
 
-                <div className='starsection'>
-                  <img src={MClass} alt="Castor B" title="Castor B" />
-                  <div class="overlay-textmclass">Castor B</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> dM1e Class Sub Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
 
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-
-                <div className='starsection'>
-                  <img src={AClass} alt="Castor C" title="Castor C" />
-                  <div class="overlay-textaclass">Castor C</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> Am Class Giant</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassawhite"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-
-                <div className='starsection'>
-                  <img src={MClass} alt="Castor D" title="Castor D" />
-                  <div class="overlay-textmclass">Castor D</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> dM1e Class Sub Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-
-                <div className='starsection'>
-                  <img src={MClass} alt="Castor E" title="Castor E" />
-                  <div class="overlay-textmclass">Castor E</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> dM1e Class Sub Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-
-                <div className='starsection'>
-                  <img src={MClass} alt="Castor F" title="Castor F" />
-                  <div class="overlay-textmclass">Castor F</div>
-                  <div className='centered-label'>
-                <GrSolaris size='20' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> dM1e Class Sub Dwarf</span>
-                </div>
-                <div className='centered-label'>
-                <BsFillBrightnessHighFill size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> Luminosity = ?</span>
-                </div>
-                <div className='centered-labelbottom'>
-                <SiFireship size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassmred"> ? &deg; F</span>
-                </div>
-                <div className='centered-label'>
-                <GiFlameSpin size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starclassflareunknown"> ? Flares</span>
-                </div>
-
-                <div className='centered-label'>
-                <GiMolecule size='18' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="starmetallicity"> Metallicity = ? %</span>
-                </div>
-                </div>
-                
-
-                
-
+               
                 <div className='planetsection'>
-                No Planets Discovered
+                <div className='centered-label'>
+                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
                 </div>
+                <div className='centered-label'>
+                <FaCircle size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetsizeneptunian"> Neptunian</span>
+                </div>
+                <div className='centered-label'>
+                <VscWorkspaceUnknown size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown </span>
+                </div>
+                
+                <img src={InfernoGiant} alt="HD 179079 I" title="HD 179079 I" />
+                <div class="overlay-textneptunian">HD 179079 I</div>
+                
+                <div className='centered-label'>
+                <CgArrowLongRightC size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 0.1100 AU</span>
+                </div>
+                <div className='centered-label'>
+                <LuOrbit size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetdistancenohabzone"> 14.4808 Days</span>
+                </div>
+                <div className='centered-label'>
+                <FaWeightHanging size='13' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetmassnotsimilar"> 25.4 (EM)</span>
+                </div>
+                <div className='centered-label'>
+                <BsDatabaseFillDown size='14' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetgravitynotsimilar"> Unknown</span>
+                </div>
+                <div className='centered-label'>
+                <TbRulerMeasure size='16' className="iconmain" alt="Diameter" title="Diameter" /><span className="planetmassnotsimilar"> Unknown</span>
+                </div>
+                <div className='centered-label'>
+                <FaTemperatureThreeQuarters size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetclimateinferno"> Inferno</span>
+                </div>
+                <div className='centered-label'>
+                <IoIosWater size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetunknown"> Unknown</span>
+                </div>
+                <div className='centered-label'>
+                <SiAlienware size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="planetaliensno"> Not Likely</span>
+                </div>
+                </div>    
+                  
+                        
 
                 
 
@@ -679,7 +510,7 @@ const StarSystems51to200 = () => {
 
               <div className='traveltimesection'>
               <div className='centered-labeldistance'>
-                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 52.000 Light Years</span>
+                <MdRocketLaunch size='16' className="iconmain" alt="Atmosphere" title="Atmosphere" /><span className="lightyears"> Distance = 208.000 Light Years</span>
                 </div>
 
                 <div className='centered-labeltraveltime'>
@@ -731,4 +562,4 @@ const StarSystems51to200 = () => {
     )
 }
 
-export default StarSystems51to200;
+export default StarSystems201to400;

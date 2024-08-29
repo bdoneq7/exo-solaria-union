@@ -9,9 +9,9 @@ export const SpaceTech = () => {
         <div className='spacetech'>
             <div className='container'>
             <div className='content'>
-                    <h2><ImRocket className='iconmain' /><span> Space Technology</span> Levels</h2>
+                    <h2><ImRocket className='iconmain' /><span> Alien / UAP Technology</span></h2>
                     <p>
-                    Tech
+                    5 Observables, Materials, Propulsion, Blueprints
                     </p>
                     
                     

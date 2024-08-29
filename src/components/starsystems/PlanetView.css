@@ -1,4 +1,4 @@
-.starsystems {
+.planetview {
     width: 100%;
     height: 600vh;
     background: #C33764;  /* fallback for old browsers */
@@ -8,7 +8,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     position: relative;
 }
 
-.starsystems a {
+.planetview a {
     text-decoration: none;
     color: #f7fb03;
     box-shadow: inset 0 0 0 0 #54b3d6;
@@ -17,21 +17,20 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     }
   
-.starsystems a:hover {
+.planetview a:hover {
       box-shadow: inset 1000px 0 0 0 #7dd2f1;
       color: #000000;
     }
 
-.starsystems:before {
+.planetview:before {
     content: '';
     position: absolute;
-    background: url('../../assets/howitworks-bg.jpg') no-repeat center center/cover;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 
-.starsystems .content {
+.planetview .content {
     position: absolute;
     top: 2.5%;
     width: 100%;
@@ -52,6 +51,14 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     margin-top: 6rem;
     width: 100%;
     height: 310px;
+    
+
+}
+
+.starsystemsectionhighest {
+    margin-top: 6rem;
+    width: 100%;
+    height: 320px;
     
 
 }
@@ -132,34 +139,6 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     width: 80%;
 }
 
-.starsectiondouble .overlay-textaclass {
-    position: absolute;
-    top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgba(65, 65, 111, 0.95);
-    border-radius: 10px;
-    color: #fff; 
-    padding: 3px; 
-    font-size: 13px; 
-    text-align: center;
-    width: 80%;
-}
-
-.starsection .overlay-textfclass {
-    position: absolute;
-    top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgb(1, 1, 101, 0.75);
-    border-radius: 10px;
-    color: #fff; 
-    padding: 3px; 
-    font-size: 13px; 
-    text-align: center;
-    width: 80%;
-}
-
 .starsection .overlay-textgclass {
     position: absolute;
     top: 20%; 
@@ -207,20 +186,6 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 .starsectiondouble .overlay-textgclass {
     position: absolute;
     top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgb(1, 1, 101, 0.75);
-    border-radius: 10px;
-    color: #fff; 
-    padding: 3px; 
-    font-size: 13px; 
-    text-align: center;
-    width: 80%;
-}
-
-.starsection .overlay-textbclass {
-    position: absolute;
-    top: 25%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     background-color: rgb(1, 1, 101, 0.75);
@@ -290,7 +255,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 .starsection .overlay-textbrowndwarfsubbd {
     position: absolute;
-    top: 33%; 
+    top: 14%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     background-color: rgb(1, 1, 101, 0.75);
@@ -365,20 +330,6 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     position: absolute;
     top: 30%; 
     left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgb(1, 1, 101, 0.50);
-    border-radius: 10px;
-    color: #fff; 
-    padding: 3px; 
-    font-size: 12px; 
-    text-align: center;
-}
-
-.planetsection .overlay-textsubneptunian {
-    position: absolute;
-    top: 36%; 
-    left: 50%; 
-    width: 80%;
     transform: translate(-50%, -50%); 
     background-color: rgb(1, 1, 101, 0.50);
     border-radius: 10px;
@@ -494,6 +445,18 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetclasslushview {
+    float: left;
+    font-size: 25px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+    margin-left: 0.2rem;
+
+}
+
 .planetclassbarren {
     float: left;
     font-size: 10px;
@@ -593,6 +556,17 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetsizeterranview {
+    float: left;
+    font-size: 13px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetsizesubterran {
     float: left;
     font-size: 10px;
@@ -637,6 +611,72 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.nitrogen {
+    float: left;
+    font-size: 13px;
+    color:#bb9dfa;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.carbondioxide {
+    float: left;
+    font-size: 13px;
+    color:#d7f845;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.watervapor {
+    float: left;
+    font-size: 13px;
+    color:#01f2ff;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.oxygen {
+    float: left;
+    font-size: 13px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.argon {
+    float: left;
+    font-size: 13px;
+    color:#fd91b3;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetgray {
+    float: left;
+    font-size: 13px;
+    color:#cfcccd;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 
 .planetatmospheretoxic {
     float: left;
@@ -660,9 +700,31 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetatmospherebreathableview {
+    float: left;
+    font-size: 13px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetdistancehabzone {
     float: left;
     font-size: 10px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetdistancehabzoneview {
+    float: left;
+    font-size: 13px;
     color:#05fd22;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -707,6 +769,94 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetmasstwinview {
+    float: left;
+    font-size: 13px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetcoreiron {
+    float: left;
+    font-size: 13px;
+    color:#fde005;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetvolcano {
+    float: left;
+    font-size: 13px;
+    color:#f99a99;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.mantle {
+    float: left;
+    font-size: 13px;
+    color:#ff77c6;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.greenhousemoderate {
+    float: left;
+    font-size: 13px;
+    color:#1aff00;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.tectonicplatesyes {
+    float: left;
+    font-size: 13px;
+    color:#eab84d;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetcrustsilicon {
+    float: left;
+    font-size: 13px;
+    color:#f9ee99;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.techlevel8 {
+    float: left;
+    font-size: 13px;
+    color:#f9b999;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetgravitynotsimilar {
     float: left;
     font-size: 10px;
@@ -732,6 +882,17 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 .planetgravityearthtwin {
     float: left;
     font-size: 10px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetgravityearthtwinview {
+    float: left;
+    font-size: 13px;
     color:#05fd22;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -773,6 +934,17 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetdiameterearthtwinview {
+    float: left;
+    font-size: 13px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetclimateextremelyhot {
     float: left;
     font-size: 10px;
@@ -806,9 +978,31 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetclimatehotview {
+    float: left;
+    font-size: 13px;
+    color:#f97d62;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetclimatewarm {
     float: left;
     font-size: 10px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetclimatewarmview {
+    float: left;
+    font-size: 13px;
     color:#05fd22;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -839,9 +1033,31 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 }
 
+.planetclimatefreezingview {
+    float: left;
+    font-size: 13px;
+    color:#4eebfd;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
 .planetwateryes {
     float: left;
     font-size: 10px;
+    color:#4eebfd;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetwateryesview {
+    float: left;
+    font-size: 13px;
     color:#4eebfd;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -864,6 +1080,17 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 .planetaliensyes {
     float: left;
     font-size: 10px;
+    color:#05fd22;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.planetaliensyesview {
+    float: left;
+    font-size: 13px;
     color:#05fd22;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
@@ -897,17 +1124,6 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 .starclassawhite {
     font-size: 10px;
     color:#f7f8f3;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    border-radius: 10px;
-    background:rgba(0,0,0,0.7);
-  
-
-}
-
-.starclassflightyellow {
-    font-size: 10px;
-    color:#e0fd05;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     border-radius: 10px;
@@ -1061,11 +1277,26 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
   }
 
+  .centered-labelbrowndwarf {
+    display: flex;
+    align-items: center;
+    padding-top: -25px;
+    
+  }
+
   .centered-labelbottom {
     display: flex;
     align-items: center;
     padding-top: 0.35rem;
     padding-bottom: 0.2rem;
+  }
+
+  .centered-labelbottombrowndwarf {
+    display: flex;
+    align-items: center;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    margin-bottom: 8rem;
   }
 
   .centered-labeltop {
@@ -1124,19 +1355,68 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
   }
 
-
-.starsystems h2 {
+.planetimage {
+   
+    float: left;
+    width: 45%;
+    height: 650px;
     color: #f8f8f8;
-    background:rgb(1, 1, 101, 0.75);
-    padding: 0.5rem;
-    border-radius: 10px;
-    font-size: 38px;
+    font-size: 30px;
+    text-align: center;
+   
+}
+
+.planetimagebelow {
+   
+    float: left;
+    width: 43%;
+    height: 650px;
+    color: #f8f8f8;
+    font-size: 30px;
+    text-align: center;
+   
+}
+
+.planetdetails {
+  
+    float: left;
+    width: 55%;
+    height: 650px;
+    color: #f8f8f8;
+    font-size: 16px;
+    padding-left: 1rem;
    
 }
 
 
+.planetview h2 {
+    color: #f8f8f8;
+    background:rgb(1, 1, 101, 0.75);
+    padding: 0.2rem;
+    border-radius: 10px;
+    font-size: 30px;
+   
+}
 
-.starsystems p {
+.planetview h3 {
+    color: #f8f8f8;
+    background:rgb(1, 1, 101, 0.75);
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-size: 20px;
+   
+}
+
+.blankspace {
+    width: 100%;
+    height: 2rem;
+   
+}
+
+.planetview p {
     color: #f8f8f8;
     margin: 1rem 0;
     background:rgba(0,0,0,0.7);
@@ -1144,14 +1424,14 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     border-radius: 10px;
 }
 
-.starsystems button {
+.planetview button {
     color: #ffffff;
     -webkit-text-stroke: 0.2px #000000;
     text-shadow: 2px 2px 4px #000000;
     
 }
 
-.starsystems .iconmain {
+.planetview .iconmain {
    
     color: #f8f8f8;
     padding-right: 0.2rem;
@@ -1160,7 +1440,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
 }
 
-.starsystems .icontitle {
+.planetview .icontitle {
    
     color: #f8f8f8;
     padding-right: 0.2rem;
@@ -1168,7 +1448,7 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
     
 }
 
-.starsystems .iconstep {
+.planetview .iconstep {
     padding-top: 0.4rem;
     
 
@@ -1177,22 +1457,22 @@ background: linear-gradient(to left, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Fi
 
 
 
-.starsystems .iconbutton {
+.planetview .iconbutton {
     margin-left: 0.75rem;
     padding-top: .2rem;
     
 }
 
 @media screen and (max-width: 940px) {
-    .starsystems .content {
+    .planetview .content {
         width: 100%;
     }
 
-    .starsystems h2 {
+    .planetview h2 {
         font-size: 1.7rem;
     }
 
-    .starsystems .iconmain {
+    .planetview .iconmain {
         padding-top: .7rem;
         color: #ffffff;
         
