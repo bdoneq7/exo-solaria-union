@@ -22,6 +22,7 @@ import PlanetsPage from './routes/PlanetsPage';
 import AliensPage from './routes/AliensPage';
 import SpaceTechPage from './routes/SpaceTechPage';
 import TermsPage from './routes/TermsPage';
+import TimelinePage from './routes/TimelinePage';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -44,6 +45,7 @@ ReactDOM.render(
       <Route path='/aliens' element={<AliensPage />} />
       <Route path='/spacetech' element={<SpaceTechPage />} />
       <Route path='/terms' element={<TermsPage />} />
+      <Route path='/timeline' element={<TimelinePage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

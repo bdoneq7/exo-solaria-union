@@ -1,6 +1,6 @@
 import React from 'react';
 import './AreAliensRealStyles.css';
-import { GiAlienBug } from "react-icons/gi";
+import { SiAlienware } from "react-icons/si";
 
 
 
@@ -9,9 +9,9 @@ const AreAliensReal = () => {
         <div className='arealiensreal'>
             <div className='container'>
                 <div className='content'>
-                    <h2><GiAlienBug className='iconmain' /><span> Are Aliens Real?</span> Yes or No</h2>
+                    <h2><SiAlienware className='iconmain' /><span> Join the</span> Exo Solaria Union</h2>
                     <p>
-                    Book Cover Image with link to Amazon Ebook
+                    Join Form
                     </p>
 
                    

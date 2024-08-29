@@ -54,9 +54,10 @@ const Navbar = () => {
                     <li><Link to='/planets'><IoPlanetSharp size='35' className='icon' alt="Planet Classes" title="Planet Classes" /></Link></li>
                     
                     <li><Link to='/aliens'><GiAlienBug size='32' className='icon' alt="Alien Species" title="Alien Species" /></Link></li>
-                    <li><Link to='/spacetech'><TbUfo size='35' className='icon' alt="Alien Technology" title="Alien Technology" /></Link></li>
-                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien Whistleblowers" title="Alien  Whistleblowers" /></Link></li>
-                    <li><Link to='https://www.instagram.com/exosolariaunion/'><GiUfo size='35' className='icon' alt="Alien/UFO/UAP Encounter Timeline" title="Alien/UFO/UAP Encounter Timeline" /></Link></li>
+                    <li><Link to='/spacetech'><TbUfo size='35' className='icon' alt="Alien Technology" title="Alien/UAP Technology" /></Link></li>
+                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien/UAP Whistleblowers" title="Alien/UAP  Whistleblowers" /></Link></li>
+                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien/UAP Researchers" title="Alien/UAP Researchers & Journalists" /></Link></li>
+                    <li><Link to='/timeline'><GiUfo size='35' className='icon' alt="Alien/UFO/UAP Encounter Timeline" title="Alien/UFO/UAP Encounter Timeline" /></Link></li>
                     <li><Link to='https://newparadigminstitute.org/take-action/join-citizens-for-disclosure/'><FaShareAlt size='35' className='icon' alt="Citizens for UAP Disclosure" title="Citizens for UAP Disclosure" /></Link></li>
                     
                     

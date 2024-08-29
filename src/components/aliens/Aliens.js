@@ -16,6 +16,12 @@ export const Aliens = () => {
                     <p>
                     Grays, J-Rods (origins, intent, biology)
                     </p>
+                    <p>
+                    Pleiadians, Nordics
+                    </p>
+                    <p>
+                    Reptilians
+                    </p>
                     
                     
                 </div>

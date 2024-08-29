@@ -1,6 +1,6 @@
 import React from 'react';
 import './TermsStyles.css';
-import { GiBlackHoleBolas } from "react-icons/gi";
+import { BsPeopleFill } from "react-icons/bs";
 
 export const Terms = () => {
     
@@ -9,9 +9,30 @@ export const Terms = () => {
         <div className='terms'>
             <div className='container'>
             <div className='content'>
-                    <h2><GiBlackHoleBolas className='iconmain' /><span> Alien / UFO / UAP</span> Whistleblowers</h2>
+                    <h2><BsPeopleFill className='iconmain' /><span> Alien / UFO / UAP</span> Whistleblowers</h2>
                     <p>
-                    Bob Lazar, Daniel Burisch (Crain), Daniel Sheehan, Lue Elizondo, David Grusch, David Fravor, Ryan Graves
+                    Bob Lazar (S4 - UFO Propulsion Tech)
+                    </p>
+                    <p>
+                    Daniel Burisch or Crain (S4 - Alien Biology & Communication)
+                    </p>
+                    <p>
+                    Daniel Sheehan (Project Bluebook Secret Files - Crash Retrieval UFO)
+                    </p>
+                    <p>
+                    Lue Elizondo (Pentagon Intelligence - Atip)
+                    </p>
+                    <p>
+                    David Grusch (Intelligence)
+                    </p>
+                    <p>
+                    David Fravor (Navy Pilot)
+                    </p>
+                    <p>
+                    Ryan Graves (Pilot)
+                    </p>
+                    <p>
+                    Tim Gallaudet (Navy Rear Admiral)
                     </p>
                     
                     

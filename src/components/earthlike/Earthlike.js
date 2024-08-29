@@ -92,11 +92,12 @@ const Earthlike = () => {
                     <div className='earthlikeplanet'>
                     
                     <div className='earthlikeplanetimage'>
-                    <img src={Teegarden2} alt="Gliese 876 Planet?" title="Gliese 876 Planet?" />
+                    <img src={Ross128} alt="Gliese 876 Planet?" title="Gliese 876 Planet?" />
                     </div>
 
                     <div className='earthlikeplanetdetails'>
-                    Gliese 876 Planet? - ? LY
+                    Gliese 876 I or Gliese 876 II Moon - 15.2 LY<br/>
+                    Grays?
                     </div>
 
                     </div> 
@@ -105,11 +106,12 @@ const Earthlike = () => {
                     <div className='earthlikeplanet'>
                     
                     <div className='earthlikeplanetimage'>
-                    <img src={Teegarden2} alt="Zeta Reticuli Planet?" title="Zeta Reticuli Planet?" />
+                    <img src={Ross128} alt="Zeta Reticuli Planet?" title="Zeta Reticuli Planet?" />
                     </div>
 
                     <div className='earthlikeplanetdetails'>
-                    Zeta Reticuli Planet? - ? LY
+                    Zeta Reticuli Planet? - 39.3 LY<br/>
+                    Grays?
                     </div>
 
                     </div> 
