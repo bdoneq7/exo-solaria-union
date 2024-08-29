@@ -28,8 +28,10 @@ import { GiBubbles } from "react-icons/gi";
 import { HiViewGrid } from "react-icons/hi";
 import { WiStars } from "react-icons/wi";
 import { TbGalaxy } from "react-icons/tb";
-import KClassGiant from "../../assets/K Class.gif";
+import BClass from "../../assets/B Class.gif";
+import KClass from "../../assets/K Class.gif";
 import SuperJovian from "../../assets/Super Jovian_small.png";
+
 
 const StarSystems401to600 = () => {
     return  (
