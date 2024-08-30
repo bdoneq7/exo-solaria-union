@@ -1,6 +1,6 @@
-.aliens {
+.research {
     width: 100%;
-    height: 200vh;
+    height: 270vh;
     position: relative;
     background: #C33764;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
@@ -8,7 +8,7 @@
 
 }
 
-.aliens:before {
+.research:before {
     content: '';
     position: absolute;
     background: url('../../assets/services-bg.jpg') no-repeat center center/cover;
@@ -17,7 +17,7 @@
     z-index: -1;
 }
 
-.aliens .content {
+.research .content {
     position: absolute;
     left: 0;
     top: 20%;
@@ -26,14 +26,14 @@
 
 }
 
-.aliens h2 {
+.research h2 {
     color: #f8f8f8;
     background:rgb(1, 1, 140, 0.5);
     padding: 0.5rem;
     border-radius: 10px;
 }
 
-.aliens p {
+.research p {
     color: #f8f8f8;
     margin: 1rem 0;
     background:rgba(1, 1, 140, 0.5);
@@ -41,26 +41,26 @@
     border-radius: 10px;
 }
 
-.aliens button {
+.research button {
     color: #ffffff;
     -webkit-text-stroke: 0.2px #000000;
     text-shadow: 2px 2px 4px #000000;
     border: 1px solid #000000;
 }
 
-.aliens .iconmain {
+.research .iconmain {
     padding-top: .9rem;
     
 }
 
-.aliens .iconbutton {
+.research .iconbutton {
     margin-left: 0.75rem;
     padding-top: .2rem;
     
 }
 
 @media screen and (max-width: 940px) {
-    .aliens .content {
+    .research .content {
         left: 0;
         width: 100%;
         

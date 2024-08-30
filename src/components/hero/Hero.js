@@ -12,7 +12,7 @@ const Hero = () => {
                     
         
                     <p>
-                    The Exo Solaria Union is dedicated to providing an accurate visual display of the stars and planets in the
+                    The Exo Solaria Union, founded by amateur astronomer Brian Done, is dedicated to providing an accurate visual display of the stars and planets in the
                     Milky Way Galaxy based upon current astronomical data, in an effort to identify where alien civilizations exist,
                     how to establish contact with these alien civilizations, and identify exo-planets that humanity can colonize
                     in the future. 
@@ -26,6 +26,11 @@ const Hero = () => {
                     <br/>
 
                     <video src={AlienContact} width="100%" height="400" loop muted autoPlay controls />
+                    <br/>
+                    <br/>
+                    Join Form<br/>
+                    <br/>
+                    Citizens for Disclosure Link
                     <div>
                         
                     </div>

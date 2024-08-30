@@ -9,11 +9,11 @@ import { GrSolaris } from "react-icons/gr";
 import { GiGalaxy } from "react-icons/gi";
 import { GiMoonOrbit } from "react-icons/gi";
 import { IoStatsChart } from "react-icons/io5";
-import { GiAlienBug } from "react-icons/gi";
 import { BsPeopleFill } from "react-icons/bs";
 import { TbUfo } from "react-icons/tb";
-import { FaShareAlt } from "react-icons/fa";
 import { GiUfo } from "react-icons/gi";
+import { GiArchiveResearch } from "react-icons/gi";
+import { PiAlienFill } from "react-icons/pi";
 
 
 import {Link} from 'react-router-dom';
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div className='logo'>
                 
                 <Link to='/'>
-                <img src={Logo} style={{ width: "20%", height: "20%"}} alt="Exo Solaria Union" title="Exo Solaria Union" />
+                <img src={Logo} style={{ width: "30%", height: "30%"}} alt="Exo Solaria Union" title="Exo Solaria Union" />
                 </Link>
                 
                    
@@ -37,7 +37,6 @@ const Navbar = () => {
                 </div>
 
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
-                    <li><Link to='/arealiensreal'><SiAlienware size='33' className='icon' alt="Are Aliens Real - Yes or No" title="Are Aliens Real - Yes or No" /></Link></li>
                     
                     <li><Link to='/galaxystats'><IoStatsChart size='33' className='icon' alt="Milky Way Galaxy Stats" title="Milky Way Galaxy Stats" /></Link></li>
                     
@@ -53,12 +52,12 @@ const Navbar = () => {
                     
                     <li><Link to='/planets'><IoPlanetSharp size='35' className='icon' alt="Planet Classes" title="Planet Classes" /></Link></li>
                     
-                    <li><Link to='/aliens'><GiAlienBug size='32' className='icon' alt="Alien Species" title="Alien Species" /></Link></li>
+                    <li><Link to='/aliens'><SiAlienware size='32' className='icon' alt="Alien Species" title="Alien Species" /></Link></li>
                     <li><Link to='/spacetech'><TbUfo size='35' className='icon' alt="Alien Technology" title="Alien/UAP Technology" /></Link></li>
-                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien/UAP Whistleblowers" title="Alien/UAP  Whistleblowers" /></Link></li>
-                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien/UAP Researchers" title="Alien/UAP Researchers & Journalists" /></Link></li>
+                    <li><Link to='/terms'><BsPeopleFill size='35' className='icon' alt="Alien/UAP Whistleblowers" title="Alien/UAP Whistleblowers" /></Link></li>
+                    <li><Link to='/research'><GiArchiveResearch size='35' className='icon' alt="Alien/UAP Researchers" title="Alien/UAP Researchers & Journalists" /></Link></li>
                     <li><Link to='/timeline'><GiUfo size='35' className='icon' alt="Alien/UFO/UAP Encounter Timeline" title="Alien/UFO/UAP Encounter Timeline" /></Link></li>
-                    <li><Link to='https://newparadigminstitute.org/take-action/join-citizens-for-disclosure/'><FaShareAlt size='35' className='icon' alt="Citizens for UAP Disclosure" title="Citizens for UAP Disclosure" /></Link></li>
+                    <li><Link to='/abductees'><PiAlienFill size='35' className='icon' alt="Alien Abductees" title="Alien Abductees" /></Link></li>
                     
                     
                 </ul>

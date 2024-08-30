@@ -23,6 +23,8 @@ import AliensPage from './routes/AliensPage';
 import SpaceTechPage from './routes/SpaceTechPage';
 import TermsPage from './routes/TermsPage';
 import TimelinePage from './routes/TimelinePage';
+import ResearchPage from './routes/ResearchPage';
+import AbducteesPage from './routes/AbducteesPage';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -46,6 +48,8 @@ ReactDOM.render(
       <Route path='/spacetech' element={<SpaceTechPage />} />
       <Route path='/terms' element={<TermsPage />} />
       <Route path='/timeline' element={<TimelinePage />} />
+      <Route path='/research' element={<ResearchPage />} />
+      <Route path='/abductees' element={<AbducteesPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
