@@ -1,6 +1,7 @@
 import React from 'react';
 import './AliensStyles.css';
 import { SiAlienware } from "react-icons/si";
+import HumanSpecies from "../../assets/humanspecies.jpeg";
 
 export const Aliens = () => {
     
@@ -11,6 +12,7 @@ export const Aliens = () => {
             <div className='content'>
                     <h2><SiAlienware className='iconmain' /><span> Alien</span> Species</h2>
                     <p>
+                    <img src={HumanSpecies} alt="Humans" title="Humans" />
                     Humans Species<br/>
                     Biology: 5-7 foot tall bodies, various skin colors, proportionate heads, arms, and legs with hair, not generally telepathic<br/>
                     Origins: Earth in Sol Star System<br/>
