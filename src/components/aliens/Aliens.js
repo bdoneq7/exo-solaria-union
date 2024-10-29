@@ -38,6 +38,13 @@ export const Aliens = () => {
                     Intent: Unknown
                     Sources: Unknown
                     </p>
+                    <p>
+                    Mantis Species<br/>
+                    Biology: Unknown<br/>
+                    Origins: Unknown<br/>
+                    Intent: Unknown
+                    Sources: Unknown
+                    </p>
                     
                     
                 </div>
